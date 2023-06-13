@@ -2,7 +2,7 @@
 @font-face {
   font-family: "Agraham", cursive;
   src: url("../../fonts/agraham/Agraham.otf") format("opentype");
-  font-weight: 600;
+  font-weight: 400;
 }
 /* BOOT CONFIG */
 *, *::before, *::after {
@@ -13,6 +13,7 @@
   -webkit-box-sizing: border-box;
 }
 
+/* RESET ELEMENTS */
 html {
   scroll-behavior: smooth;
 }
