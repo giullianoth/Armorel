@@ -503,6 +503,7 @@ html body i.fa-solid, html body i.fa-regular, html body i.fa-brands {
   .arm_category_content_categories {
     justify-content: space-between;
     flex-wrap: nowrap;
+    gap: 30px;
   }
 }
 .arm_category_content_categories_item {

@@ -41,6 +41,7 @@
                 @include setResponsiveDesign($breakpoint-desktop-sd) {
                     justify-content: space-between;
                     flex-wrap: nowrap;
+                    gap: 30px;
                 }
 
                 &_item {
