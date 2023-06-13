@@ -7,7 +7,7 @@ const setStyle = (element, attr, value) => element.style[attr] = value
 const addClass = (element, className) => element.classList.add(className)
 const removeClass = (element, className) => element.classList.remove(className)
 const toggleClass = (element, className) => element.classList.toggle(className)
-const replaceClass = (element, oldClass, newClass) => element.classList.replace(oldClass, newClass)
+const replaceClass = (element, currentClassName, newClassName) => element.classList.replace(currentClassName, newClassName)
 const elementContainsClass = (element, className) => element.classList.contains(className)
 
 const computedStyle = (element, attr) => window.getComputedStyle(element)[attr]

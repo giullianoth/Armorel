@@ -14,7 +14,11 @@ function closeMenu() {
 
 function toggleSubmenu(event) {
     event.preventDefault()
-    const btn = event.target
+    let btn = event.target
+
+    if (elementContainsClass(btn, "j_dropdown_icon")) {
+        btn = btn.parentNode
+    }
 
     submenus.forEach((sub) => isVisible(sub) && submenu(btn) !== sub && slideUp(sub))
     dropdownBtns.forEach((b) => isActive(b.parentNode) && btn !== b && removeClass(b.parentNode, "active"))

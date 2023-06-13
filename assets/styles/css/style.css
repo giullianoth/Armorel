@@ -94,54 +94,37 @@ html body i.fa-solid, html body i.fa-regular, html body i.fa-brands {
   gap: 20px;
   color: #282A2C;
 }
-.arm_header_content_accountarea {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.arm_header_content_accountarea_account i {
-  margin-right: 5px;
-  color: #9D6335;
-}
-.arm_header_content_accountarea_wishlist i {
-  color: #9D6335;
-}
-.arm_header_content_accountarea_cart {
-  position: relative;
-}
-.arm_header_content_accountarea_cart i {
-  font-size: 1.4rem;
-}
-.arm_header_content_accountarea_cart_count {
-  position: absolute;
-  top: -7px;
-  left: unset;
-  right: -7px;
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  background-color: #9D6335;
-  color: #FFF;
-  font-size: 0.8rem;
-  font-weight: 600;
-  display: block;
-  text-align: center;
-  pointer-events: none;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
+@media screen and (min-width: 767px) {
+  .arm_header_content {
+    justify-content: space-between;
+  }
 }
 .arm_header_content_search {
-  flex-basis: 100%;
+  flex-basis: calc(100% - 40px);
+}
+@media screen and (min-width: 767px) {
+  .arm_header_content_search {
+    flex-basis: unset;
+    order: 2;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .arm_header_content_search {
+    flex-basis: 60%;
+  }
 }
 .arm_header_content_search_form {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
+  max-width: 600px;
+}
+@media screen and (min-width: 767px) {
+  .arm_header_content_search_form {
+    max-width: 100%;
+  }
 }
 .arm_header_content_search_form input {
   display: block;
@@ -170,26 +153,29 @@ html body i.fa-solid, html body i.fa-regular, html body i.fa-brands {
   height: 8px;
   background-color: #9D6335;
 }
-.arm_header_content_logo {
-  flex-basis: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.arm_header_content_nav {
+  flex-basis: 20px;
 }
-.arm_header_content_logo_title {
-  display: none;
+@media screen and (min-width: 767px) {
+  .arm_header_content_nav {
+    flex-basis: unset;
+    order: 4;
+  }
 }
-.arm_header_content_logo_img img {
-  width: 140px;
+@media screen and (min-width: 1023px) {
+  .arm_header_content_nav {
+    flex-basis: 100%;
+    padding: 10px 0;
+  }
 }
 .arm_header_content_nav_icon {
   font-size: 1.4rem;
   cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: unset;
-  right: 20px;
+}
+@media screen and (min-width: 1023px) {
+  .arm_header_content_nav_icon {
+    display: none;
+  }
 }
 .arm_header_content_nav_lightbox {
   position: fixed;
@@ -200,6 +186,13 @@ html body i.fa-solid, html body i.fa-regular, html body i.fa-brands {
   background-color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
   display: none;
+}
+@media screen and (min-width: 1023px) {
+  .arm_header_content_nav_lightbox {
+    display: block;
+    position: static;
+    background: none;
+  }
 }
 .arm_header_content_nav_lightbox_menuarea {
   position: fixed;
@@ -215,6 +208,15 @@ html body i.fa-solid, html body i.fa-regular, html body i.fa-brands {
   transform: translateX(-100%);
   transition: all 0.3s ease 0s;
 }
+@media screen and (min-width: 1023px) {
+  .arm_header_content_nav_lightbox_menuarea {
+    position: static;
+    transform: none;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+  }
+}
 .arm_header_content_nav_lightbox_menuarea_closeicon {
   font-size: 1.4rem;
   margin-bottom: 20px;
@@ -224,6 +226,11 @@ html body i.fa-solid, html body i.fa-regular, html body i.fa-brands {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   cursor: pointer;
+}
+@media screen and (min-width: 1023px) {
+  .arm_header_content_nav_lightbox_menuarea_closeicon {
+    display: none;
+  }
 }
 .arm_header_content_nav_lightbox_menuarea a:hover {
   color: #9D6335;
@@ -235,6 +242,16 @@ html body i.fa-solid, html body i.fa-regular, html body i.fa-brands {
   flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
+}
+@media screen and (min-width: 1023px) {
+  .arm_header_content_nav_lightbox_menuarea_menu {
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+.arm_header_content_nav_lightbox_menuarea_menu_item {
+  position: relative;
 }
 .arm_header_content_nav_lightbox_menuarea_menu_item.active i {
   transform: rotate(180deg);
@@ -254,4 +271,89 @@ html body i.fa-solid, html body i.fa-regular, html body i.fa-brands {
   flex-direction: column;
   gap: 20px;
   display: none;
+}
+@media screen and (min-width: 1023px) {
+  .arm_header_content_nav_lightbox_menuarea_submenu {
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+  }
+}
+.arm_header_content_logo {
+  flex-basis: 60px;
+}
+@media screen and (min-width: 599px) {
+  .arm_header_content_logo {
+    flex-basis: 100px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .arm_header_content_logo {
+    flex-basis: unset;
+    order: 1;
+  }
+}
+.arm_header_content_logo_title {
+  display: none;
+}
+.arm_header_content_logo_img img {
+  width: 80px;
+}
+@media screen and (min-width: 599px) {
+  .arm_header_content_logo_img img {
+    width: 120px;
+  }
+}
+.arm_header_content_accountarea {
+  flex-basis: calc(100% - 80px - 20px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+@media screen and (min-width: 599px) {
+  .arm_header_content_accountarea {
+    flex-basis: calc(100% - 120px - 20px);
+  }
+}
+@media screen and (min-width: 767px) {
+  .arm_header_content_accountarea {
+    flex-basis: unset;
+    order: 3;
+  }
+}
+.arm_header_content_accountarea_account {
+  font-size: 0.8rem;
+}
+.arm_header_content_accountarea_account i {
+  margin-right: 5px;
+  color: #9D6335;
+}
+.arm_header_content_accountarea_wishlist i {
+  color: #9D6335;
+}
+.arm_header_content_accountarea_cart {
+  position: relative;
+}
+.arm_header_content_accountarea_cart_count {
+  position: absolute;
+  top: -4px;
+  left: unset;
+  right: -8px;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  background-color: #9D6335;
+  color: #FFF;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: block;
+  text-align: center;
+  pointer-events: none;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */
