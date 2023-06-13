@@ -189,6 +189,7 @@
                                 margin: 0;
                                 @include absolute(100%);
                                 padding: 10px;
+                                box-shadow: 0 4px 10px -2px $color-black-alpha-1;
                             }
                         }
                     }

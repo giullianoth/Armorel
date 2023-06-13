@@ -279,6 +279,7 @@ html body i.fa-solid, html body i.fa-regular, html body i.fa-brands {
     top: 100%;
     left: 0;
     padding: 10px;
+    box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.1019607843);
   }
 }
 .arm_header_content_logo {
