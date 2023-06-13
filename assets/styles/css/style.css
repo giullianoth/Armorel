@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "Agraham", cursive;
+  src: url("../../fonts/agraham/Agraham.otf") format("opentype");
+  font-weight: 600;
+}
 /* BOOT CONFIG */
 *, *::before, *::after {
   margin: 0;
@@ -357,4 +362,87 @@ html body i.fa-solid, html body i.fa-regular, html body i.fa-brands {
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
+}
+
+/* HEADLINE */
+.arm_headline {
+  width: 100%;
+  background-image: url("../../images/BANNER-2-MOBILE-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 650px;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1023px) {
+  .arm_headline {
+    background-image: url("../../images/BANNER-3.png");
+  }
+}
+.arm_headline_content {
+  max-width: 600px;
+  padding: 0 20px;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+@media screen and (min-width: 1023px) {
+  .arm_headline_content {
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 650px;
+  }
+}
+.arm_headline_content_header_subtitle {
+  font-weight: 400;
+  text-transform: lowercase;
+  color: #493328;
+}
+.arm_headline_content_header_title {
+  font-family: "Agraham", cursive;
+  font-size: 2.24rem;
+  color: #9D6335;
+}
+@media screen and (min-width: 479px) {
+  .arm_headline_content_header_title {
+    font-size: 2.8rem;
+  }
+}
+.arm_headline_content_info {
+  font-family: "Jost", sans-serif;
+  color: #493328;
+}
+.arm_headline_content_info p {
+  font-size: 1.4rem;
+}
+.arm_headline_content_info_text {
+  text-transform: lowercase;
+}
+.arm_headline_content_info_offer {
+  text-transform: uppercase;
+}
+.arm_headline_content_cta {
+  margin-top: 10px;
+}
+.arm_headline_content_cta a {
+  padding: 8px 14px;
+  background-image: linear-gradient(to right, #9D6335, #B5856C, #9D6335);
+  background-size: 200%;
+  background-position: center left;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 500;
+  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.1019607843);
+}
+.arm_headline_content_cta a:hover {
+  background-position: center right;
 }/*# sourceMappingURL=style.css.map */
