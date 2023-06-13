@@ -446,4 +446,88 @@ html body i.fa-solid, html body i.fa-regular, html body i.fa-brands {
 }
 .arm_headline_content_cta a:hover {
   background-position: center right;
+}
+
+/* CATEGORY SECTION */
+.arm_category {
+  width: 100%;
+  margin: 60px 0;
+}
+.arm_category_content {
+  max-width: 480px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 767px) {
+  .arm_category_content {
+    max-width: 768px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1023px) {
+  .arm_category_content {
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+}
+.arm_category_content_titlewrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-bottom: 40px;
+}
+.arm_category_content_titlewrapper_title {
+  font-size: 1rem;
+}
+@media screen and (min-width: 767px) {
+  .arm_category_content_titlewrapper_title {
+    font-size: 1.6em;
+  }
+}
+.arm_category_content_titlewrapper_action {
+  font-family: "Jost", sans-serif;
+  color: #282A2C;
+  font-weight: 600;
+}
+.arm_category_content_categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media screen and (min-width: 1023px) {
+  .arm_category_content_categories {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+}
+.arm_category_content_categories_item {
+  flex-basis: calc(50% - 20px);
+}
+@media screen and (min-width: 767px) {
+  .arm_category_content_categories_item {
+    flex-basis: calc(33.3333333333% - 20px);
+  }
+}
+@media screen and (min-width: 1023px) {
+  .arm_category_content_categories_item {
+    flex-basis: unset;
+  }
+}
+.arm_category_content_categories_item_imgwrapper img {
+  transition: all 0.3s ease 0s;
+}
+.arm_category_content_categories_item_imgwrapper img:hover {
+  transform: scale(1.05);
+  filter: grayscale(60%);
+}
+.arm_category_content_categories_item_link {
+  text-align: center;
+}
+.arm_category_content_categories_item_link a {
+  color: #282A2C;
 }/*# sourceMappingURL=style.css.map */
