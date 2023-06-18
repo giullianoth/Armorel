@@ -1,0 +1,26 @@
+/* CATEGORY */
+@include theme() {
+    &_category {
+        &_imgwrapper {
+            @include flex;
+
+            img {
+                @include transition;
+                width: 160px;
+
+                &:hover {
+                    transform: scale(1.05);
+                    filter: grayscale(60%);
+                }
+            }
+        }
+
+        &_link {
+            text-align: center;
+
+            a {
+                color: $color-jet;
+            }
+        }
+    }
+}

@@ -44,7 +44,7 @@
                     gap: 30px;
                 }
 
-                &_item {
+                article {
                     @include flex2(20px);
 
                     @include setResponsiveDesign($breakpoint-tablet) {
@@ -53,25 +53,6 @@
 
                     @include setResponsiveDesign($breakpoint-desktop-sd) {
                         @include flexBasis(unset);
-                    }
-
-                    &_imgwrapper {
-                        img {
-                            @include transition;
-
-                            &:hover {
-                                transform: scale(1.05);
-                                filter: grayscale(60%);
-                            }
-                        }
-                    }
-
-                    &_link {
-                        text-align: center;
-
-                        a {
-                            color: $color-jet;
-                        }
                     }
                 }
             }
