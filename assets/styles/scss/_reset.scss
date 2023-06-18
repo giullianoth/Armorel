@@ -58,5 +58,35 @@ html {
         i.fa-solid, i.fa-regular, i.fa-brands {
             vertical-align: middle;
         }
+
+        @include theme() {
+            &_titlearea {
+                @include flex;
+                overflow: hidden;
+
+                &_title {
+                    font-family: $font-jost;
+                    font-weight: 500;
+                    font-size: $font-size-default;
+                    text-transform: uppercase;
+                    @include relative;
+
+                    &::before {
+                        content: "";
+                        border-bottom: 1px solid $color-silver;
+                        @include absolute(50%, unset);
+                        right: calc(100% + 10px);
+                        width: 100vw;
+                    }
+
+                    &::after {
+                        content: "";
+                        border-bottom: 1px solid $color-silver;
+                        @include absolute(50%, calc(100% + 10px));
+                        width: 100vw;
+                    }
+                }
+            }
+        }
     }
 }

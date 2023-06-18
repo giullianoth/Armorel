@@ -18,7 +18,10 @@ $color-dark-pastel-green: #38C438;
 $color-raw-umber: #9D6335;
 $color-bistre: #493328;
 $color-beaver: #B5856C;
+$color-persian-red: #CF2E2E;
+$color-mikado-yellow: #FEC42D;
 $color-platinum: #DDD;
+$color-silver: #B6B6B6;
 $color-white: #FFF;
 
 $color-black-alpha-6: #00000099;
@@ -42,6 +45,10 @@ $container-padding-x: 20px;
 
 // TRANSITIONS AND ANIMATIONS
 $transition-duration-default: 0.3s;
+
+// BORDER RADIUS
+$radius-mini: 4px;
+$radius-small: 10px;
 
 // BROWSER CORES
 $browser-cores-default: ("moz", "webkit");
