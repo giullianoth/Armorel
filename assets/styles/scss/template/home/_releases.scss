@@ -23,110 +23,15 @@
                 @include flex(flex-start);
                 gap: 20px;
 
-                &_item {
+                article {
                     @include flex1;
-                    padding: 6px;
-                    background-color: $color-white;
-                    @include transition;
 
                     @include setResponsiveDesign($breakpoint-tablet) {
                         @include flex2(20px);
                     }
-
+                
                     @include setResponsiveDesign($breakpoint-desktop-sd) {
                         @include flex4(20px);
-                    }
-
-                    &:hover {
-                        box-shadow: 0 0 10px 0 $color-black-alpha-1;
-                    }
-
-                    &:hover &_info_actions {
-                        opacity: 1;
-                    }
-
-                    &_image {
-                        @include relative;
-                        margin-bottom: 20px;
-
-                        &_discount {
-                            @include absolute(10px, unset);
-                            right: 10px;
-                            padding: 4px 8px;
-                            background-color: $color-dark-pastel-green;
-                            color: $color-white;
-                            @include borderRadius($radius-mini);
-                        }
-                    }
-
-                    &_info {
-                        @include relative;
-
-                        &_actions {
-                            @include absolute(unset, 50%);
-                            bottom: calc(100% + 19px);
-                            transform: translateX(-50%);
-                            width: 80%;
-                            background-color: $color-white;
-                            padding: 6px 0;
-                            @include borderRadius($radius-small $radius-small 0 0);
-
-                            opacity: 0;
-
-                            @include flex(space-around);
-                            @include transition;
-
-                            a {
-                                color: $color-jet;
-
-                                &:hover {
-                                    color: $color-persian-red;
-                                }
-                            }
-                        }
-
-                        &_title {
-                            margin-bottom: 10px;
-
-                            h2 {
-                                font-size: 1em;
-                                font-weight: 500;
-                                text-align: center;
-
-                                a {
-                                    &:hover {
-                                        color: $color-persian-red;
-                                    }
-                                }
-                            }
-                        }
-
-                        &_rating {
-                            margin-bottom: 20px;
-                            text-align: center;
-                            font-size: $font-size-small;
-
-                            i {
-                                color: $color-mikado-yellow;
-                            }
-                        }
-
-                        &_price {
-                            font-size: $font-size-big;
-                            font-family: $font-jost;
-                            font-weight: 700;
-                            @include flex;
-                            gap: 10px;
-
-                            &_currentprice {
-                                color: $color-jet;
-                            }
-
-                            &_actualprice {
-                                color: $color-silver;
-                                text-decoration: line-through;
-                            }
-                        }
                     }
                 }
             }
