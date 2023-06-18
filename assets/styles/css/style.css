@@ -697,4 +697,38 @@ html body .arm_titlearea_title::after {
 .arm_releases_content_list_item_info_price_actualprice {
   color: #B6B6B6;
   text-decoration: line-through;
+}
+
+/* CATEGORY SECTION 2 */
+.arm_category2 {
+  width: 100%;
+  margin: 60px 0;
+}
+.arm_category2_content {
+  max-width: 375px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media screen and (min-width: 899px) {
+  .arm_category2_content {
+    max-width: 1140px;
+  }
+}
+.arm_category2_content_item {
+  flex-basis: 100%;
+}
+@media screen and (min-width: 899px) {
+  .arm_category2_content_item {
+    flex-basis: calc(33.3333333333% - 20px);
+  }
+}
+.arm_category2_content_item img {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */
