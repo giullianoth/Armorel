@@ -735,4 +735,56 @@ html body .arm_titlearea_title::after {
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+}
+
+/* SHOPPING INFO SECTION */
+.arm_shopinfo {
+  width: 100%;
+  margin: 120px 0 60px 0;
+}
+.arm_shopinfo_content {
+  max-width: 1140px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.arm_shopinfo_content_item {
+  flex-basis: 100%;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #B6B6B6;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+@media screen and (min-width: 599px) {
+  .arm_shopinfo_content_item {
+    flex-basis: calc(50% - 20px);
+  }
+}
+@media screen and (min-width: 899px) {
+  .arm_shopinfo_content_item {
+    flex-basis: calc(25% - 20px);
+  }
+}
+.arm_shopinfo_content_item_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.arm_shopinfo_content_item_img img {
+  width: 69px;
+}
+.arm_shopinfo_content_item_title h1 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.arm_shopinfo_content_item_info {
+  font-size: 0.8rem;
 }/*# sourceMappingURL=style.css.map */
