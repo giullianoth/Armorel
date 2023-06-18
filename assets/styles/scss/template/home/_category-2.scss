@@ -15,9 +15,14 @@
 
             &_item {
                 @include flex1;
+                @include transition;
 
                 @include setResponsiveDesign($breakpoint-tablet-landscape) {
                     @include flex3(20px);
+                }
+
+                &:hover {
+                    transform: translateY(-20px);
                 }
 
                 img {

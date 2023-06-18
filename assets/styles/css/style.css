@@ -721,11 +721,15 @@ html body .arm_titlearea_title::after {
 }
 .arm_category2_content_item {
   flex-basis: 100%;
+  transition: all 0.3s ease 0s;
 }
 @media screen and (min-width: 899px) {
   .arm_category2_content_item {
     flex-basis: calc(33.3333333333% - 20px);
   }
+}
+.arm_category2_content_item:hover {
+  transform: translateY(-20px);
 }
 .arm_category2_content_item img {
   border-radius: 10px;
