@@ -51,16 +51,14 @@ export const Data = {
             },
 
             images: {
-                featured_image: "brinco_strass.jpg",
+                featured_image: "brinco-com-decoracao-de-strass-dourado.jpg",
                 image_gallery: [
-                    "brinco_strass_2.jpg"
+                    "brinco-com-decoracao-de-strass-dourado-2.jpg"
                 ],
             },
 
             category: [1],
-
             is_variable: false,
-
             variations: null,
         },
 
@@ -69,7 +67,6 @@ export const Data = {
             name: "Brinco de Argola 5.6cm - Cor Prata ou Dourado 1 Par",
             description: "",
             url: "brinco-de-argola-56cm-cor-prata-ou-dourado-1-par",
-
             general: null,
 
             stock: {
@@ -80,7 +77,6 @@ export const Data = {
             },
 
             delivery: null,
-
             delivery_class: "",
 
             related_products: {
@@ -106,14 +102,13 @@ export const Data = {
             },
 
             images: {
-                featured_image: "brinco_argola.jpg",
+                featured_image: "brinco-de-argola-56cm-cor-prata-ou-dourado-1-par.jpg",
                 image_gallery: [
-                    "brinco_argola_2.jpg"
+                    "brinco-de-argola-56cm-cor-prata-ou-dourado-1-par-2.jpg"
                 ],
             },
 
             category: [1, 9],
-
             is_variable: true,
 
             variations: [
@@ -128,7 +123,7 @@ export const Data = {
                             ""
                         ],
                     },
-                    price: 100,
+                    price: 120,
                     promotional_price: null,
                     promotional_price_period: {
                         from: "",
@@ -155,7 +150,7 @@ export const Data = {
                         ],
                     },
                     price: 100,
-                    promotional_price: null,
+                    promotional_price: 34,
                     promotional_price_period: {
                         from: "",
                         to: "",
@@ -286,7 +281,7 @@ export const Data = {
                             ""
                         ],
                     },
-                    price: 200,
+                    price: 180,
                     promotional_price: 150,
                     promotional_price_period: {
                         from: "",
@@ -406,6 +401,3 @@ export const Data = {
         },
     ],
 }
-
-document.querySelector("img").src = `./storaged/uploads/2023/06/${Data.product[0].images.featured_image}`
-console.log(document.querySelector("img"));

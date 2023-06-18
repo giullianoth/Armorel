@@ -1,3 +1,6 @@
+// SITE
+const url = () => "http://127.0.0.1:5500"
+
 // DOM
 const getElement = (selector, parentElement = null) => (parentElement ?? document).querySelector(selector)
 const getElements = (selector, parentElement = null) => (parentElement ?? document).querySelectorAll(selector)
@@ -37,7 +40,13 @@ const dropdownBtns = getElements(".j_dropdown")
 const submenus = getElements(".j_submenu")
 const submenu = (btn) => getElement(".j_submenu", btn.parentElement)
 
+// CHARACTERS
+const priceBRL = (number) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(number)
+const round = (number) => Math.floor(number)
+
 export {
+    url,
+
     getElement, getElements,
     setStyle, addClass, removeClass, toggleClass, replaceClass, elementContainsClass, computedStyle, isVisible, isActive,
     normalArray,
@@ -46,4 +55,6 @@ export {
 
     menuIcon, closeMenuIcon, mobileMenuLightbox, mobileMenu,
     dropdownBtns, submenus, submenu,
+
+    priceBRL, round,
 }
