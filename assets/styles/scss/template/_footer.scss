@@ -1,0 +1,85 @@
+/* FOOTER */
+@include theme() {
+    &_footer {
+        @include fullWidthContainer;
+        
+        &_nav {
+            padding: 60px 0;
+            background-color: $color-seasalt;
+
+            &_content {
+                @include maxWidthContainer;
+                @include flex(flex-start, flex-start);
+                gap: 20px;
+
+                &_item {
+                    @include flex1;
+                    color: $color-jet;
+
+                    @include setResponsiveDesign($breakpoint-mobile-landscape) {
+                        @include flex2(20px);
+                    }
+
+                    @include setResponsiveDesign($breakpoint-desktop-sd) {
+                        @include flex4(20px);
+                    }
+
+                    &_title {
+                        margin-bottom: 20px;
+
+                        h1 {
+                            text-transform: uppercase;
+                            font-weight: 500;
+                            font-size: $font-size-big;
+                        }
+                    }
+
+                    &_menu {
+                        &.contact {
+                            margin-top: 10px;
+
+                            i {
+                                width: 14px;
+                                margin-right: 10px;
+                            }
+                        }
+
+                        &.social_networks {
+                            @include flex(flex-start);
+                            gap: 20px;
+                            
+                            i {
+                                font-size: $font-size-big;
+                                width: 36px;
+                                height: 36px;
+                                background-color: $color-jet;
+                                color: $color-white;
+                                @include flex;
+                                @include rounded;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    &_payment {
+                        img {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_rights {
+            background-color: $color-jet;
+            padding: 10px 20px;
+
+            p {
+                font-size: $font-size-small;
+                font-family: $font-jost;
+                color: $color-white;
+                text-align: center;
+            }
+        }
+    }
+}
