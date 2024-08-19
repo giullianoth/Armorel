@@ -1,14 +1,14 @@
 /* FOOTER */
 @include theme() {
     &_footer {
-        @include fullWidthContainer;
+        @include containerFluid;
         
         &_nav {
             padding: 60px 0;
             background-color: $color-seasalt;
 
             &_content {
-                @include maxWidthContainer;
+                @include container;
                 @include flex(flex-start, flex-start);
                 gap: 20px;
 

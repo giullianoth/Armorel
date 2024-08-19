@@ -32,6 +32,7 @@ $color-black-alpha-1: #0000001A;
 $font-jost: 'Jost', sans-serif;
 $font-poppins: 'Poppins', sans-serif;
 $font-agraham: "Agraham", cursive;
+$font-devinne-swash: 'Devinne Swash', sans-serif;;
 
 $font-path: "../../fonts";
 
@@ -41,8 +42,7 @@ $font-size-big: 1.4rem;
 
 // CONTAINER MAX WIDTH
 $container-max-width-default: 1140px;
-$container-padding-y: 0;
-$container-padding-x: 20px;
+$container-clearance: 20px;
 
 // TRANSITIONS AND ANIMATIONS
 $transition-duration-default: 0.3s;
@@ -51,5 +51,8 @@ $transition-duration-default: 0.3s;
 $radius-mini: 4px;
 $radius-small: 10px;
 
-// BROWSER CORES
-$browser-cores-default: ("moz", "webkit");
+// BROWSER PREFIXES
+$browser-prefixes-default: ("moz", "webkit");
+
+// IMAGES PATH
+$image-path: "../../../assets/images";

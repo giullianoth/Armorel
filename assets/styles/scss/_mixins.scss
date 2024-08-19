@@ -57,7 +57,7 @@
 }
 
 // CONTAINER
-@mixin fullWidthContainer($fillScreen: false) {
+@mixin containerFluid($fillScreen: false) {
     width: 100%;
 
     @if $fillScreen == true {
@@ -65,24 +65,24 @@
     }
 }
 
-@mixin maxWidthContainer($maxWidth: $container-max-width-default, $paddingY: $container-padding-y, $paddingX: $container-padding-x) {
+@mixin container($maxWidth: $container-max-width-default, $clearance: $container-clearance) {
     max-width: $maxWidth;
-    padding: $paddingY $paddingX;
+    padding-inline: $clearance;
     margin: 0 auto;
 }
 
-// BROWSER CORES ATTRIBUTES
-@mixin setBrowserCores($attr, $value, $cores: $browser-cores-default) {
+// BROWSER PREFIXES ATTRIBUTES
+@mixin setBrowserPrefixes($attr, $value, $prefixes: $browser-prefixes-default) {
     #{$attr}: #{$value};
 
-    @each $core in $cores {
-        -#{$core}-#{$attr}: #{$value};
+    @each $prefix in $prefixes {
+        -#{$prefix}-#{$attr}: #{$value};
     }
 }
 
 // BORDER RADIUS
 @mixin borderRadius($radius: $radius-default) {
-    @include setBrowserCores(border-radius, $radius);
+    @include setBrowserPrefixes(border-radius, $radius);
 }
 
 @mixin rounded() {
@@ -112,15 +112,15 @@
 }
 
 @mixin flex2($gap: 0) {
-    @include flexBasis(calc(100% / 2), $gap);
+    @include flexBasis(calc(100% / 2), calc($gap - ($gap / 2)));
 }
 
 @mixin flex3($gap: 0) {
-    @include flexBasis(calc(100% / 3), $gap);
+    @include flexBasis(calc(100% / 3), calc($gap - ($gap / 3)));
 }
 
 @mixin flex4($gap: 0) {
-    @include flexBasis(calc(100% / 4), $gap);
+    @include flexBasis(calc(100% / 4), calc($gap - ($gap / 4)));
 }
 
 // POSITION
@@ -138,7 +138,7 @@
 
 @mixin absoluteFull($top: 0, $left: 0, $fillScreen: false) {
     @include absolute($top, $left);
-    @include fullWidthContainer($fillScreen);
+    @include containerFluid($fillScreen);
 }
 
 // Fixed
@@ -150,13 +150,13 @@
 
 @mixin fixedFull($top: 0, $left: 0, $fillScreen: false) {
     @include fixed($top, $left);
-    @include fullWidthContainer($fillScreen);
+    @include containerFluid($fillScreen);
 }
 
 // BACKGROUND IMAGE
 @mixin backgroundImage($image: "", $repeat: no-repeat, $size: cover, $position: center center) {
     @if $image != "" {
-        background-image: url($image);
+        background-image: url("#{$image-path}/#{$image}");
     }
 
     background-repeat: $repeat;
@@ -179,8 +179,7 @@
     }
 
     @else {
-        $width: calc($screenWidth - 1px);
-        @media screen and (min-width: $width) {
+        @media screen and (min-width: $screenWidth) {
             @content;
         }
     }

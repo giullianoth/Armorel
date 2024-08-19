@@ -1,10 +1,10 @@
 /* HEADER */
 @include theme() {
     &_header {
-        @include fullWidthContainer;
+        @include containerFluid;
 
         &_freight {
-            @include fullWidthContainer;
+            @include containerFluid;
             padding: 10px 0;
             background-color: $color-raw-umber;
 
@@ -18,7 +18,7 @@
         }
 
         &_content {
-            @include maxWidthContainer;
+            @include container;
             @include flex(flex-start);
             @include relative;
             margin-top: 20px;
@@ -42,7 +42,7 @@
                 }
 
                 &_form {
-                    @include fullWidthContainer;
+                    @include containerFluid;
                     @include flex(flex-start, center, nowrap);
 
                     max-width: $breakpoint-mobile-landscape;

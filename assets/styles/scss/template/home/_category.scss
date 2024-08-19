@@ -1,18 +1,18 @@
 /* CATEGORY SECTION */
 @include theme() {
     &_category {
-        @include fullWidthContainer;
+        @include containerFluid;
         margin: 60px 0;
 
         &_content {
-            @include maxWidthContainer($breakpoint-mobile);
+            @include container($breakpoint-mobile);
 
             @include setResponsiveDesign($breakpoint-tablet) {
-                @include maxWidthContainer($breakpoint-tablet);
+                @include container($breakpoint-tablet);
             }
 
             @include setResponsiveDesign($breakpoint-desktop-sd) {
-                @include maxWidthContainer;
+                @include container;
             }
 
             &_titlewrapper {

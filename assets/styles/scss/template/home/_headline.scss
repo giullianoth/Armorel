@@ -1,21 +1,21 @@
 /* HEADLINE */
 @include theme() {
     &_headline {
-        @include fullWidthContainer;
-        @include backgroundImage("../../images/BANNER-2-MOBILE-2.png");
+        @include containerFluid;
+        @include backgroundImage("BANNER-2-MOBILE-2.png");
         min-height: 650px;
         margin-top: 20px;
 
         @include setResponsiveDesign($breakpoint-desktop-sd) {
-            background-image: url("../../images/BANNER-3.png");
+            @include backgroundImage("BANNER-3.png");
         }
 
         &_content {
-            @include maxWidthContainer($breakpoint-mobile-landscape);
+            @include container($breakpoint-mobile-landscape);
             padding-top: 70px;
 
             @include setResponsiveDesign($breakpoint-desktop-sd) {
-                @include maxWidthContainer($container-max-width-default);
+                @include container($container-max-width-default);
                 @include flex(center, flex-start);
                 flex-direction: column;
                 height: 650px;
@@ -25,16 +25,16 @@
                 &_subtitle {
                     font-weight: 400;
                     text-transform: lowercase;
-                    color: $color-bistre;
+                    color: $color-raw-umber;
                 }
 
                 &_title {
-                    font-family: $font-agraham;
-                    font-size: calc($font-size-big * 1.6);
+                    font-family: $font-devinne-swash;
+                    font-size: calc($font-size-big * 2.4);
                     color: $color-raw-umber;
 
                     @include setResponsiveDesign($breakpoint-mobile) {
-                        font-size: calc($font-size-big * 2);
+                        font-size: calc($font-size-big * 3);
                     }
                 }
             }

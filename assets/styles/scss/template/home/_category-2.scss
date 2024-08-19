@@ -1,11 +1,11 @@
 /* CATEGORY SECTION 2 */
 @include theme() {
     &_category2 {
-        @include fullWidthContainer;
+        @include containerFluid;
         margin: 60px 0;
 
         &_content {
-            @include maxWidthContainer($layout-mobile);
+            @include container($layout-mobile);
             @include flex;
             gap: 20px;
 

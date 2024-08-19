@@ -1,11 +1,11 @@
 /* SHOPPING INFO SECTION */
 @include theme() {
     &_shopinfo {
-        @include fullWidthContainer;
+        @include containerFluid;
         margin: 120px 0 60px 0;
 
         &_content {
-            @include maxWidthContainer;
+            @include container;
             @include flex;
             gap: 20px;
 
