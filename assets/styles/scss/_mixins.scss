@@ -1,58 +1,7 @@
 // THEME
 @mixin theme() {
-    .arm {
+    .arm- {
         @content;
-    }
-}
-
-// OFFLINE FONTS
-@mixin setFonts($presets) {
-
-    $weight: ();
-    $family: ();
-    $files: ();
-    $path: ();
-    $format: ();
-
-    @each $attr, $values in $presets {
-
-        @if $attr == "weights" {
-            @for $w from 1 through length($list: $values) {
-                $weight: append($list: $weight, $val: nth($list: $values, $n: $w), $separator: comma);
-            }
-        }
-
-        @if $attr == "family" {
-            @for $f from 1 through length($list: $weight) {
-                $family: append($list: $family, $val: $values, $separator: comma);
-            }
-        }
-
-        @if $attr == "files" {
-            @for $fl from 1 through length($list: $weight) {
-                $files: append($list: $files, $val: nth($list: $values, $n: $fl), $separator: comma);
-            }
-        }
-
-        @if $attr == "path" {
-            @for $p from 1 through length($list: $weight) {
-                $path: append($list: $path, $val: "#{$font-path}/#{$values}/#{nth($list: $files, $n: $p)}", $separator: comma);
-            }
-        }
-
-        @if $attr == "format" {
-            @for $fm from 1 through length($list: $weight) {
-                $format: append($list: $format, $val: $values, $separator: comma);
-            }
-        }
-    }
-
-    @for $font from 1 through length($list: $weight) {
-        @font-face {
-            font-family: nth($list: $family, $n: $font);
-            src: url(nth($list: $path, $n: $font)) format(nth($list: $format, $n: $font));
-            font-weight: nth($list: $weight, $n: $font);
-        }
     }
 }
 
@@ -65,14 +14,22 @@
     }
 }
 
-@mixin container($maxWidth: $container-max-width-default, $clearance: $container-clearance) {
+@mixin container($maxWidth: $container-width, $padding: $side-clearance) {
     max-width: $maxWidth;
-    padding-inline: $clearance;
-    margin: 0 auto;
+    padding-inline: $padding;
+    margin-inline: auto;
 }
 
-// BROWSER PREFIXES ATTRIBUTES
-@mixin setBrowserPrefixes($attr, $value, $prefixes: $browser-prefixes-default) {
+@mixin containerClearance($spacing: $section-clearance) {
+    padding-block: $spacing;
+
+    @include setResponsiveDesign($breakpoint-small) {
+        padding-block: calc($spacing - 20px);
+    }
+}
+
+// ATTRIBUTES WITH BROWSER PREFIXES
+@mixin setBrowserPrefix($attr, $value, $prefixes: $browser-prefixes-default) {
     #{$attr}: #{$value};
 
     @each $prefix in $prefixes {
@@ -81,8 +38,8 @@
 }
 
 // BORDER RADIUS
-@mixin borderRadius($radius: $radius-default) {
-    @include setBrowserPrefixes(border-radius, $radius);
+@mixin borderRadius($radius) {
+    @include setBrowserPrefix(border-radius, $radius);
 }
 
 @mixin rounded() {
@@ -170,7 +127,7 @@
 }
 
 // RESPONSIVE DESIGN
-@mixin setResponsiveDesign($screenWidth, $isMaxWidth: false) {
+@mixin setResponsiveDesign($screenWidth, $isMaxWidth: false) {    
 
     @if $isMaxWidth == true {
         @media screen and (max-width: $screenWidth) {

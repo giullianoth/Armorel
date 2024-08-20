@@ -1,26 +1,63 @@
-/* BOOT CONFIG */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     vertical-align: baseline;
-
-    @include setBrowserPrefixes(box-sizing, border-box);
+    @include setBrowserPrefix(box-sizing, border-box);
 }
 
-// RESET ELEMENTS
-@import "reset";
+html {
+    scroll-behavior: smooth;
+}
 
-// THEME CONFIG
-@import "template/header";
-@import "template/footer";
+body {
+    font-family: $font-poppins;
+    font-size: $font-size-default;
+    color: $color-text;
+}
 
-// SNIPPETS CONFIG
-@import "template/product";
-@import "template/category1";
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-jost;
+    color: $color-primary;
+}
 
-// Home
-@import "template/home/headline";
-@import "template/home/category";
-@import "template/home/releases";
-@import "template/home/category-2";
-@import "template/home/shop-info";
+a {
+    text-decoration: none;
+    color: $color-brown;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+    @include setBrowserPrefix(object-fit, cover, "o");
+    @include setBrowserPrefix(object-position, center, "o");
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    border: 1px solid $color-lightgray;
+    padding: 10px;
+    outline: none;
+    @include borderRadius(5px);
+
+    &::placeholder {
+        color: $color-lightgray;
+    }
+}
+
+@include theme() {
+    &button {
+        font-family: $font-jost;
+        font-size: $font-size-default;
+        color: $color-white;
+        background-color: $color-accent;
+        padding: 6px 20px;
+        cursor: pointer;
+        border: none;
+        @include borderRadius(5px);
+    }
+}

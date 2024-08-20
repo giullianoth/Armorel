@@ -1,4 +1,3 @@
-import { DropdownMenu, MobileMenu } from "./viewport/menu.js"
+import Menu from "./menu.js"
 
-MobileMenu()
-DropdownMenu()
+Menu()
