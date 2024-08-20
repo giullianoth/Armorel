@@ -1,83 +1,80 @@
-import { setStyle, transitionDuration, transitionGap, transitionProps } from "./variables.js"
+import { transitionDuration, transitionGap } from "./variables.js"
 
-function fadeIn(element, callback = null, displayElement = "block") {
-    setStyle(element, "transition", transitionProps())
-    setStyle(element, "opacity", 0)
-    setStyle(element, "display", displayElement)
+const transitionProps = (property = "all", duration = `${transitionDuration / 1000}s`, timingFunction = "ease", delay = "0s") =>
+    `${property} ${duration} ${timingFunction} ${delay}`
 
-    setTimeout(() => {
-        setStyle(element, "opacity", "")
-
-        setTimeout(() => {
-            setStyle(element, "transition", "")
-            callback && callback()
-        }, transitionDuration)
-    }, transitionGap)
-}
-
-function fadeOut(element, callback = null, removeElement = false) {
-    setStyle(element, "transition", transitionProps())
-    setStyle(element, "opacity", 0)
-
-    setTimeout(() => {
-        setStyle(element, "display", "none")
-        setStyle(element, "opacity", "")
-        setStyle(element, "transition", "")
-        removeElement && element.remove()
-        callback && callback()
-    }, transitionDuration)
-}
-
-function slideDown(element, callback = null, displayElement = "block") {
-    setStyle(element, "transition", "")
-    setStyle(element, "display", displayElement)
+export function slideDown(element, displayElement = "block") {
+    element.style.transition = "unset"
+    element.style.display = displayElement
 
     let maxHeight = element.offsetHeight
 
-    setStyle(element, "overflow", "hidden")
-    setStyle(element, "maxHeight", 0)
-    setStyle(element, "paddingTop", 0)
-    setStyle(element, "paddingBottom", 0)
-    setStyle(element, "borderTopWidth", 0)
-    setStyle(element, "borderBottomWidth", 0)
+    element.style.overflow = "hidden"
+    element.style.maxHeight = 0
+    element.style.paddingTop = 0
+    element.style.paddingBottom = 0
+    element.style.borderTopWidth = 0
+    element.style.borderBottomWidth = 0
 
     setTimeout(() => {
-        setStyle(element, "transition", transitionProps())
-        setStyle(element, "maxHeight", `${maxHeight}px`)
-        setStyle(element, "paddingTop", "")
-        setStyle(element, "paddingBottom", "")
-        setStyle(element, "borderTopWidth", "")
-        setStyle(element, "borderBottomWidth", "")
+        element.style.transition = transitionProps()
+        element.style.maxHeight = `${maxHeight}px`
+        element.style.paddingTop = ""
+        element.style.paddingBottom = ""
+        element.style.borderTopWidth = ""
+        element.style.borderBottomWidth = ""
 
         setTimeout(() => {
-            setStyle(element, "overflow", "")
-            setStyle(element, "transition", "")
-            callback && callback()
-        }, transitionDuration)
+            element.style.overflow = ""
+            element.style.transition = ""
+        }, transitionDuration - transitionGap)
     }, transitionGap)
 }
 
-function slideUp(element, callback = null, removeElement = false) {
-    setStyle(element, "transition", transitionProps())
-    setStyle(element, "overflow", "hidden")
-    setStyle(element, "maxHeight", 0)
-    setStyle(element, "paddingTop", 0)
-    setStyle(element, "paddingBottom", 0)
-    setStyle(element, "borderTopWidth", 0)
-    setStyle(element, "borderBottomWidth", 0)
+export function slideUp(element, removeElement = false) {
+    element.style.transition = transitionProps()
+    element.style.overflow = "hidden"
+    element.style.maxHeight = 0
+    element.style.paddingTop = 0
+    element.style.paddingBottom = 0
+    element.style.borderTopWidth = 0
+    element.style.borderBottomWidth = 0
 
     setTimeout(() => {
-        setStyle(element, "display", "none")
-        setStyle(element, "maxHeight", "")
-        setStyle(element, "paddingTop", "")
-        setStyle(element, "paddingBottom", "")
-        setStyle(element, "borderTopWidth", "")
-        setStyle(element, "borderBottomWidth", "")
-        setStyle(element, "overflow", "")
-        setStyle(element, "transition", "")
+        element.style.display = "none"
+        element.style.maxHeight = ""
+        element.style.paddingTop = ""
+        element.style.paddingBottom = ""
+        element.style.borderTopWidth = ""
+        element.style.borderBottomWidth = ""
+        element.style.overflow = ""
+        element.style.transition = ""
         removeElement && element.remove()
-        callback && callback()
     }, transitionDuration)
 }
 
-export { fadeIn, fadeOut, slideDown, slideUp }
+export function fadeIn(element, displayElement = "block") {
+    element.style.transition = transitionProps()
+    element.style.opacity = 0
+    element.style.display = displayElement
+
+    setTimeout(() => {
+        element.style.opacity = ""
+
+        setTimeout(() => {
+            element.style.transition = ""
+        }, transitionDuration - transitionGap)
+    }, transitionGap)
+}
+
+export function fadeOut(element, removeElement = false) {
+    element.style.transition = transitionProps()
+    element.style.opacity = 0
+
+    setTimeout(() => {
+        element.style.display = "none"
+        element.style.opacity = ""
+        element.style.transition = ""
+        removeElement && element.remove()
+    }, transitionDuration)
+}

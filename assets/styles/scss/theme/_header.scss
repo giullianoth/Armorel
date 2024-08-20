@@ -1,0 +1,301 @@
+@include theme() {
+    &header {
+        @include containerFluid;
+
+        &__free-freight {
+            background-color: $color-brown;
+            padding-block: 6px;
+
+            p {
+                text-align: center;
+                color: $color-white;
+                text-transform: uppercase;
+                font-family: $font-jost;
+            }
+        }
+
+        &__container {
+            @include container;
+            @include flex(space-between);
+            gap: 10px;
+            padding-block: 4px;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                padding-block: 20px;
+            }
+        }
+
+        &__user {
+            @include flex1;
+            @include flex(flex-end);
+            gap: 30px;
+            margin-bottom: 10px;
+            font-size: 0.6em;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                font-size: 0.9em;
+                order: 3;
+                @include flexBasis(unset);
+            }
+
+            i {
+                color: $color-brown;
+            }
+        }
+
+        &__account {
+            @include flex(flex-start, center, nowrap);
+            gap: 10px;
+
+            .account {
+                a {
+                    color: $color-primary;
+                }
+
+                i {
+                    margin-right: 8px;
+                }
+            }
+
+            .whishlist {
+                i {
+                    font-size: 1.2em;
+                }
+            }
+        }
+
+        &__cart {
+            a {
+                display: inline-block;
+                font-size: 1.6em;
+                @include relative;
+
+                i {                        
+                    color: $color-primary;
+                }
+
+                span {
+                    display: block;
+                    font-size: 0.8rem;
+                    @include absolute(-3px, unset);
+                    right: -6px;
+                    width: 15px;
+                    height: 15px;
+                    background-color: $color-brown;
+                    color: $color-white;
+                    @include rounded;
+                    text-align: center;
+                    line-height: 15px;
+                }
+            }
+        }
+
+        &__logo {
+            img {
+                max-width: 90px;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    max-width: 120px;
+                    order: 1;
+                }
+            }
+        }
+
+        &__title {
+            display: none;
+        }
+
+        &__navigation {
+            @include relative;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                order: 4;
+                @include flex1;
+            }
+        }
+
+        &__menu- {
+            &icon {
+                cursor: pointer;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    display: none;
+                }
+
+                i {
+                    font-size: 26px;
+                    color: $color-primary;
+                }
+            }
+
+            &overlay {
+                @include fixedFull(0, 0, true);
+                z-index: 100;
+                background-color: $color-black-overlay;
+                cursor: pointer;
+                display: none;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    display: block;
+                    background: none;
+                    position: initial;
+                    width: auto;
+                    height: auto;
+                }
+            }
+
+            &container {
+                @include relative;
+                @include containerFluid(true);
+                max-width: 300px;
+                background-color: $color-white;
+                padding: 40px;
+                transform: translateX(-100%);
+                cursor: default;
+                @include transition;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    padding: 0;
+                    max-width: none;
+                    background: none;
+                    transform: none;
+                }
+
+                &.active {
+                    transform: none;
+                }
+            }
+
+            &wrapper {
+                @include containerFluid(true);
+                overflow-y: auto;
+                padding-top: 20px;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    padding: 0;
+                    overflow: visible;
+                }
+            }
+
+            &list {
+                @include flex(center, flex-end, nowrap);
+                flex-direction: column;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    column-gap: 36px;
+                    flex-direction: row;
+                    align-items: center;
+                }
+            }
+
+            &item {
+                @include relative;
+                text-align: right;
+
+                a {                    
+                    font-weight: 500;
+                    font-size: 1.05em;
+                    color: $color-primary;
+                    @include transition;
+                    display: inline-block;
+                    padding-block: 10px;
+
+                    &:hover {
+                        color: $color-brown;
+                    }
+
+                    &.open {
+                        i {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                i {
+                    @include transition;
+                }
+            }
+
+            &close {
+                @include absolute(10px, unset);
+                right: 10px;
+                width: 20px;
+                height: 20px;
+                border: 1px solid $color-primary;
+                @include borderRadius(2px);
+                text-align: center;
+                line-height: 20px;
+                color: $color-primary;
+                cursor: pointer;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    display: none;
+                }
+            }
+        }
+
+        &__submenu {
+            margin-right: 30px;
+            display: none;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include absolute(100%);
+                box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.1);
+                background-color: $color-white;
+                margin: 0;
+            }
+
+            &-item {
+                @include setResponsiveDesign($breakpoint-large) {
+                    a {
+                        padding: 15px 30px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        &__search {
+            @include flex1;
+            
+            @include setResponsiveDesign($breakpoint-large) {
+                order: 2;
+                @include flex2;
+            }
+
+            form {                
+                @include containerFluid;
+            }
+
+            .wrapper {
+                @include containerFluid;
+                @include flex(center, stretch, nowrap);
+            }
+
+            input {
+                @include borderRadius(2px 0 0 2px);
+                flex-grow: 1;
+                border-right: none;
+
+                &::placeholder {
+                    font-style: italic;
+                }
+            }
+
+            .arm-button {
+                @include borderRadius(0 2px 2px 0);
+                @include relative;
+                background-color: $color-brown;
+
+                &::before {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    background-color: $color-brown;
+                    @include absolute(50%, -4px);
+                    transform: translateY(-50%) rotate(45deg);
+                }
+            }
+        }
+    }
+}

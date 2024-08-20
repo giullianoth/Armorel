@@ -1,440 +1,130 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Armorel Semi Joias - Joias em Ouro e Prata</title>
+    <title>Armorel Semi Joias – Joias em Ouro e Prata</title>
 
     <script src="https://kit.fontawesome.com/fe0ca3f893.js" crossorigin="anonymous" defer></script>
 
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles/css/style.min.css">
-
-    <script type="module" src="assets/scripts/script.js" defer></script>
 </head>
-
 <body>
-    <header class="arm_header">
-        <div class="arm_header_freight">
-            <p class="arm_header_freight_text">Frete Grátis a Partit de R$ 249</p>
+    <header class="arm-header">
+        <div class="arm-header__free-freight">
+            <p>Frete grátis a partir de R$ 249</p>
         </div>
 
-        <div class="arm_header_content">
-            <div class="arm_header_content_search">
-                <form action="" method="get" class="arm_header_content_search_form">
-                    <input type="text" name="search" id="search" placeholder="Olá, o que você procura?">
-                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
+        <div class="arm-header__container">
+            <div class="arm-header__user">
+                <div class="arm-header__account">
+                    <div class="account">
+                        <a href="#">
+                            <i class="fa-regular fa-user"></i>
+                            Minha Conta
+                        </a>
+                    </div>
+
+                    <div class="whishlist">
+                        <a href="#">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="arm-header__cart">
+                    <a href="#">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>0</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="arm-header__logo">
+                <h1 class="arm-header__title">Amorel Semi Joias</h1>
+
+                <a href="#">
+                    <img src="assets/images/AMOREL.png" alt="Logo Armorel">
+                </a>
             </div>
 
-            <nav class="arm_header_content_nav">
-                <i class="fa-solid fa-bars arm_header_content_nav_icon j_menu_icon"></i>
+            <nav class="arm-header__navigation">
+                <div class="arm-header__menu-icon j_menu_icon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
 
-                <div class="arm_header_content_nav_lightbox j_mobile_menu_lightbox j_close">
-                    <div class="arm_header_content_nav_lightbox_menuarea j_mobile_menu">
-                        <i class="fa-solid fa-xmark arm_header_content_nav_lightbox_menuarea_closeicon j_close_menu"></i>
+                <div class="arm-header__menu-overlay j_menu_overlay">
+                    <div class="arm-header__menu-container j_menu_container">
+                        <div class="arm-header__menu-wrapper">
+                            <ul class="arm-header__menu-list">
+                                <li class="arm-header__menu-item">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="arm-header__menu-item">
+                                    <a href="#">Loja</a>
+                                </li>
+                                <li class="arm-header__menu-item">
+                                    <a href="#" class="j_dropdown">
+                                        Brincos
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </a>
+                                    
+                                    <ul class="arm-header__submenu j_submenu">
+                                        <li class="arm-header__submenu-item">
+                                            <a href="#">Argolas</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="arm-header__menu-item">
+                                    <a href="#">Colares</a>
+                                </li>
+                                <li class="arm-header__menu-item">
+                                    <a href="#" class="j_dropdown">
+                                        Pulseiras
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </a>
+                                    
+                                    <ul class="arm-header__submenu j_submenu">
+                                        <li class="arm-header__submenu-item">
+                                            <a href="#">Braceletes</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="arm-header__menu-item">
+                                    <a href="#">Conjuntos</a>
+                                </li>
+                                <li class="arm-header__menu-item">
+                                    <a href="#">Contato</a>
+                                </li>
+                            </ul>
 
-                        <ul class="arm_header_content_nav_lightbox_menuarea_menu">
-                            <li class="arm_header_content_nav_lightbox_menuarea_menu_item">
-                                <a href="#">Home</a>
-                            </li>
-
-                            <li class="arm_header_content_nav_lightbox_menuarea_menu_item">
-                                <a href="#">Loja</a>
-                            </li>
-
-                            <li class="arm_header_content_nav_lightbox_menuarea_menu_item">
-                                <a href="#" class="j_dropdown">Brincos <i class="fa-solid fa-angle-down j_dropdown_icon"></i></a>
-
-                                <ul class="arm_header_content_nav_lightbox_menuarea_submenu j_submenu">
-                                    <li class="arm_header_content_nav_lightbox_menuarea_submenu_item">
-                                        <a href="#">Argolas</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="arm_header_content_nav_lightbox_menuarea_menu_item">
-                                <a href="#">Colares</a>
-                            </li>
-
-                            <li class="arm_header_content_nav_lightbox_menuarea_menu_item">
-                                <a href="#" class="j_dropdown">Pulseiras <i class="fa-solid fa-angle-down j_dropdown_icon"></i></a>
-
-                                <ul class="arm_header_content_nav_lightbox_menuarea_submenu j_submenu">
-                                    <li class="arm_header_content_nav_lightbox_menuarea_submenu_item">
-                                        <a href="#">Braceletes</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="arm_header_content_nav_lightbox_menuarea_menu_item">
-                                <a href="#">Conjuntos</a>
-                            </li>
-
-                            <li class="arm_header_content_nav_lightbox_menuarea_menu_item">
-                                <a href="#">Contato</a>
-                            </li>
-                        </ul>
+                            <div class="arm-header__menu-close j_menu_close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
 
-            <div class="arm_header_content_logo">
-                <h1 class="arm_header_content_logo_title">Armorel Semi Joias</h1>
+            <div class="arm-header__search">
+                <form>
+                    <div class="wrapper">
+                        <input type="text" name="search" id="search" placeholder="Olá, o que você procura?">
 
-                <a href="#" class="arm_header_content_logo_img">
-                    <img src="assets/images/AMOREL.png" alt="Armorel Semi Joias">
-                </a>
-            </div>
-
-            <div class="arm_header_content_accountarea">
-                <div class="arm_header_content_accountarea_account">
-                    <a href="#">
-                        <i class="fa-regular fa-user"></i> Minha conta
-                    </a>
-                </div>
-
-                <div class="arm_header_content_accountarea_wishlist">
-                    <a href="#">
-                        <i class="fa-regular fa-heart"></i>
-                    </a>
-                </div>
-
-                <div class="arm_header_content_accountarea_cart">
-                    <span class="arm_header_content_accountarea_cart_count">0</span>
-                    
-                    <a href="#">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                    </a>
-                </div>
+                        <button type="submit" class="arm-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </header>
 
-    <main>
-        <section class="arm_headline">
-            <div class="arm_headline_content">
-                <header class="arm_headline_content_header">
-                    <h1 class="arm_headline_content_header_subtitle">Dia dos Namorados</h1>
-                    <h1 class="arm_headline_content_header_title">Promoção</h1>
-                </header>
+    <main></main>
 
-                <div class="arm_headline_content_info">
-                    <p class="arm_headline_content_info_text">Presenteie seu amor</p>
-                    <p class="arm_headline_content_info_offer">Com até 30% off</p>
-                </div>
+    <footer></footer>
 
-                <div class="arm_headline_content_cta">
-                    <a href="#">Comprar agora</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="arm_category">
-            <div class="arm_category_content">
-                <header class="arm_category_content_titlewrapper">
-                    <h1 class="arm_category_content_titlewrapper_title">Compre por categoria:</h1>
-                    <div class="arm_category_content_titlewrapper_action">
-                        <a href="#">Ver tudo <i class="fa-solid fa-right-long"></i></a>
-                    </div>
-                </header>
-
-                <div class="arm_category_content_categories">
-                    <article class="arm_category">
-                        <figure class="arm_category_imgwrapper">
-                            <a href="#">
-                                <img src="assets/images/1.png" alt="Brincos">
-                            </a>
-                        </figure>
-                    
-                        <div class="arm_category_link">
-                            <a href="#">Brincos</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="arm_releases">
-            <div class="arm_releases_content">
-                <header class="arm_releases_content_titlearea arm_titlearea">
-                    <h1 class="arm_titlearea_title">Lançamentos</h1>
-                </header>
-
-                <div class="arm_releases_content_list j_releases">
-                    <article class="arm_product">
-                        <div class="arm_product_image">
-                            <a href="#">
-                                <img src="storaged/uploads/2023/06/relogio.jpg" alt="Relógio Prata De Quartzo Com">
-                            </a>
-                    
-                            <span class="arm_product_image_discount">-12%</span>
-                        </div>
-                    
-                        <div class="arm_product_info">
-                            <div class="arm_product_info_actions">
-                                <a href="#"><i class="fa-regular fa-heart"></i></a>
-                                <a href="#"><i class="fa-regular fa-eye"></i></a>
-                                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                            </div>
-                    
-                            <header class="arm_product_info_title">
-                                <h2>
-                                    <a href="#">Relógio Prata De Quartzo Com</a>
-                                </h2>
-                            </header>
-                    
-                            <div class="arm_product_info_rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <span class="rating_count">(2)</span>
-                            </div>
-                    
-                            <div class="arm_product_info_price">
-                                <p class="arm_product_info_price_currentprice">R$ 220,00</p>
-                                <p class="arm_product_info_price_actualprice">R$ 250,00</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="arm_category2">
-            <div class="arm_category2_content">
-                <figure class="arm_category2_content_item">
-                    <a href="#">
-                        <img src="assets/images/1-2.png" alt="Colares">
-                    </a>
-                </figure>
-
-                <figure class="arm_category2_content_item">
-                    <a href="#">
-                        <img src="assets/images/2-2.png" alt="Argolas">
-                    </a>
-                </figure>
-
-                <figure class="arm_category2_content_item">
-                    <a href="#">
-                        <img src="assets/images/3-2.png" alt="Braceletes">
-                    </a>
-                </figure>
-            </div>
-        </section>
-
-        <section class="arm_releases">
-            <div class="arm_releases_content">
-                <header class="arm_releases_content_titlearea arm_titlearea">
-                    <h1 class="arm_titlearea_title">Os queridinhos</h1>
-                </header>
-
-                <div class="arm_releases_content_list">
-                    <article class="arm_product">
-                        <div class="arm_product_image">
-                            <a href="#">
-                                <img src="storaged/uploads/2023/06/relogio.jpg" alt="Relógio Prata De Quartzo Com">
-                            </a>
-                    
-                            <span class="arm_product_image_discount">-12%</span>
-                        </div>
-                    
-                        <div class="arm_product_info">
-                            <div class="arm_product_info_actions">
-                                <a href="#"><i class="fa-regular fa-heart"></i></a>
-                                <a href="#"><i class="fa-regular fa-eye"></i></a>
-                                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                            </div>
-                    
-                            <header class="arm_product_info_title">
-                                <h2>
-                                    <a href="#">Relógio Prata De Quartzo Com</a>
-                                </h2>
-                            </header>
-                    
-                            <div class="arm_product_info_rating">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <span class="rating_count">(2)</span>
-                            </div>
-                    
-                            <div class="arm_product_info_price">
-                                <p class="arm_product_info_price_currentprice">R$ 220,00</p>
-                                <p class="arm_product_info_price_actualprice">R$ 250,00</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="arm_shopinfo">
-            <div class="arm_shopinfo_content">
-                <article class="arm_shopinfo_content_item">
-                    <figure class="arm_shopinfo_content_item_img">
-                        <img src="assets/images/caminhao-de-entrega-4.png.webp" alt="Caminhão">
-                    </figure>
-
-                    <header class="arm_shopinfo_content_item_title">
-                        <h1>Receba em casa</h1>
-                    </header>
-
-                    <p class="arm_shopinfo_content_item_info">Enviamos para todo o Brasil</p>
-                </article>
-
-                <article class="arm_shopinfo_content_item">
-                    <figure class="arm_shopinfo_content_item_img">
-                        <img src="assets/images/devolucoes-1.png.webp" alt="Caixa">
-                    </figure>
-
-                    <header class="arm_shopinfo_content_item_title">
-                        <h1>Troca e devolução</h1>
-                    </header>
-
-                    <p class="arm_shopinfo_content_item_info">7 dias após o recebimento</p>
-                </article>
-
-                <article class="arm_shopinfo_content_item">
-                    <figure class="arm_shopinfo_content_item_img">
-                        <img src="assets/images/cartoes-de-credito-1.png.webp" alt="Cartões">
-                    </figure>
-
-                    <header class="arm_shopinfo_content_item_title">
-                        <h1>Parcele em até 12x</h1>
-                    </header>
-
-                    <p class="arm_shopinfo_content_item_info">Com cartões de crédito</p>
-                </article>
-
-                <article class="arm_shopinfo_content_item">
-                    <figure class="arm_shopinfo_content_item_img">
-                        <img src="assets/images/cadeado-1.png.webp" alt="Cadeado">
-                    </figure>
-
-                    <header class="arm_shopinfo_content_item_title">
-                        <h1>Site 100% seguro</h1>
-                    </header>
-
-                    <p class="arm_shopinfo_content_item_info">Seus dados estão protegidos</p>
-                </article>
-            </div>
-        </section>
-    </main>
-
-    <footer class="arm_footer">
-        <div class="arm_footer_nav">
-            <div class="arm_footer_nav_content">
-                <article class="arm_footer_nav_content_item">
-                    <header class="arm_footer_nav_content_item_title">
-                        <h1>Institucional</h1>
-                    </header>
-
-                    <ul class="arm_footer_nav_content_item_menu">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-
-                        <li>
-                            <a href="#">Sobre Nós</a>
-                        </li>
-
-                        <li>
-                            <a href="#">Todos os Produtos</a>
-                        </li>
-
-                        <li>
-                            <a href="#">Contato</a>
-                        </li>
-                    </ul>
-                </article>
-
-                <article class="arm_footer_nav_content_item">
-                    <header class="arm_footer_nav_content_item_title">
-                        <h1>Ajuda</h1>
-                    </header>
-
-                    <ul class="arm_footer_nav_content_item_menu">
-                        <li>
-                            <a href="#">Política de Privacidade</a>
-                        </li>
-
-                        <li>
-                            <a href="#">Política de Devolução e Trocas</a>
-                        </li>
-
-                        <li>
-                            <a href="#">Rastreamento e Pedidos</a>
-                        </li>
-                    </ul>
-
-                    <ul class="arm_footer_nav_content_item_menu contact">
-                        <li>
-                            <a href="mailto:tharsoweb@gmail.com">
-                                <i class="fa-regular fa-envelope"></i>
-                                tharsoweb@gmail.com
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                (61) 9 9999-9999
-                            </a>
-                        </li>
-                    </ul>
-                </article>
-
-                <article class="arm_footer_nav_content_item">
-                    <header class="arm_footer_nav_content_item_title">
-                        <h1>Formas de Pagamento</h1>
-                    </header>
-
-                    <figure class="arm_footer_nav_content_item_payment">
-                        <img src="assets/images/formas.webp" alt="Formas de Pagamento">
-                    </figure>
-
-                    <figure class="arm_footer_nav_content_item_payment">
-                        <img src="assets/images/selossl.webp" alt="Site Seguro">
-                    </figure>
-                </article>
-
-                <article class="arm_footer_nav_content_item">
-                    <header class="arm_footer_nav_content_item_title">
-                        <h1>Nossas Redes</h1>
-                    </header>
-
-                    <ul class="arm_footer_nav_content_item_menu social_networks">
-                        <li>
-                            <i class="fa-brands fa-facebook"></i>
-                        </li>
-
-                        <li>
-                            <i class="fa-brands fa-twitter"></i>
-                        </li>
-
-                        <li>
-                            <i class="fa-brands fa-instagram"></i>
-                        </li>
-
-                        <li>
-                            <i class="fa-brands fa-pinterest"></i>
-                        </li>
-                    </ul>
-                </article>
-            </div>
-        </div>
-
-        <div class="arm_footer_rights">
-            <p>Amorel Joias © 2023 Todos os direitos reservados.</p>
-            <p>CNPJ: 00000000000/00</p>
-        </div>
-    </footer>
+    <script type="module" src="assets/scripts/script.js"></script>
 </body>
-
 </html>

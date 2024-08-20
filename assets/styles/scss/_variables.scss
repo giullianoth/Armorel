@@ -1,55 +1,40 @@
-// LAYOUT AND BREAKPOINTS
-$layout-mobile: 375px;
-$layout-desktop: 1440px;
-
-$breakpoint-mobile: 480px;
-$breakpoint-mobile-landscape: 600px;
-$breakpoint-tablet: 768px;
-$breakpoint-tablet-landscape: 900px;
-$breakpoint-desktop-sd: 1024px;
-$breakpoint-desktop-hd1: 1366px;
-$breakpoint-desktop-hd2: $layout-desktop;
-$breakpoint-desktop-fhd: 1920px;
+// BREAKPOINTS
+$breakpoint-extra-small: 375px;
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-extra-large: 1024px;
+$breakpoint-xx-large: 1200px;
 
 // COLORS
-$color-jet: #282A2C;
-$color-gray: #7A7A7A;
-$color-dark-pastel-green: #38C438;
-$color-raw-umber: #9D6335;
-$color-bistre: #493328;
-$color-beaver: #B5856C;
-$color-persian-red: #CF2E2E;
-$color-mikado-yellow: #FEC42D;
-$color-platinum: #DDD;
-$color-silver: #B6B6B6;
-$color-seasalt: #F6F6F6;
+$color-primary: #282A2C;
+$color-secondary: #282A2C;
+$color-secondary: #282A2C;
+$color-text: #7A7A7A;
+$color-accent: #38C43B;
+
+$color-brown: #9D6335;
+$color-lightgray: #DDD;
 $color-white: #FFF;
 
-$color-black-alpha-6: #00000099;
-$color-black-alpha-1: #0000001A;
+$color-black-overlay: rgba(0, 0, 0, .6);
 
 // TIPOGRAPHY
-$font-jost: 'Jost', sans-serif;
-$font-poppins: 'Poppins', sans-serif;
-$font-agraham: "Agraham", cursive;
-
-$font-path: "../../fonts";
-
+$font-jost: "Jost", system-ui;
+$font-poppins: "Poppins", system-ui;
+$font-ephesis: "Ephesis", cursive;
 $font-size-default: 1rem;
-$font-size-small: 0.8rem;
-$font-size-big: 1.4rem;
 
-// CONTAINER MAX WIDTH
-$container-max-width-default: 1140px;
-$container-padding-y: 0;
-$container-padding-x: 20px;
+// CONTAINER WIDTH
+$container-width: 1140px;
+$side-clearance: 20px;
+$section-clearance: 80px;
 
 // TRANSITIONS AND ANIMATIONS
 $transition-duration-default: 0.3s;
 
-// BORDER RADIUS
-$radius-mini: 4px;
-$radius-small: 10px;
+// BROWSER PREFIXES
+$browser-prefixes-default: ("moz", "webkit");
 
-// BROWSER CORES
-$browser-cores-default: ("moz", "webkit");
+// IMAGES
+$image-path: "../../../assets/images";
