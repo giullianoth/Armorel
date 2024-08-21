@@ -1,0 +1,76 @@
+@include theme() {
+    &hero {
+        @include containerFluid;
+        @include backgroundImage("BANNER-2-MOBILE-2.png");
+
+        @include setResponsiveDesign($breakpoint-large) {
+            @include backgroundImage("BANNER-3.png");
+        }
+
+        &__container {
+            @include container;
+            padding-block: 60px;
+            min-height: 650px;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex(center, flex-start);
+                flex-direction: column;
+            }
+        }
+
+        &__title {
+            h1 {
+                color: $color-dark-brown;
+                font-weight: 400;
+                text-transform: lowercase;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    font-size: 2em;
+                }
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    font-size: 2.2em;
+                }
+
+                span {
+                    display: block;
+                    text-transform: initial;
+                    font-family: $font-ephesis;
+                    font-size: 4.4em;
+                    color: $color-brown;
+                    line-height: 0.8;
+                }
+            }
+        }
+
+        &__headline {
+            font-family: $font-jost;
+            text-transform: lowercase;
+            font-size: 1.4em;
+            color: $color-dark-brown;
+            margin-bottom: 20px;
+
+            span {
+                display: block;
+                font-weight: 500;
+                text-transform: uppercase;
+                font-size: 1.1em;
+            }
+        }
+
+        &__cta {
+            .arm-button {
+                text-transform: uppercase;
+                @include borderRadius(15px);
+                background-image: linear-gradient(to right, $color-brown, $color-light-brown, $color-brown);
+                background-size: 200%;
+                background-position: left;
+                @include transition;
+
+                &:hover {
+                    background-position: right;
+                }
+            }
+        }
+    }
+}

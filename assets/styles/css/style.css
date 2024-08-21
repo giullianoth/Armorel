@@ -527,3 +527,86 @@ input::placeholder {
   background-color: #282A2C;
   padding-block: 10px;
 }
+
+/* HOME */
+/* HERO SECTION */
+.arm-hero {
+  width: 100%;
+  background-image: url("../../../assets/images/BANNER-2-MOBILE-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media screen and (min-width: 992px) {
+  .arm-hero {
+    background-image: url("../../../assets/images/BANNER-3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+.arm-hero__container {
+  max-width: 1140px;
+  padding-inline: 20px;
+  margin-inline: auto;
+  padding-block: 60px;
+  min-height: 650px;
+}
+@media screen and (min-width: 992px) {
+  .arm-hero__container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+.arm-hero__title h1 {
+  color: #4F3A2E;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+@media screen and (min-width: 576px) {
+  .arm-hero__title h1 {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .arm-hero__title h1 {
+    font-size: 2.2em;
+  }
+}
+.arm-hero__title h1 span {
+  display: block;
+  text-transform: initial;
+  font-family: "Ephesis", cursive;
+  font-size: 4.4em;
+  color: #9D6335;
+  line-height: 0.8;
+}
+.arm-hero__headline {
+  font-family: "Jost", system-ui;
+  text-transform: lowercase;
+  font-size: 1.4em;
+  color: #4F3A2E;
+  margin-bottom: 20px;
+}
+.arm-hero__headline span {
+  display: block;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+.arm-hero__cta .arm-button {
+  text-transform: uppercase;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  background-image: linear-gradient(to right, #9D6335, #B8896C, #9D6335);
+  background-size: 200%;
+  background-position: left;
+  transition: all 0.3s ease 0s;
+}
+.arm-hero__cta .arm-button:hover {
+  background-position: right;
+}
