@@ -39,13 +39,13 @@ li {
 input {
     font-family: inherit;
     font-size: inherit;
-    border: 1px solid $color-lightgray;
+    border: 1px solid $color-light-gray;
     padding: 10px;
     outline: none;
     @include borderRadius(5px);
 
     &::placeholder {
-        color: $color-lightgray;
+        color: $color-light-gray;
     }
 }
 
