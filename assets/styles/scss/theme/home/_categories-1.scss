@@ -12,6 +12,10 @@
         &__title {
             h1 {
                 font-size: 1.2em;
+
+                @include setResponsiveDesign($breakpoint-extra-small, true) {
+                    font-size: 1em;
+                }
             }
         }
 
@@ -22,12 +26,20 @@
                 font-weight: 600;
                 @include transition;
 
+                @include setResponsiveDesign($breakpoint-extra-small, true) {
+                    font-size: 0.8em;
+                }
+
                 &:hover {
                     color: $color-brown;
                 }
 
                 i {
                     margin-left: 6px;
+
+                    @include setResponsiveDesign($breakpoint-extra-small, true) {
+                        margin-left: 3px;
+                    }
                 }
             }
         }
@@ -42,7 +54,7 @@
             &:hover {
                 img {
                     filter: saturate(35%);
-                    transform: scale(1.15);
+                    transform: scale(1.1);
                 }
             }
 

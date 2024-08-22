@@ -66,4 +66,154 @@ i {
         border: none;
         @include borderRadius(5px);
     }
+
+    &title-divider {
+        margin-bottom: 40px;
+        overflow: hidden;
+
+        h1 {
+            font-weight: 600;
+            text-transform: uppercase;
+            width: fit-content;
+            margin-inline: auto;
+            @include relative;
+
+            &::before {
+                content: "";
+                @include absolute(50%, unset);
+                right: calc(100% + 10px);
+                width: 100vw;
+                height: 1px;
+                background-color: $color-light-gray;
+            }
+
+            &::after {
+                content: "";
+                @include absolute(50%, calc(100% + 10px));
+                width: 100vw;
+                height: 1px;
+                background-color: $color-light-gray;
+            }
+        }
+    }
+
+    &product {
+        &-item {
+            @include transition;
+            padding: 10px;
+            background-color: $color-white;
+            text-align: center;
+
+            &:hover {
+                box-shadow: 0 20px 40px rgba(0, 0, 0, .1);
+
+                .arm-product-actions {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        &-image {
+            @include relative;
+            margin-bottom: 10px;
+        }
+
+        &-actions {
+            @include transition;
+            @include absolute(unset, 50%);
+            bottom: 0;
+            transform: translateX(-50%);
+            background-color: $color-white;
+            @include flex(center, center, nowrap);
+            @include borderRadius(5px 5px 0 0);
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        &-action {
+            a {
+                display: inline-block;
+                padding: 10px 20px;
+                color: $color-primary;
+                font-size: 0.9em;
+                @include transition;
+
+                &:hover {
+                    color: $color-brown;
+                }
+            }
+        }
+
+        &-discount {
+            @include absolute(10px, unset);
+            right: 10px;
+            background-color: $color-accent;
+            padding: 3px 6px;
+            color: $color-white;
+            @include borderRadius(3px);
+            font-size: 0.9em;
+        }
+
+        &-name {
+            font-size: $font-size-default;
+            font-weight: 400;
+            font-family: $font-poppins;
+            line-height: 1;
+            margin-bottom: 10px;
+
+            a {
+                color: $color-primary;
+                @include transition;
+
+                &:hover {
+                    color: $color-brown;
+                }
+            }
+        }
+
+        &-rating {
+            color: $color-ambar;
+            margin-bottom: 10px;
+
+            &-qt {
+                font-size: 0.8em;
+                color: $color-text;
+                margin-left: 6px;
+            }
+        }
+
+        &-price {
+            margin-bottom: 10px;
+            font-family: $font-jost;
+            font-weight: 700;
+            color: $color-primary;
+            font-size: 1.2em;
+        }
+
+        &-current-price {
+            font-size: 0.8em;
+            text-decoration: line-through;
+            color: $color-text;
+        }
+
+        &-installment {
+            color: $color-primary;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+        }
+
+        &-full-payment {
+            width: fit-content;
+            margin-inline: auto;
+            background-color: $color-light-green;
+            padding: 4px 10px;
+            @include borderRadius(5px);
+            color: $color-accent;
+
+            span {
+                color: $color-primary;
+            }
+        }
+    }
 }

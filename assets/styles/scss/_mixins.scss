@@ -64,8 +64,8 @@
     }
 }
 
-@mixin flex1($gap: 0) {
-    @include flexBasis(100%, $gap);
+@mixin flex1() {
+    @include flexBasis(100%);
 }
 
 @mixin flex2($gap: 0) {
