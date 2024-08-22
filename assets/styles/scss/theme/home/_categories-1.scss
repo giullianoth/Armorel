@@ -1,0 +1,58 @@
+@include theme() {
+    &categories1 {
+        @include containerFluid;
+        margin-block: 50px;
+
+        &__container {
+            @include container;
+            @include flex(space-between);
+            row-gap: 40px;
+        }
+
+        &__title {
+            h1 {
+                font-size: 1.2em;
+            }
+        }
+
+        &__cta {
+            a {
+                color: $color-primary;
+                font-family: $font-jost;
+                font-weight: 600;
+                @include transition;
+
+                &:hover {
+                    color: $color-brown;
+                }
+
+                i {
+                    margin-left: 6px;
+                }
+            }
+        }
+
+        &__list {
+            @include flex(space-evenly);
+            gap: 20px;
+            @include flex1;
+        }
+
+        &__item {
+            &-image {
+                img {
+                    width: 100px;
+                }
+            }
+
+            &-title {
+                h2 {
+                    font-family: $font-poppins;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

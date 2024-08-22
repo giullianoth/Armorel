@@ -55,6 +55,10 @@ input::placeholder {
   color: #DDD;
 }
 
+i.fa-regular, i.fa-solid, i.fa-brands {
+  vertical-align: middle;
+}
+
 .arm-button {
   font-family: "Jost", system-ui;
   font-size: 1rem;
@@ -271,6 +275,11 @@ input::placeholder {
   transition: all 0.3s ease 0s;
   display: inline-block;
   padding-block: 10px;
+}
+@media screen and (min-width: 992px) {
+  .arm-header__menu-item a {
+    padding: 0;
+  }
 }
 .arm-header__menu-item a:hover {
   color: #9D6335;
@@ -536,6 +545,7 @@ input::placeholder {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  margin-top: 50px;
 }
 @media screen and (min-width: 992px) {
   .arm-hero {
@@ -543,6 +553,7 @@ input::placeholder {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    margin-top: 30px;
   }
 }
 .arm-hero__container {
@@ -584,6 +595,11 @@ input::placeholder {
   color: #9D6335;
   line-height: 0.8;
 }
+@media screen and (max-width: 375px) {
+  .arm-hero__title h1 span {
+    font-size: 3.3em;
+  }
+}
 .arm-hero__headline {
   font-family: "Jost", system-ui;
   text-transform: lowercase;
@@ -609,4 +625,52 @@ input::placeholder {
 }
 .arm-hero__cta .arm-button:hover {
   background-position: right;
+}
+
+/* HERO CATEGORIES 1 */
+.arm-categories1 {
+  width: 100%;
+  margin-block: 50px;
+}
+.arm-categories1__container {
+  max-width: 1140px;
+  padding-inline: 20px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 40px;
+}
+.arm-categories1__title h1 {
+  font-size: 1.2em;
+}
+.arm-categories1__cta a {
+  color: #282A2C;
+  font-family: "Jost", system-ui;
+  font-weight: 600;
+  transition: all 0.3s ease 0s;
+}
+.arm-categories1__cta a:hover {
+  color: #9D6335;
+}
+.arm-categories1__cta a i {
+  margin-left: 6px;
+}
+.arm-categories1__list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-basis: 100%;
+}
+.arm-categories1__item-image img {
+  width: 100px;
+}
+.arm-categories1__item-title h2 {
+  font-family: "Poppins", system-ui;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
 }

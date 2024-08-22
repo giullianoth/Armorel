@@ -49,6 +49,12 @@ input {
     }
 }
 
+i {
+    &.fa-regular, &.fa-solid, &.fa-brands {
+        vertical-align: middle;
+    }
+}
+
 @include theme() {
     &button {
         font-family: $font-jost;

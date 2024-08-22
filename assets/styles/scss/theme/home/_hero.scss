@@ -2,9 +2,11 @@
     &hero {
         @include containerFluid;
         @include backgroundImage("BANNER-2-MOBILE-2.png");
+        margin-top: 50px;
 
         @include setResponsiveDesign($breakpoint-large) {
             @include backgroundImage("BANNER-3.png");
+            margin-top: 30px;
         }
 
         &__container {
@@ -39,6 +41,10 @@
                     font-size: 4.4em;
                     color: $color-brown;
                     line-height: 0.8;
+
+                    @include setResponsiveDesign($breakpoint-extra-small, true) {
+                        font-size: 3.3em;
+                    }
                 }
             }
         }

@@ -200,6 +200,10 @@
                     display: inline-block;
                     padding-block: 10px;
 
+                    @include setResponsiveDesign($breakpoint-large) {
+                        padding: 0;
+                    }
+
                     &:hover {
                         color: $color-brown;
                     }
