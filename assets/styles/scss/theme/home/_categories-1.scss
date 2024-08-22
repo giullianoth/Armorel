@@ -46,11 +46,29 @@
 
         &__list {
             @include flex(space-evenly);
-            gap: 20px;
+            gap: 40px;
+            flex-direction: column;
             @include flex1;
+
+            @include setResponsiveDesign($breakpoint-small) {
+                flex-direction: row;
+                column-gap: 0;
+            }
         }
 
         &__item {
+            @include setResponsiveDesign($breakpoint-small) {
+                @include flex2;
+            }
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                @include flex3;
+            }
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flexBasis(unset);
+            }
+
             &:hover {
                 img {
                     filter: saturate(35%);
@@ -60,8 +78,14 @@
 
             &-image {
                 img {
-                    width: 100px;
+                    width: 180px;
                     @include transition;
+                    margin-inline: auto;
+                    display: block;
+
+                    @include setResponsiveDesign($breakpoint-large) {
+                        width: 100px;
+                    }
                 }
             }
 

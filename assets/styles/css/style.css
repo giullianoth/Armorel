@@ -77,10 +77,16 @@ i.fa-regular, i.fa-solid, i.fa-brands {
 }
 .arm-title-divider h1 {
   font-weight: 600;
+  font-size: 1.1em;
   text-transform: uppercase;
   width: fit-content;
   margin-inline: auto;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .arm-title-divider h1 {
+    font-size: 1.4em;
+  }
 }
 .arm-title-divider h1::before {
   content: "";
@@ -818,16 +824,45 @@ i.fa-regular, i.fa-solid, i.fa-brands {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
+  flex-direction: column;
   flex-basis: 100%;
+}
+@media screen and (min-width: 576px) {
+  .arm-categories1__list {
+    flex-direction: row;
+    column-gap: 0;
+  }
+}
+@media screen and (min-width: 576px) {
+  .arm-categories1__item {
+    flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .arm-categories1__item {
+    flex-basis: 33.3333333333%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .arm-categories1__item {
+    flex-basis: unset;
+  }
 }
 .arm-categories1__item:hover img {
   filter: saturate(35%);
   transform: scale(1.1);
 }
 .arm-categories1__item-image img {
-  width: 100px;
+  width: 180px;
   transition: all 0.3s ease 0s;
+  margin-inline: auto;
+  display: block;
+}
+@media screen and (min-width: 992px) {
+  .arm-categories1__item-image img {
+    width: 100px;
+  }
 }
 .arm-categories1__item-title h2 {
   font-family: "Poppins", system-ui;

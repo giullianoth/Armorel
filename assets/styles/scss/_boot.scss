@@ -73,10 +73,15 @@ i {
 
         h1 {
             font-weight: 600;
+            font-size: 1.1em;
             text-transform: uppercase;
             width: fit-content;
             margin-inline: auto;
             @include relative;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                font-size: 1.4em;
+            }
 
             &::before {
                 content: "";
