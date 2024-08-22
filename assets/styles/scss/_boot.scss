@@ -134,12 +134,13 @@ i {
             @include borderRadius(5px 5px 0 0);
             opacity: 0;
             visibility: hidden;
+            padding-inline: 10px;
         }
 
         &-action {
             a {
                 display: inline-block;
-                padding: 10px 20px;
+                padding: 10px;
                 color: $color-primary;
                 font-size: 0.9em;
                 @include transition;
@@ -215,9 +216,11 @@ i {
             padding: 4px 10px;
             @include borderRadius(5px);
             color: $color-accent;
+            font-size: 0.8em;
 
             span {
                 color: $color-primary;
+                font-weight: 500;
             }
         }
     }
