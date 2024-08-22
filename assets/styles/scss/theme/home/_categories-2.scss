@@ -1,0 +1,51 @@
+@include theme() {
+    &categories2 {
+        @include containerFluid;
+        margin-block: 50px;
+
+        &__container {
+            @include flex(flex-start, stretch);
+
+            @include setResponsiveDesign($breakpoint-small) {
+                @include container($breakpoint-small);
+                gap: 20px;
+            }
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include container;
+            }
+        }
+
+        &__link {
+            @include flex1;
+            overflow: hidden;
+            @include transition;
+
+            @include setResponsiveDesign($breakpoint-small) {
+                @include borderRadius(5px);
+            }
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex3(20px);
+
+                &:hover {
+                    transform: translateY(-20px);
+                }
+            }
+
+            img {
+                height: 100%;
+                @include transition;
+
+                &:hover {
+                    transform: scale(1.1);
+                    filter: saturate(35%);
+
+                    @include setResponsiveDesign($breakpoint-large) {
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+}
