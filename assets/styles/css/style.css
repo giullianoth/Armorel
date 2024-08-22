@@ -665,8 +665,13 @@ i.fa-regular, i.fa-solid, i.fa-brands {
   gap: 20px;
   flex-basis: 100%;
 }
+.arm-categories1__item:hover img {
+  filter: saturate(35%);
+  transform: scale(1.15);
+}
 .arm-categories1__item-image img {
   width: 100px;
+  transition: all 0.3s ease 0s;
 }
 .arm-categories1__item-title h2 {
   font-family: "Poppins", system-ui;

@@ -39,9 +39,17 @@
         }
 
         &__item {
+            &:hover {
+                img {
+                    filter: saturate(35%);
+                    transform: scale(1.15);
+                }
+            }
+
             &-image {
                 img {
                     width: 100px;
+                    @include transition;
                 }
             }
 
