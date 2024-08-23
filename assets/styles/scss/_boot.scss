@@ -65,6 +65,9 @@ i {
         cursor: pointer;
         border: none;
         @include borderRadius(5px);
+        text-align: center;
+        display: inline-block;
+        @include transition;
     }
 
     &title-divider {

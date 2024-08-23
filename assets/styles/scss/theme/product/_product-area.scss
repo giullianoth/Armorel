@@ -1,0 +1,358 @@
+@include theme() {
+    &product-area {
+        @include containerFluid;
+        padding-block: 50px;
+        margin-top: 50px;
+        background-color: $color-lighter-gray;
+
+        &__container {
+            @include container;
+        }
+
+        &__breadcumb {
+            margin-bottom: 30px;
+
+            i {
+                margin-inline: 7px;
+            }
+
+            a {
+                color: $color-text;
+                @include transition;
+
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+
+        &__presentation {
+            @include flex(flex-start, stretch);
+            gap: 50px;
+        }
+
+        &__image {
+            @include flex1;
+            @include container(500px, 0);
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex2(50px);
+            }
+
+            &-featured {
+                @include containerFluid;
+                overflow: hidden;
+                margin-bottom: 12px;
+                @include relative;
+
+                .wrapper {
+                    @include containerFluid(true);
+                    @include flex(flex-start, stretch, nowrap);
+
+                    img {
+                        @include containerFluid;
+                        display: block;
+                    }
+                }
+
+                .expand {
+                    @include absolute(20px, unset);
+                    right: 20px;
+                    width: 50px;
+                    height: 50px;
+                    background-color: $color-white;
+                    text-align: center;
+                    line-height: 50px;
+                    font-size: 1.2em;
+                    color: $color-primary;
+                    cursor: pointer;
+                }
+            }
+
+            &-thumbnails {
+                @include containerFluid;
+
+                &-list {
+                    @include flex(flex-start, stretch, nowrap);
+                    column-gap: 12px;
+                }
+
+                &-item {
+                    @include flex4(12px);
+                    cursor: pointer;
+
+                    @include setResponsiveDesign($breakpoint-large) {
+                        @include flexBasis(unset);
+                    }
+                }
+            }
+
+            &-expanded {
+                @include fixedFull(0, 0, true);
+                @include flex;
+                background-color: $color-primary;
+                color: $color-white;
+                z-index: 110;
+                display: none;
+
+                .actions {
+                    @include absoluteFull(0, 0, true);
+                }
+
+                .nav {
+                    @include absolute(20px, 20px);
+                }
+                .close {
+                    @include absolute(20px, unset);
+                    right: 20px;
+                    cursor: pointer;
+                }
+                .btn {
+                    @include absolute(50%, unset);
+                    transform: translateY(-50%);
+                    cursor: pointer;
+
+                    &.prev {
+                        left: 20px;
+                    }
+                    &.next {
+                        right: 20px;
+                    }
+                }
+            }
+        }
+
+        &__details {
+            @include flex1;
+            background-color: $color-white;
+            padding: 20px;
+            box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                padding: 40px;
+            }
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex2(50px);
+            }
+        }
+
+        &__title {
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            line-height: 1;
+
+            @include setResponsiveDesign($breakpoint-extra-large) {
+                font-size: 1.4em;
+            }
+        }
+
+        &__button {
+            cursor: default;
+            padding: 12px;
+
+            i {
+                margin-right: 10px;
+            }
+        }
+
+        &__rating {
+            margin-bottom: 30px;
+            font-size: 0.8em;
+
+            i {
+                color: $color-ambar;
+            }
+        }
+
+        &__price {
+            font-weight: 700;
+            font-size: 1.8em;
+            font-family: $font-jost;
+            color: $color-primary;
+            margin-bottom: 20px;
+        }
+
+        &__current-price {
+            font-size: 0.6em;
+            color: $color-text;
+            text-decoration: line-through;
+        }
+
+        &__installment {
+            margin-bottom: 20px;
+            color: $color-primary;
+        }
+
+        &__full-payment {
+            margin-bottom: 20px;
+            background-color: $color-light-green;
+            color: $color-accent;
+            font-weight: 500;
+        }
+
+        &__discount {
+            margin-bottom: 20px;
+        }
+
+        &__installment-details {
+            margin-block: 30px 40px;
+
+            &-button {                
+                background: none;
+                border: 1px solid $color-brown;
+                color: $color-brown;
+                cursor: pointer;
+
+                &:hover {
+                    color: $color-white;
+                    background-color: $color-brown;
+                }
+            }
+        }
+
+        &__installment-modal {
+            text-align: start;
+            @include fixedFull(0, 0, true);
+            background-color: $color-black-overlay;
+            padding: 20px 10px;
+            display: none;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                padding: 50px 6rem;
+            }
+
+            @include setResponsiveDesign($breakpoint-extra-large) {
+                padding: 10rem 16rem;
+            }
+
+            .content {
+                background-color: $color-white;
+                @include containerFluid(true);
+                padding: 20px;
+                @include relative;
+                @include borderRadius(10px);
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    padding: 40px;
+                }
+
+                @include setResponsiveDesign($breakpoint-extra-large) {
+                    @include container(600px, 40px);
+                }
+            }
+
+            .wrapper {
+                @include containerFluid(true);
+                overflow-y: auto;
+            }
+
+            .close {
+                cursor: pointer;
+                @include absolute(0, unset);
+                right: 10px;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    top: 20px;
+                    right: 20px;
+                }
+            }
+
+            .title, .subtitle {
+                font-size: 1.2em;
+                font-weight: 600;
+                font-family: $font-jost;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+
+            .title {
+                border-bottom: 1px solid $color-lighter-gray;
+            }
+
+            .cards {
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                border-bottom: 1px solid $color-lighter-gray;
+
+                &-info {
+                    cursor: default;
+                    padding: 4px 12px;
+                    background-color: $color-light-green;
+                    color: $color-accent;
+                    font-weight: 500;
+                    font-size: 0.8em;
+                }
+            }
+
+            .installments-info {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                font-size: 0.8em;
+                
+                p {
+                    padding-block: 5px;
+                    border-bottom: 1px solid $color-lighter-gray;
+                }
+            }
+        }
+
+        &__freight {
+            padding: 14px;
+            background-color: $color-lighter-gray;
+            margin-bottom: 30px;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                padding: 20px;
+            }
+
+            input {
+                width: 100%;
+            }
+        }
+
+        &__actions {
+            @include flex(flex-start, stretch, nowrap);
+            column-gap: 20px;
+
+            &-quantity {
+                @include flex(center, center, nowrap);
+
+                .quantity {
+                    padding: 6px 30px;
+                    border: 1px solid $color-light-gray;
+                    border-right: none;
+                }
+
+                .change {
+                    height: 100%;
+                    @include flex(flex-start);
+                    flex-direction: column;
+
+                    i {
+                        background-color: $color-accent;
+                        color: white;
+                        font-size: 0.7em;
+                        padding-inline: 8px;
+                        @include flex2;
+                        cursor: pointer;
+                        @include flex;
+                    }
+                }
+            }
+
+            &-purchase {
+                .arm-button {
+                    height: 100%;
+                    @include flex;
+                    font-size: 1.2em;
+                }
+            }
+
+            &-wishlist {
+                font-size: 1.6em;
+                @include flex;
+            }
+        }
+    }
+}
