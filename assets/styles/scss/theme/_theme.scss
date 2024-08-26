@@ -5,20 +5,27 @@
 @import "footer";
 
 /* HOME PAGE */
-/* HERO SECTION */
+/* Hero Section */
 @import "home/hero";
 
-/* CATEGORIES SECTION 1 */
+/* Categories Section 1 */
 @import "home/categories-1";
 
-/* RELEASES SECTION */
+/* Releases Section */
 @import "home/releases";
 
-/* CATEGORIES SECTION 2 */
+/* Categories Section 2 */
 @import "home/categories-2";
 
-/* FAVORITES SECTION */
+/* Favorites Section */
 @import "home/favorites";
 
 /* PRODUCT PAGE */
+/* Product details Section */
 @import "product/product-area";
+
+/* Product Rating Section */
+@import "product/product-rating";
+
+/* Product Related Section */
+@import "product/product-related";

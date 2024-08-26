@@ -47,12 +47,18 @@ li {
     list-style: none;
 }
 
-input {
+label {
+    cursor: pointer;
+    display: block;
+}
+
+input, textarea {
     font-family: inherit;
     font-size: inherit;
     border: 1px solid $color-light-gray;
     padding: 10px;
     outline: none;
+    display: block;
     @include borderRadius(5px);
 
     &::placeholder {
