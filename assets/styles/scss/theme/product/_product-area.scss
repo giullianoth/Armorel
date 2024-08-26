@@ -48,6 +48,7 @@
                 .wrapper {
                     @include containerFluid(true);
                     @include flex(flex-start, stretch, nowrap);
+                    @include transition;
 
                     img {
                         @include containerFluid;
@@ -66,6 +67,13 @@
                     font-size: 1.2em;
                     color: $color-primary;
                     cursor: pointer;
+                    z-index: 10;
+                }
+
+                .image-zoom {
+                    @include absoluteFull(0, 0, true);
+                    @include backgroundImage("", no-repeat, 150%);
+                    transition-property: opacity !important;
                 }
             }
 
@@ -80,23 +88,49 @@
                 &-item {
                     @include flex4(12px);
                     cursor: pointer;
+                    opacity: 0.6;
+                    @include transition;
 
-                    @include setResponsiveDesign($breakpoint-large) {
-                        @include flexBasis(unset);
+                    &:hover, &.active {
+                        opacity: 1;
                     }
                 }
             }
 
             &-expanded {
-                @include fixedFull(0, 0, true);
-                @include flex;
-                background-color: $color-primary;
+                @include fixedFull(0, 0, true);                
+                background-color: $color-black-overlay;
                 color: $color-white;
                 z-index: 110;
                 display: none;
+                padding-block: 5em;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    padding-block: 6em;
+                }
+
+                .image {
+                    background-color: $color-white;
+                    color: $color-text;
+                    @include flex;
+                    @include container(fit-content, 0);
+
+                    img {
+                        @include containerFluid(true);
+                    }
+                }
 
                 .actions {
                     @include absoluteFull(0, 0, true);
+                    z-index: -1;
+                    opacity: 0;
+                    visibility: hidden;
+                    @include transition;
+
+                    &.visible {
+                        opacity: 1;
+                        visibility: visible;
+                    }
                 }
 
                 .nav {
@@ -214,6 +248,7 @@
         &__installment-modal {
             text-align: start;
             @include fixedFull(0, 0, true);
+            z-index: 110;
             background-color: $color-black-overlay;
             padding: 20px 10px;
             display: none;
