@@ -92,6 +92,12 @@ export default function ProductPhotos() {
 
     expandNav.forEach(nav => {
         nav.addEventListener("click", () => {
+            if (!expandActions.classList.contains("visible")) {
+                window.clearTimeout()
+                expandActions.classList.add("visible")
+                setTimeout(() => expandActions.classList.remove("visible"), 3000)
+            }
+            
             let index = 0
             let photosToCompare = photos.map(photo => photo.outerHTML)
             let from = expandedPhoto().cloneNode(true)
