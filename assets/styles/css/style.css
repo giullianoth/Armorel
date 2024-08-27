@@ -7,14 +7,14 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   scrollbar-width: 4px;
-  scrollbar-color: #9D6335;
+  scrollbar-color: #7A7A7A;
 }
 
 ::-webkit-scrollbar {
   width: 4px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #DDD;
+  background-color: #7A7A7A;
 }
 
 html {
@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
-  color: #9D6335;
+  color: inherit;
 }
 
 img {
@@ -55,7 +55,7 @@ label {
   display: block;
 }
 
-input, textarea {
+input, textarea, select {
   font-family: inherit;
   font-size: inherit;
   border: 1px solid #DDD;
@@ -66,7 +66,10 @@ input, textarea {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
 }
-input::placeholder, textarea::placeholder {
+input[type=checkbox], input[type=radio], textarea[type=checkbox], textarea[type=radio], select[type=checkbox], select[type=radio] {
+  cursor: pointer;
+}
+input::placeholder, textarea::placeholder, select::placeholder {
   color: #DDD;
 }
 
@@ -1667,5 +1670,153 @@ i.fa-regular, i.fa-solid, i.fa-brands {
 @media screen and (min-width: 1024px) {
   .arm-product-related__item {
     flex-basis: calc(25% - 15px);
+  }
+}
+
+/* STORE PAGE */
+/* Store container */
+.arm-store {
+  width: 100%;
+  margin-block: 50px;
+}
+.arm-store__container {
+  max-width: 1140px;
+  padding-inline: 20px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+/* Filter Section */
+.arm-store__filter {
+  flex-basis: 100%;
+  max-width: 420px;
+}
+@media screen and (min-width: 1024px) {
+  .arm-store__filter {
+    max-width: none;
+    flex-basis: 260px;
+  }
+}
+.arm-store__filter-by-price .range {
+  width: 100%;
+  height: 10px;
+  background-color: #DDD;
+  margin-bottom: 10px;
+  position: relative;
+}
+.arm-store__filter-by-price .handle {
+  position: absolute;
+  top: 50%;
+  left: unset;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  background-color: #7A7A7A;
+  cursor: pointer;
+}
+.arm-store__filter-by-price .handle.min {
+  left: 0;
+}
+.arm-store__filter-by-price .handle.max {
+  right: 0;
+}
+.arm-store__filter-content {
+  display: none;
+  padding-block: 10px 20px;
+}
+@media screen and (min-width: 1024px) {
+  .arm-store__filter-content {
+    display: block;
+  }
+}
+.arm-store__filter-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: #282A2C;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #F6F6F6;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.arm-store__filter-title h2 {
+  font-size: 1em;
+  font-weight: 600;
+}
+.arm-store__filter-list {
+  line-height: 1;
+}
+.arm-store__filter-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.arm-store__filter-clear .arm-button {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+/* Products Section */
+.arm-store__content {
+  flex-basis: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .arm-store__content {
+    flex-basis: calc(100% - 260px - 50px);
+  }
+}
+.arm-store__content select {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .arm-store__content select {
+    width: auto;
+  }
+}
+.arm-store__products {
+  margin-top: 50px;
+}
+.arm-store__products-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 480px;
+  padding-inline: 0;
+  margin-inline: auto;
+}
+@media screen and (min-width: 768px) {
+  .arm-store__products-list {
+    max-width: 900px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .arm-store__products-list {
+    max-width: none;
+  }
+}
+.arm-store__products-item {
+  flex-basis: 100%;
+}
+@media screen and (min-width: 768px) {
+  .arm-store__products-item {
+    flex-basis: calc(50% - 10px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .arm-store__products-item {
+    flex-basis: calc(33.3333333333% - 13.3333333333px);
   }
 }

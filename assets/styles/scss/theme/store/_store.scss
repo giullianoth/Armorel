@@ -1,0 +1,12 @@
+@include theme() {
+    &store {
+        @include containerFluid;
+        margin-block: 50px;
+
+        &__container {
+            @include container;
+            @include flex(flex-start, flex-start);
+            gap: 50px;
+        }
+    }
+}

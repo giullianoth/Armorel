@@ -5,14 +5,14 @@
     @include setBrowserPrefix(box-sizing, border-box);
 
     scrollbar-width: 4px;
-    scrollbar-color: $color-brown;
+    scrollbar-color: $color-text;
 }
 
 ::-webkit-scrollbar {
     width: 4px;
 
     &-thumb {
-        background-color: $color-light-gray;
+        background-color: $color-text;
     }
 }
 
@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     text-decoration: none;
-    color: $color-brown;
+    color: inherit;
 }
 
 img {
@@ -52,7 +52,7 @@ label {
     display: block;
 }
 
-input, textarea {
+input, textarea, select {
     font-family: inherit;
     font-size: inherit;
     border: 1px solid $color-light-gray;
@@ -60,6 +60,10 @@ input, textarea {
     outline: none;
     display: block;
     @include borderRadius(5px);
+
+    &[type="checkbox"], &[type="radio"] {
+        cursor: pointer;
+    }
 
     &::placeholder {
         color: $color-light-gray;
