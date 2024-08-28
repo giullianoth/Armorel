@@ -9,29 +9,62 @@
         }
 
         &-by {
+            margin-bottom: 10px;
+
             &-price {
                 .range {
-                    @include containerFluid;
-                    height: 10px;
-                    background-color: $color-light-gray;
+                    @include relative;
                     margin-bottom: 10px;
-                    @include relative
+
+                    .bar {
+                        @include containerFluid;
+                        height: 10px;
+                        background-color: $color-lighter-gray;
+                    }
+
+                    .progress {
+                        @include absolute;
+                        height: 100%;
+                        right: 0;
+                        background-color: $color-light-gray;
+                    }
                 }
 
                 .handle {
-                    @include absolute(50%, unset);
-                    transform: translateY(-50%);
-                    width: 14px;
-                    height: 14px;
-                    background-color: $color-text;
-                    cursor: pointer;
+                    @include absoluteFull(0, 0, true);
+                    @include setBrowserPrefix(appearance, none, "webkit");
+                    background: none;
+                    padding: 0;
+                    border: none;
+                    @include borderRadius(0);
+                    pointer-events: none;
 
-                    &.min {
-                        left: 0;
+                    &::-webkit-slider-thumb {
+                        width: 15px;
+                        height: 15px;
+                        @include setBrowserPrefix(appearance, none, "webkit");
+                        background-color: $color-text;
+                        pointer-events: auto;
+                        cursor: pointer;
                     }
 
-                    &.max {
-                        right: 0;
+                    &::-moz-range-thumb {
+                        width: 15px;
+                        height: 15px;
+                        @include setBrowserPrefix(appearance, none, "moz");
+                        background-color: $color-text;
+                        pointer-events: auto;
+                        cursor: pointer;
+                        border: none;
+                        @include borderRadius(0);
+                    }
+                }
+
+                .value {
+                    span {
+                        display: inline-block;
+                        width: 40px;
+                        text-align: center;
                     }
                 }
             }
@@ -39,7 +72,7 @@
 
         &-content {
             display: none;
-            padding-block: 10px 20px;
+            padding: 10px 0 20px 0;
 
             @include setResponsiveDesign($breakpoint-extra-large) {
                 display: block;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relógio Prata De Quartzo Com Ponteiro Quadrado – Armorel Semi Joias</title>
+    <title>Loja – Armorel Semi Joias</title>
 
     <script src="https://kit.fontawesome.com/fe0ca3f893.js" crossorigin="anonymous" defer></script>
 
@@ -125,39 +125,43 @@
         <div class="arm-store__container">
             <aside class="arm-store__filter">
                 <article class="arm-store__filter-by arm-store__filter-by-price">
-                    <header class="arm-store__filter-title">
+                    <header class="arm-store__filter-title j_filter_collapse">
                         <h2>Preço</h2>
 
                         <div class="arm-store__filter-collapse">
-                            <i class="fa-solid fa-minus"></i>
+                            <i class="fa-solid fa-plus"></i>
                         </div>
                     </header>
 
-                    <div class="arm-store__filter-content">
-                        <div class="range">
-                            <div class="handle min"></div>
-                            <div class="handle max"></div>
+                    <div class="arm-store__filter-content j_filter_content">
+                        <div class="range j_price_range">
+                            <div class="bar">
+                                <div class="progress"></div>
+                            </div>
+
+                            <input type="range" name="price-min" id="price-min" min="50" max="300" value="50" class="handle min">
+                            <input type="range" name="price-max" id="price-max" min="50" max="300" value="300" class="handle max">
                         </div>
 
-                        <div class="value">
-                            R$ 
+                        <div class="value j_price_range_value">
+                            R$
                             <span class="min">50</span>
-                             - 
+                            -
                             <span class="max">300</span>
                         </div>
                     </div>
                 </article>
 
                 <article class="arm-store__filter-by arm-store__filter-by-category">
-                    <header class="arm-store__filter-title">
+                    <header class="arm-store__filter-title j_filter_collapse">
                         <h2>Categorias</h2>
 
                         <div class="arm-store__filter-collapse">
-                            <i class="fa-solid fa-minus"></i>
+                            <i class="fa-solid fa-plus"></i>
                         </div>
                     </header>
 
-                    <div class="arm-store__filter-content">
+                    <div class="arm-store__filter-content j_filter_content">
                         <ul class="arm-store__filter-list">
                             <li class="arm-store__filter-item">
                                 <input type="radio" name="aneis" id="aneis">
@@ -203,15 +207,15 @@
                 </article>
 
                 <article class="arm-store__filter-by arm-store__filter-by-stone">
-                    <header class="arm-store__filter-title">
+                    <header class="arm-store__filter-title j_filter_collapse">
                         <h2>Cor da Pedra</h2>
 
                         <div class="arm-store__filter-collapse">
-                            <i class="fa-solid fa-minus"></i>
+                            <i class="fa-solid fa-plus"></i>
                         </div>
                     </header>
 
-                    <div class="arm-store__filter-content">
+                    <div class="arm-store__filter-content j_filter_content">
                         <ul class="arm-store__filter-list">
                             <li class="arm-store__filter-item">
                                 <input type="checkbox" name="transparente" id="transparente">
@@ -227,15 +231,15 @@
                 </article>
 
                 <article class="arm-store__filter-by arm-store__filter-by-material">
-                    <header class="arm-store__filter-title">
+                    <header class="arm-store__filter-title j_filter_collapse">
                         <h2>Material</h2>
 
                         <div class="arm-store__filter-collapse">
-                            <i class="fa-solid fa-minus"></i>
+                            <i class="fa-solid fa-plus"></i>
                         </div>
                     </header>
 
-                    <div class="arm-store__filter-content">
+                    <div class="arm-store__filter-content j_filter_content">
                         <ul class="arm-store__filter-list">
                             <li class="arm-store__filter-item">
                                 <input type="checkbox" name="ouro" id="ouro">
@@ -251,15 +255,15 @@
                 </article>
 
                 <article class="arm-store__filter-by arm-store__filter-by-size">
-                    <header class="arm-store__filter-title">
+                    <header class="arm-store__filter-title j_filter_collapse">
                         <h2>Tamanho do Aro</h2>
 
                         <div class="arm-store__filter-collapse">
-                            <i class="fa-solid fa-minus"></i>
+                            <i class="fa-solid fa-plus"></i>
                         </div>
                     </header>
 
-                    <div class="arm-store__filter-content">
+                    <div class="arm-store__filter-content j_filter_content">
                         <ul class="arm-store__filter-list">
                             <li class="arm-store__filter-item">
                                 <input type="checkbox" name="tamanho9" id="tamanho9">
@@ -928,7 +932,7 @@
                         <article class="arm-store__products-item arm-product-item">
                             <div class="arm-product-image">
                                 <a href="../produto/">
-                                    <img src="../assets/images/piercing-dourado.webp" alt="Anel prata de strass e decoração borboleta">
+                                    <img src="../assets/images/anel-prata-strass.webp" alt="Anel prata de strass e decoração borboleta">
                                 </a>
     
                                 <ul class="arm-product-actions">
@@ -1042,7 +1046,7 @@
 
                     <div class="arm-store__products-pages">
                         <div class="page-btn"><i class="fa-solid fa-chevron-left"></i></div>
-                        <div class="page-btn">1</div>
+                        <div class="page-btn active">1</div>
                         <div class="page-btn">2</div>
                         <div class="page-btn"><i class="fa-solid fa-chevron-right"></i></div>
                     </div>
@@ -1216,5 +1220,7 @@
     </footer>
 
     <script type="module" src="../assets/scripts/script.js"></script>
+    <script type="module" src="../assets/scripts/store/filter-collapse.js"></script>
+    <script type="module" src="../assets/scripts/store/price-range.js"></script>
 </body>
 </html>

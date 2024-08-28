@@ -22,6 +22,7 @@
             @include flex(flex-start, stretch);
             gap: 20px;
             @include container(480px, 0);
+            margin-bottom: 20px;
 
             @include setResponsiveDesign($breakpoint-medium) {
                 max-width: 900px;
@@ -41,6 +42,27 @@
 
             @include setResponsiveDesign($breakpoint-extra-large) {
                 @include flex3(20px);
+            }
+        }
+
+        &-pages {
+            @include flex;
+            gap: 10px;
+            
+            .page-btn {
+                width: 40px;
+                height: 40px;
+                border: 1px solid $color-light-gray;
+                color: color-light-gray;
+                font-weight: 500;
+                @include flex;
+                cursor: pointer;
+                @include transition;
+
+                &:hover, &.active {
+                    border-color: $color-primary;
+                    color: $color-primary;
+                }
             }
         }
     }
