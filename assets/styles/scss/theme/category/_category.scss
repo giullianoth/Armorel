@@ -1,0 +1,60 @@
+@include theme() {
+    &category {
+        @include containerFluid;
+        margin-block: 50px;
+
+        &__container {
+            @include container;
+        }
+
+        &__filter {
+            margin-bottom: 40px;
+
+            p {
+                margin-bottom: 10px;
+            }
+        }
+
+        &__list {
+            @include flex;
+            gap: 5px;
+        }
+
+        &__item {
+            flex-grow: 1;
+            padding: 5px 10px;
+            @include borderRadius(0);
+            background-color: $color-brown;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        &__products {
+            @include flex(flex-start, stretch);
+            gap: 20px;
+            @include container(480px, 0);
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                max-width: 900px;
+            }
+
+            @include setResponsiveDesign($breakpoint-extra-large) {
+                max-width: none;
+            }
+        }
+
+        &__product {
+            @include flex1;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                @include flex2(20px);
+            }
+
+            @include setResponsiveDesign($breakpoint-extra-large) {
+                @include flex4(20px);
+            }
+        }
+    }
+}

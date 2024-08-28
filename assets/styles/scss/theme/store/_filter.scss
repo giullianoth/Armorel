@@ -34,9 +34,6 @@
                     @include absoluteFull(0, 0, true);
                     @include setBrowserPrefix(appearance, none, "webkit");
                     background: none;
-                    padding: 0;
-                    border: none;
-                    @include borderRadius(0);
                     pointer-events: none;
 
                     &::-webkit-slider-thumb {

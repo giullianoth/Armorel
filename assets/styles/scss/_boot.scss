@@ -52,7 +52,7 @@ label {
     display: block;
 }
 
-input, textarea, select {
+input:not([type="range"]), textarea, select {
     font-family: inherit;
     font-size: inherit;
     border: 1px solid $color-light-gray;
@@ -61,13 +61,13 @@ input, textarea, select {
     display: block;
     @include borderRadius(5px);
 
-    &[type="checkbox"], &[type="radio"] {
-        cursor: pointer;
-    }
-
     &::placeholder {
         color: $color-light-gray;
     }
+}
+
+input[type="range"], input[type="checkbox"], input[type="radio"], select {
+    cursor: pointer;
 }
 
 i {

@@ -22,7 +22,7 @@
             @include flex(flex-start, stretch);
             gap: 20px;
             @include container(480px, 0);
-            margin-bottom: 20px;
+            margin-bottom: 40px;
 
             @include setResponsiveDesign($breakpoint-medium) {
                 max-width: 900px;
