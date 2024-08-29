@@ -218,6 +218,7 @@
 
                 @include setResponsiveDesign($breakpoint-large) {
                     @include flexBasis(unset);
+                    font-size: $font-size-default;
                 }
 
                 .collapse {

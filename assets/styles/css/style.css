@@ -2238,6 +2238,7 @@ input[type=range], input[type=checkbox], input[type=radio], select {
 @media screen and (min-width: 992px) {
   .arm-cart__details-coupons {
     flex-basis: unset;
+    font-size: 1rem;
   }
 }
 .arm-cart__details-coupons .collapse {

@@ -134,7 +134,9 @@
 
                     <div class="arm-cart__item">
                         <div class="arm-cart__item-image">
-                            <img src="../assets/images/relogio-thumb.jpg" alt="Relógio Prata De Quartzo Com Ponteiro Quadrado">
+                            <a href="../produto/">
+                                <img src="../assets/images/relogio-thumb.jpg" alt="Relógio Prata De Quartzo Com Ponteiro Quadrado">
+                            </a>
 
                             <button class="arm-button delete">
                                 <i class="fa-solid fa-xmark"></i>
@@ -143,7 +145,9 @@
 
                         <div class="arm-cart__item-details">
                             <div class="arm-cart__item-title">
-                                <p>Relógio Prata De Quartzo Com Ponteiro Quadrado</p>
+                                <p>
+                                    <a href="../produto/">Relógio Prata De Quartzo Com Ponteiro Quadrado</a>
+                                </p>
                             </div>
     
                             <div class="arm-cart__item-price">
@@ -176,7 +180,9 @@
 
                     <div class="arm-cart__item">
                         <div class="arm-cart__item-image">
-                            <img src="../assets/images/anel-prata-thumb.webp" alt="2 Peças Anel Prata Ou Dourado Com Decoração De Zircão - Ouro">
+                            <a href="../produto/">
+                                <img src="../assets/images/anel-prata-thumb.webp" alt="2 Peças Anel Prata Ou Dourado Com Decoração De Zircão - Ouro">
+                            </a>
 
                             <button class="delete arm-button">
                                 <i class="fa-solid fa-xmark"></i>
@@ -185,7 +191,9 @@
 
                         <div class="arm-cart__item-details">
                             <div class="arm-cart__item-title">
-                                <p>2 Peças Anel Prata Ou Dourado Com Decoração De Zircão - Ouro</p>
+                                <p>
+                                    <a href="../produto/">2 Peças Anel Prata Ou Dourado Com Decoração De Zircão - Ouro</a>
+                                </p>
                             </div>
     
                             <div class="arm-cart__item-price">
@@ -239,13 +247,13 @@
                 </div>
 
                 <div class="arm-cart__details">
-                    <div class="arm-cart__details-coupons">
-                        <div class="collapse">
+                    <div class="arm-cart__details-coupons j_cart_collapse">
+                        <div class="collapse j_cart_collapse_clickable">
                             <p>Você tem um cupom? <span>Clique aqui para inserir um cupom</span></p>
                             <i class="fa-solid fa-sort-down"></i>
                         </div>
 
-                        <div class="coupons-area">
+                        <div class="coupons-area j_cart_collapse_content">
                             <p>Se você tiver um código de cupom, aplique-o abaixo.</p>
 
                             <div class="insert">
@@ -265,10 +273,10 @@
                             <p class="freight-title"><strong>Entrega:</strong></p>
                             <p class="freight-desc">Digite seu endereço para ver as opções de entrega.</p>
 
-                            <div class="freight-calc">
-                                <p class="clickable">Calcular entrega</p>
+                            <div class="freight-calc j_cart_collapse">
+                                <p class="clickable j_cart_collapse_clickable">Calcular entrega</p>
 
-                                <div class="collapse">
+                                <div class="collapse j_cart_collapse_content">
                                     <input type="text" name="freight" id="freight" placeholder="CEP">
                                     <button class="arm-button">Atualizar</button>
                                 </div>
@@ -462,5 +470,6 @@
     </footer>
 
     <script type="module" src="../assets/scripts/script.js"></script>
+    <script type="module" src="../assets/scripts/cart/content-collapse.js"></script>
 </body>
 </html>
