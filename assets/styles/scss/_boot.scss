@@ -70,12 +70,6 @@ input[type="range"], input[type="checkbox"], input[type="radio"], select {
     cursor: pointer;
 }
 
-i {
-    &.fa-regular, &.fa-solid, &.fa-brands {
-        vertical-align: middle;
-    }
-}
-
 @include theme() {
     &button {
         font-family: $font-jost;

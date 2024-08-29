@@ -1,0 +1,324 @@
+@include theme() {
+    &cart {
+        @include containerFluid;
+        margin-block: 50px;
+
+        &__container {
+            @include container;
+        }
+
+        &__list {
+            border: 1px solid $color-light-gray;
+            margin-bottom: 50px;
+        }
+
+        &__header {
+            padding: 20px;
+            background-color: $color-light-gray;
+            color: $color-primary;
+            display: none;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                display: block;
+                @include flex(flex-start, center, nowrap);
+            }
+
+            .name {
+                @include flexBasis(450px);
+            }
+
+            .price {
+                @include flexBasis(calc((100% - 600px) / 2));
+            }
+
+            .quantity {
+                @include flexBasis(150px);
+            }
+
+            .subtotal {
+                @include flexBasis(calc((100% - 600px) / 2));
+                padding-left: 50px;
+            }
+        }
+
+        &__item {
+            padding: 20px;
+            @include flex(flex-start, flex-start, nowrap);
+            gap: 20px;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                align-items: center;
+            }
+
+            &-image {
+                @include relative;
+                @include flexBasis(80px);
+
+                img {
+                    width: 100%;
+                }
+
+                .delete {
+                    padding: 0;
+                    width: 20px;
+                    height: 20px;
+                    @include rounded;
+                    background: red;
+                    border: 1px solid $color-white;
+                    @include flex;
+                    opacity: 0.7;
+                    @include absolute(-11px, -11px);
+                }
+            }
+
+            &-details {
+                @include flexBasis(calc(100% - 80px), 20px);
+                @include flex(flex-start, stretch, nowrap);
+                flex-direction: column;
+                row-gap: 10px;
+                line-height: 1;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    flex-direction: row;
+                    align-items: center;
+                }
+            }
+
+            &-title {
+                font-weight: 500;
+                line-height: 1;
+                color: $color-primary;
+                margin-bottom: 10px;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    margin: 0;
+                    @include flexBasis(350px);
+                }
+            }
+
+            &-price, &-subtotal {
+                @include setResponsiveDesign($breakpoint-large) {
+                    @include flexBasis(calc((100% - 500px) / 2));
+                }
+
+                p {
+                    @include flex(flex-start, center, nowrap);
+                    color: $color-primary;
+                }
+
+                .label {
+                    color: $color-text;
+                    font-size: 0.8em;
+                    @include flexBasis(80px);
+
+                    @include setResponsiveDesign($breakpoint-large) {
+                        display: none;
+                    }
+                }
+            }
+
+            &-subtotal {
+                @include setResponsiveDesign($breakpoint-large) {
+                    order: 4;
+                    padding-left: 50px;
+                }
+            }
+
+            &-quantity {
+                margin-top: 10px;
+                width: 150px;
+                @include flex(flex-start, stretch, nowrap);
+                border: 1px solid $color-light-gray;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    margin: 0;
+                    @include flexBasis(150px);
+                    order: 3;
+                }
+
+                .btn {
+                    padding-inline: 0;
+                    @include flex3;
+                    @include borderRadius(0);
+                    background: none;
+                    color: $color-text;
+
+                    &.remove {
+                        border-right: 1px solid $color-light-gray;
+                    }
+
+                    &.add {
+                        border-left: 1px solid $color-light-gray;
+                    }
+                }
+
+                .qt {
+                    @include flex3;
+                    @include flex;
+                }
+            }
+        }
+
+        &__actions {
+            @include flex;
+            row-gap: 20px;
+            margin-bottom: 50px;
+
+            .left {
+                @include flex1;
+                @include container(330px, 0);
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    @include flex2;
+                    max-width: none;
+                }
+
+                .arm-button {
+                    width: 100%;
+
+                    @include setResponsiveDesign($breakpoint-medium) {
+                        width: auto;
+                    }
+                }
+            }
+
+            .right {
+                @include flex1;
+                @include flex(center, center, nowrap);
+                gap: 5px;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    @include flex2;
+                    justify-content: flex-end;
+                }
+
+                @include setResponsiveDesign(370px, true) {
+                    flex-direction: column;
+
+                    .arm-button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &__details {
+            @include flex(flex-start, flex-start);
+            row-gap: 50px;
+            @include container(500px, 0);
+
+            @include setResponsiveDesign($breakpoint-large) {
+                justify-content: space-between;
+                max-width: none;
+            }
+
+            &-coupons {
+                font-size: 0.9em;
+                @include flex1;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    @include flexBasis(unset);
+                }
+
+                .collapse {
+                    background-color: $color-light-gray;
+                    padding: 10px;
+                    @include flex(space-between, center, nowrap);
+                    gap: 50px;
+                    color: $color-primary;
+                    cursor: pointer;
+
+                    span {
+                        color: $color-brown;
+                        display: block;
+
+                        @include setResponsiveDesign($breakpoint-small) {
+                            display: inline;
+                        }
+                    }
+                }
+
+                .coupons-area {
+                    padding-block: 20px;
+                    display: none;
+
+                    p {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .insert {
+                    @include flex(flex-start, stretch, nowrap);
+                    gap: 10px;
+                    flex-direction: column;
+
+                    @include setResponsiveDesign($breakpoint-small) {
+                        flex-direction: row;
+                    }
+                }
+            }
+
+            &-resume {
+                @include flex1;
+                padding: 20px;
+                background-color: $color-lighter-gray;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    @include flexBasis(400px);
+                }
+
+                .detail {
+                    padding-block: 10px;
+                    color: $color-primary;
+
+                    &:not(:last-child) {
+                        border-bottom: 1px solid $color-light-gray;
+                    }
+
+                    &.price {
+                        @include flex(space-between, center);
+                    }
+
+                    .freight {
+                        &-title {
+                            margin-bottom: 10px;
+                        }
+
+                        &-desc {
+                            line-height: 1;
+                            font-size: 0.9em;
+                            margin-bottom: 10px;
+                        }
+
+                        &-calc {
+                            .clickable {
+                                margin-bottom: 10px;
+                                letter-spacing: 1.4px;
+                                text-transform: uppercase;
+                                font-weight: 600;
+                                color: $color-brown;
+                                cursor: pointer;
+                            }
+
+                            .collapse {
+                                margin-bottom: 10px;
+                                @include flex(center, stretch, nowrap);
+                                flex-direction: column;
+                                gap: 10px;
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &.action {
+                        margin-top: 20px;
+
+                        .arm-button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
