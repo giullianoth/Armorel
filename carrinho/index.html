@@ -153,25 +153,28 @@
                             <div class="arm-cart__item-price">
                                 <p>
                                     <span class="label">Preço</span>
-                                    <strong>R$ 220,00</strong>
+                                    <strong>R$ <span class="j_product_price">220,00</span></strong>
                                 </p>
+
+                                <span class="pix j_pix_price">198</span>
+                                <span class="pix j_pix_total">198</span>
                             </div>
     
                             <div class="arm-cart__item-subtotal">
                                 <p>
                                     <span class="label">Subtotal</span>
-                                    <strong>R$ 220,00</strong>
+                                    <strong>R$ <span class="j_product_total">220,00</span></strong>
                                 </p>
                             </div>
 
-                            <div class="arm-cart__item-quantity">
-                                <button class="arm-button btn remove">
+                            <div class="arm-cart__item-quantity j_quantity">
+                                <button class="arm-button btn remove cart">
                                     <i class="fa-solid fa-minus"></i>
                                 </button>
     
                                 <span class="qt">1</span>
     
-                                <button class="arm-button btn add">
+                                <button class="arm-button btn add cart">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
                             </div>
@@ -199,25 +202,28 @@
                             <div class="arm-cart__item-price">
                                 <p>
                                     <span class="label">Preço</span>
-                                    <strong>R$ 220,00</strong>
+                                    <strong>R$ <span class="j_product_price">220,00</span></strong>
                                 </p>
+
+                                <span class="pix j_pix_price">198</span>
+                                <span class="pix j_pix_total">396</span>
                             </div>
     
                             <div class="arm-cart__item-subtotal">
                                 <p>
                                     <span class="label">Subtotal</span>
-                                    <strong>R$ 440,00</strong>
+                                    <strong>R$ <span class="j_product_total">440,00</span></strong>
                                 </p>
                             </div>
 
-                            <div class="arm-cart__item-quantity">
-                                <button class="arm-button btn remove">
+                            <div class="arm-cart__item-quantity j_quantity">
+                                <button class="arm-button btn remove cart">
                                     <i class="fa-solid fa-minus"></i>
                                 </button>
     
                                 <span class="qt">2</span>
     
-                                <button class="arm-button btn add">
+                                <button class="arm-button btn add cart">
                                     <i class="fa-solid fa-plus"></i>
                                 </button>
                             </div>
@@ -266,7 +272,7 @@
                     <div class="arm-cart__details-resume">
                         <p class="detail price">
                             <span>Subtotal</span>
-                            <span><strong>R$ 660,00</strong></span>
+                            <span><strong>R$ <span class="j_cart_subtotal">660,00</span></strong></span>
                         </p>
 
                         <div class="detail freight">
@@ -285,12 +291,12 @@
 
                         <p class="detail price">
                             <span>Total no Pix</span>
-                            <span><strong>R$ 594,00</strong></span>
+                            <span><strong>R$ <span class="j_cart_pix">594,00</span></strong></span>
                         </p>
 
                         <p class="detail price">
                             <span><strong>Total</strong></span>
-                            <span><strong>R$ 660,00</strong></span>
+                            <span><strong>R$ <span class="j_cart_total">660,00</span></strong></span>
                         </p>
 
                         <div class="detail action">
@@ -470,6 +476,8 @@
     </footer>
 
     <script type="module" src="../assets/scripts/script.js"></script>
+    <script type="module" src="../assets/scripts/product-quantity.js"></script>
     <script type="module" src="../assets/scripts/cart/content-collapse.js"></script>
+    <script type="module" src="../assets/scripts/cart/update-price.js"></script>
 </body>
 </html>

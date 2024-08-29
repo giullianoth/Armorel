@@ -115,6 +115,10 @@
                         display: none;
                     }
                 }
+
+                .pix {
+                    display: none;
+                }
             }
 
             &-subtotal {
@@ -224,10 +228,18 @@
                 .collapse {
                     background-color: $color-light-gray;
                     padding: 10px;
-                    @include flex(space-between, center, nowrap);
+                    @include flex(space-between, stretch, nowrap);
                     gap: 50px;
                     color: $color-primary;
                     cursor: pointer;
+
+                    i {
+                        @include transition;
+
+                        &.active {
+                            transform: rotate(180deg);
+                        }
+                    }
 
                     span {
                         color: $color-brown;
@@ -307,6 +319,10 @@
                                 flex-direction: column;
                                 gap: 10px;
                                 display: none;
+
+                                input {
+                                    width: 100%;
+                                }
                             }
                         }
                     }

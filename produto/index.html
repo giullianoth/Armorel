@@ -127,7 +127,7 @@
                 <div class="arm-product-area__breadcumb">
                     <a href="../">Início</a>
                     <i class="fa-solid fa-arrow-right-long"></i>
-                    <a href="#">Relógios</a>
+                    <a href="../categoria/">Relógios</a>
                     <i class="fa-solid fa-arrow-right-long"></i>
                     Relógio Prata De Quartzo Com Ponteiro Quadrado
                 </div>
@@ -280,11 +280,17 @@
                         </div>
 
                         <div class="arm-product-area__actions">
-                            <div class="arm-product-area__actions-quantity">
-                                <p class="quantity">1</p>
-                                <div class="change">
-                                    <i class="fa-solid fa-minus remove"></i>
-                                    <i class="fa-solid fa-plus add"></i>
+                            <div class="arm-product-area__actions-quantity j_quantity">
+                                <span class="qt">1</span>
+
+                                <div class="buttons">
+                                    <button class="arm-button btn add">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+
+                                    <button class="arm-button btn remove">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -910,6 +916,7 @@
     </footer>
 
     <script type="module" src="../assets/scripts/script.js"></script>
+    <script type="module" src="../assets/scripts/product-quantity.js"></script>
     <script type="module" src="../assets/scripts/product/product-photos.js"></script>
     <script type="module" src="../assets/scripts/product/rating.js"></script>
 </body>

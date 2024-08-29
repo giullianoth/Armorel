@@ -267,10 +267,6 @@
                 @include flex2;
             }
 
-            form {                
-                @include containerFluid;
-            }
-
             .wrapper {
                 @include containerFluid;
                 @include flex(center, stretch, nowrap);
@@ -280,6 +276,7 @@
                 @include borderRadius(2px 0 0 2px);
                 flex-grow: 1;
                 border-right: none;
+                width: 82%;
 
                 &::placeholder {
                     font-style: italic;
@@ -290,6 +287,7 @@
                 @include borderRadius(0 2px 2px 0);
                 @include relative;
                 background-color: $color-brown;
+                width: 18%;
 
                 &::before {
                     content: "";

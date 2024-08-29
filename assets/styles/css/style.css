@@ -508,9 +508,6 @@ input[type=range], input[type=checkbox], input[type=radio], select {
     flex-basis: 50%;
   }
 }
-.arm-header__search form {
-  width: 100%;
-}
 .arm-header__search .wrapper {
   width: 100%;
   display: flex;
@@ -524,6 +521,7 @@ input[type=range], input[type=checkbox], input[type=radio], select {
   -webkit-border-radius: 2px 0 0 2px;
   flex-grow: 1;
   border-right: none;
+  width: 82%;
 }
 .arm-header__search input::placeholder {
   font-style: italic;
@@ -534,6 +532,7 @@ input[type=range], input[type=checkbox], input[type=radio], select {
   -webkit-border-radius: 0 2px 2px 0;
   position: relative;
   background-color: #9D6335;
+  width: 18%;
 }
 .arm-header__search .arm-button::before {
   content: "";
@@ -1414,33 +1413,34 @@ input[type=range], input[type=checkbox], input[type=radio], select {
 .arm-product-area__actions-quantity {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: nowrap;
+  width: 90px;
 }
-.arm-product-area__actions-quantity .quantity {
-  padding: 6px 30px;
-  border: 1px solid #DDD;
-  border-right: none;
-}
-.arm-product-area__actions-quantity .change {
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-.arm-product-area__actions-quantity .change i {
-  background-color: #38C43B;
-  color: white;
-  font-size: 0.7em;
-  padding-inline: 8px;
-  flex-basis: 50%;
-  cursor: pointer;
+.arm-product-area__actions-quantity .qt {
+  flex-basis: calc(100% - 35px);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  border: 1px solid #ddd;
+  border-right: none;
+}
+.arm-product-area__actions-quantity .buttons {
+  flex-basis: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.arm-product-area__actions-quantity .buttons .btn {
+  padding: 0;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  font-size: 0.7em;
+  flex-grow: 1;
 }
 .arm-product-area__actions-purchase .arm-button {
   height: 100%;
@@ -2121,6 +2121,9 @@ input[type=range], input[type=checkbox], input[type=radio], select {
     display: none;
   }
 }
+.arm-cart__item-price .pix, .arm-cart__item-subtotal .pix {
+  display: none;
+}
 @media screen and (min-width: 992px) {
   .arm-cart__item-subtotal {
     order: 4;
@@ -2246,11 +2249,17 @@ input[type=range], input[type=checkbox], input[type=radio], select {
   padding: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   flex-wrap: nowrap;
   gap: 50px;
   color: #282A2C;
   cursor: pointer;
+}
+.arm-cart__details-coupons .collapse i {
+  transition: all 0.3s ease 0s;
+}
+.arm-cart__details-coupons .collapse i.active {
+  transform: rotate(180deg);
 }
 .arm-cart__details-coupons .collapse span {
   color: #9D6335;
@@ -2329,6 +2338,9 @@ input[type=range], input[type=checkbox], input[type=radio], select {
   flex-direction: column;
   gap: 10px;
   display: none;
+}
+.arm-cart__details-resume .detail .freight-calc .collapse input {
+  width: 100%;
 }
 .arm-cart__details-resume .detail.action {
   margin-top: 20px;
