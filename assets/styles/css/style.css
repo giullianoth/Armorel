@@ -2249,7 +2249,7 @@ input[type=range], input[type=checkbox], input[type=radio], select {
   padding: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
   flex-wrap: nowrap;
   gap: 50px;
   color: #282A2C;

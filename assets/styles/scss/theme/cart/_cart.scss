@@ -228,7 +228,7 @@
                 .collapse {
                     background-color: $color-light-gray;
                     padding: 10px;
-                    @include flex(space-between, stretch, nowrap);
+                    @include flex(space-between, center, nowrap);
                     gap: 50px;
                     color: $color-primary;
                     cursor: pointer;
