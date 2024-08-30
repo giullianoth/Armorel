@@ -2617,23 +2617,21 @@ input[type=range], input[type=checkbox], input[type=radio], select {
     flex-basis: calc(50% - 10px);
   }
 }
-.arm-checkout__customer-payment .payments-item .content.pix .code {
+.arm-checkout__customer-payment .payments-item .content.pix .get-code {
   margin-top: 20px;
   text-align: center;
 }
-.arm-checkout__customer-payment .payments-item .content.pix .code span {
-  display: block;
-  background-color: #F6F6F6;
-  padding: 6px;
-  font-size: 1.2em;
-  color: #282A2C;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-.arm-checkout__customer-payment .payments-item .content.pix .code span.qr {
+.arm-checkout__customer-payment .payments-item .content.pix .qr {
   max-width: 120px;
   padding-inline: 0;
   margin-inline: auto;
+  margin-bottom: 10px;
+}
+.arm-checkout__customer-payment .payments-item .content.pix .code {
+  line-break: anywhere;
+  padding: 6px;
+  margin-bottom: 10px;
+  background-color: #F6F6F6;
 }
 .arm-checkout__customer-proceed {
   margin-top: 20px;
