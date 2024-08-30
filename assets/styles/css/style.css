@@ -2562,8 +2562,15 @@ input[type=range], input[type=checkbox], input[type=radio], select {
 .arm-checkout__customer-payment .payments-item .title:hover, .arm-checkout__customer-payment .payments-item .title.active {
   background-color: #DDD;
 }
-.arm-checkout__customer-payment .payments-item .title:hover .check, .arm-checkout__customer-payment .payments-item .title.active .check {
+.arm-checkout__customer-payment .payments-item .title:hover .check {
   border-color: #7A7A7A;
+}
+.arm-checkout__customer-payment .payments-item .title.active .check {
+  border-color: #38C43B;
+  background-color: #38C43B;
+}
+.arm-checkout__customer-payment .payments-item .title.active .check i {
+  opacity: 1;
 }
 .arm-checkout__customer-payment .payments-item .check {
   display: block;
@@ -2573,6 +2580,16 @@ input[type=range], input[type=checkbox], input[type=radio], select {
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
+  transition: all 0.3s ease 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.arm-checkout__customer-payment .payments-item .check i {
+  font-size: 0.9em;
+  color: #FFF;
+  opacity: 0;
   transition: all 0.3s ease 0s;
 }
 .arm-checkout__customer-payment .payments-item .content {

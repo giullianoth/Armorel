@@ -156,9 +156,22 @@
 
                             &:hover, &.active {
                                 background-color: $color-light-gray;
-    
+                            }
+
+                            &:hover {
                                 .check {
                                     border-color: $color-text;
+                                }
+                            }
+
+                            &.active {
+                                .check {
+                                    border-color: $color-accent;
+                                    background-color: $color-accent;
+
+                                    i {
+                                        opacity: 1;
+                                    }
                                 }
                             }
                         }
@@ -170,6 +183,14 @@
                             border: 1px solid $color-light-gray;
                             @include rounded;
                             @include transition;
+                            @include flex;
+
+                            i {
+                                font-size: 0.9em;
+                                color: $color-white;
+                                opacity: 0;
+                                @include transition;
+                            }
                         }
 
                         .content {
