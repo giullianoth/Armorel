@@ -1,0 +1,258 @@
+@include theme() {
+    &checkout {
+        &__customer {
+            &-area {
+                @include flex1;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    @include container($breakpoint-small, 0);
+                }
+
+                @include setResponsiveDesign($breakpoint-extra-large) {
+                    @include flexBasis(calc(100% - 400px), 40px);
+                    max-width: none;
+                }
+            }
+
+            &-contact {
+                border: 1px solid $color-light-gray;
+                padding: 20px;
+
+                @include setResponsiveDesign($breakpoint-small) {
+                    @include borderRadius(5px 5px 0 0);
+                }
+            }
+
+            &-login {
+                padding: 20px;
+                margin-bottom: 20px;
+                text-align: center;
+                background-color: $color-lighter-gray;
+                @include borderRadius(5px);
+
+                a {
+                    color: $color-brown;
+                }
+            }
+
+            &-continue {
+                text-align: center;
+                margin-bottom: 20px;
+                overflow: hidden;
+
+                span {
+                    display: inline-block;
+                    @include relative;
+
+                    &::before {
+                        content: "";
+                        @include absolute(50%, unset);
+                        right: calc(100% + 10px);
+                        width: 100vw;
+                        height: 1px;
+                        background-color: $color-light-gray;
+                    }
+        
+                    &::after {
+                        content: "";
+                        @include absolute(50%, calc(100% + 10px));
+                        width: 100vw;
+                        height: 1px;
+                        background-color: $color-light-gray;
+                    }
+                }
+            }
+
+            &-email {
+                margin-bottom: 10px;
+            }
+
+            &-input {
+                @include containerFluid;
+                margin-bottom: 10px;
+            }
+
+            &-note {
+                line-height: 1;
+                font-size: 0.8em;
+            }
+
+            &-button {
+                margin-top: 20px;
+                @include containerFluid;
+                background-color: $color-lighter-gray;
+                color: $color-primary;
+                font-weight: 600;
+
+                &:hover {
+                    background-color: $color-light-gray;
+                }
+            }
+
+            &-data {
+                padding: 20px;
+                background-color: $color-light-gray;
+            }
+
+            &-form {
+                @include flex(flex-start, flex-start);
+                gap: 20px;
+
+                label {
+                    font-size: 0.9em;
+                }
+
+                input {
+                    @include containerFluid;
+                }
+
+                .form-control {
+                    @include flex1;
+
+                    @include setResponsiveDesign($breakpoint-extra-large) {
+                        @include flex2(20px);
+
+                        &.country, &.company {
+                            @include flex1;
+                        }
+                    }
+                }
+            }
+
+            &-delivery, &-notes, &-payment {
+                padding: 20px;
+                border: 1px solid $color-light-gray;
+                border-top: none;
+            }
+
+            &-notes {
+                textarea {
+                    @include containerFluid;
+                }
+            }
+
+            &-payment {
+                @include setResponsiveDesign($breakpoint-small) {
+                    @include borderRadius(0 0 5px 5px);
+                }
+
+                .payments {
+                    &-list {
+                        border: 1px solid $color-light-gray;
+                        @include borderRadius(5px);
+                    }
+
+                    &-item {
+                        &:not(:last-child) {
+                            border-bottom: 1px solid $color-light-gray;
+                        }
+
+                        .title {
+                            cursor: pointer;
+                            @include flex(flex-start);
+                            column-gap: 20px;
+                            padding: 10px;
+                            @include transition;
+
+                            &:hover, &.active {
+                                background-color: $color-light-gray;
+    
+                                .check {
+                                    border-color: $color-text;
+                                }
+                            }
+                        }
+
+                        .check {
+                            display: block;
+                            width: 24px;
+                            height: 24px;
+                            border: 1px solid $color-light-gray;
+                            @include rounded;
+                            @include transition;
+                        }
+
+                        .content {
+                            padding: 20px;
+                            display: none;
+
+                            &.ticket {
+                                a {
+                                    color: $color-brown;
+
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+
+                            &.card {
+                                form {
+                                    margin-top: 20px;
+                                    @include flex(flex-start, stretch);
+                                    gap: 20px;
+
+                                    input, select {
+                                        @include containerFluid;
+                                    }
+
+                                    .form-control {
+                                        @include flex1;
+
+                                        &.exp-date {
+                                            @include flex(flex-start, stretch);
+                                            gap: 7px;
+
+                                            p {
+                                                @include flex1;
+                                            }
+
+                                            div {
+                                                @include flex2(10px);
+                                            }
+                                        }
+                                    }
+
+                                    .cvc, .installments {
+                                        @include setResponsiveDesign($breakpoint-extra-large) {
+                                            @include flex2(20px);
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.pix {
+                                .code {
+                                    margin-top: 20px;
+                                    text-align: center;
+
+                                    span {
+                                        display: block;
+                                        background-color: $color-lighter-gray;
+                                        padding: 6px;
+                                        font-size: 1.2em;
+                                        color: $color-primary;
+                                        margin-bottom: 10px;
+                                        font-weight: 600;
+
+                                        &.qr {
+                                            @include container(120px, 0);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &-proceed {
+                margin-top: 20px;
+
+                .arm-button {                    
+                    @include containerFluid;
+                }
+            }
+        }
+    }
+}

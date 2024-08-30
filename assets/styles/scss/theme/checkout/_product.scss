@@ -1,0 +1,79 @@
+@include theme() {
+    &checkout {
+        &__product {
+            display: none;
+            border: 1px solid $color-light-gray;
+            @include borderRadius(5px);
+            font-size: 0.9em;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+            right: 0;
+
+            @include setResponsiveDesign($breakpoint-extra-large) {
+                display: block;
+                @include flexBasis(400px);
+            }
+
+            &-title {
+                @include flex(space-between);
+                padding: 10px;
+                border-bottom: 1px solid $color-light-gray;
+
+                a {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &-item {
+                padding: 10px;
+                border-bottom: 1px solid $color-light-gray;
+                @include flex(flex-start, stretch, nowrap);
+                gap: 20px;
+
+                .image {
+                    @include flexBasis(60px);
+                    @include relative;
+
+                    span {
+                        display: block;
+                        background-color: $color-text;
+                        color: $color-white;
+                        padding: 2px 6px;
+                        @include borderRadius(10px);
+                        @include absolute(-6px, unset);
+                        right: -6px;
+                    }
+                }
+
+                .description {
+                    @include flexBasis(calc(100% - 160px), 40px);
+                    color: $color-primary;
+
+                    .name {
+                        margin-bottom: 8px;
+                    }
+                }
+
+                .price {
+                    @include flexBasis(100px);
+                    text-align: end;
+                }
+            }
+
+            &-price-resume {
+                padding: 10px;
+                @include flex(space-between);
+                font-size: $font-size-default;
+                font-weight: 700;
+                color: $color-primary;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-light-gray;
+                }
+            }
+        }
+    }
+}

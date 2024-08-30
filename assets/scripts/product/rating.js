@@ -1,9 +1,6 @@
-import { getElement, getElements } from "../variables.js"
+import { getElements } from "../variables.js"
 
 const starsToRate = getElements(".j_star_rate")
-let rated = false
-// const starOutline = "<i class=\"fa-regular fa-star\"></i>"
-// const starFill = "<i class=\"fa-solid fa-star\"></i>"
 
 starsToRate.forEach((star, index, arr) => {
     star.addEventListener("mouseenter", () => {

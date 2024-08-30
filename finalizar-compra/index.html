@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalização de compra – Armorel Semi Joias</title>
+
+    <script src="https://kit.fontawesome.com/fe0ca3f893.js" crossorigin="anonymous" defer></script>
+
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/styles/css/style.min.css">
+</head>
+<body>
+    <header class="arm-header">
+        <div class="arm-header__free-freight">
+            <p>Frete grátis a partir de R$ 249</p>
+        </div>
+
+        <div class="arm-header__container">
+            <div class="arm-header__user">
+                <div class="arm-header__account">
+                    <div class="account">
+                        <a href="#">
+                            <i class="fa-regular fa-user"></i>
+                            Minha Conta
+                        </a>
+                    </div>
+
+                    <div class="whishlist">
+                        <a href="#">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="arm-header__cart">
+                    <a href="../carrinho/">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>0</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="arm-header__logo">
+                <h1 class="arm-header__title">Amorel Semi Joias</h1>
+
+                <a href="../">
+                    <img src="../assets/images/AMOREL.png" alt="Logo Armorel">
+                </a>
+            </div>
+
+            <nav class="arm-header__navigation">
+                <div class="arm-header__menu-icon j_menu_icon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="arm-header__menu-overlay j_menu_overlay">
+                    <div class="arm-header__menu-container j_menu_container">
+                        <div class="arm-header__menu-wrapper">
+                            <ul class="arm-header__menu-list">
+                                <li class="arm-header__menu-item">
+                                    <a href="../">Home</a>
+                                </li>
+                                <li class="arm-header__menu-item">
+                                    <a href="../loja/">Loja</a>
+                                </li>
+                                <li class="arm-header__menu-item">
+                                    <a href="../categoria/" class="j_dropdown">
+                                        Brincos
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </a>
+                                    
+                                    <ul class="arm-header__submenu j_submenu">
+                                        <li class="arm-header__submenu-item">
+                                            <a href="../categoria/">Argolas</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="arm-header__menu-item">
+                                    <a href="../categoria/">Colares</a>
+                                </li>
+                                <li class="arm-header__menu-item">
+                                    <a href="../categoria/" class="j_dropdown">
+                                        Pulseiras
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </a>
+                                    
+                                    <ul class="arm-header__submenu j_submenu">
+                                        <li class="arm-header__submenu-item">
+                                            <a href="../categoria/">Braceletes</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="arm-header__menu-item">
+                                    <a href="../categoria/">Conjuntos</a>
+                                </li>
+                                <li class="arm-header__menu-item">
+                                    <a href="#">Contato</a>
+                                </li>
+                            </ul>
+
+                            <div class="arm-header__menu-close j_menu_close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="arm-header__search">
+                <form>
+                    <div class="wrapper">
+                        <input type="text" name="search" id="search" placeholder="Olá, o que você procura?">
+
+                        <button type="submit" class="arm-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="arm-checkout">
+        <div class="arm-checkout__container">
+            <section class="arm-checkout__customer-area">
+                <!-- <div class="arm-checkout__progress">
+                    <p>Passo 2 de 3</p>
+
+                    <div class="bar">
+                        <div class="progress" style="width: 66.66%;"></div>
+                    </div>
+                </div> -->
+
+                <article class="arm-checkout__customer-contact">
+                    <header class="arm-checkout__title">
+                        <h2>Meu contato</h2>
+                    </header>
+
+                    <div class="arm-checkout__customer-login">
+                        <p>Já tem uma conta? <a href="#">Faça login</a></p>
+                    </div>
+
+                    <div class="arm-checkout__customer-register">
+                        <p class="arm-checkout__customer-continue">
+                            <span>Ou continue abaixo</span>
+                        </p>
+
+                        <label for="register-email" class="arm-checkout__customer-email">Endereço de e-mail <span style="color: red;">*</span></label>
+                        <input type="email" name="register-email" id="register-email" class="arm-checkout__customer-input">
+
+                        <p class="arm-checkout__customer-note">O número do pedido e o recibo serão enviados para este endereço de e-mail.</p>
+
+                        <button class="arm-button arm-checkout__customer-button">Salvar alterações</button>
+                    </div>
+                </article>
+
+                <article class="arm-checkout__customer-data">
+                    <header class="arm-checkout__title">
+                        <h2>Enviando para</h2>
+                    </header>
+
+                    <form class="arm-checkout__customer-form">
+                        <div class="form-control">
+                            <label for="register-name">Nome <span style="color: red;">*</span></label>
+                            <input type="text" name="register-name" id="register-name">
+                        </div>
+
+                        <div class="form-control">
+                            <label for="register-surname">Sobrenome <span style="color: red;">*</span></label>
+                            <input type="text" name="register-surname" id="register-surname">
+                        </div>
+
+                        <div class="form-control">
+                            <label for="register-document">CPF <span style="color: red;">*</span></label>
+                            <input type="text" name="register-document" id="register-document">
+                        </div>
+
+                        <div class="form-control">
+                            <label for="register-zip">CEP <span style="color: red;">*</span></label>
+                            <input type="text" name="register-zip" id="register-zip">
+                        </div>
+
+                        <div class="form-control country">
+                            <label for="register-country">País <span style="color: red;">*</span></label>
+                            <input type="text" name="register-country" id="register-country">
+                        </div>
+
+                        <div class="form-control">
+                            <label for="register-address">Endereço <span style="color: red;">*</span></label>
+                            <input type="text" name="register-address" id="register-address">
+                        </div>
+
+                        <div class="form-control">
+                            <label for="register-address-number">Número <span style="color: red;">*</span></label>
+                            <input type="text" name="register-address-number" id="register-address-number">
+                        </div>
+
+                        <div class="form-control">
+                            <label for="register-complement">Complemento</label>
+                            <input type="text" name="register-complement" id="register-complement">
+                        </div>
+
+                        <div class="form-control">
+                            <label for="register-borough">Bairro</label>
+                            <input type="text" name="register-borough" id="register-borough">
+                        </div>
+
+                        <div class="form-control">
+                            <label for="register-city">Cidade <span style="color: red;">*</span></label>
+                            <input type="text" name="register-city" id="register-city">
+                        </div>
+
+                        <div class="form-control">
+                            <label for="register-state">Estado <span style="color: red;">*</span></label>
+                            <input type="text" name="register-state" id="register-state">
+                        </div>
+
+                        <div class="form-control company">
+                            <label for="register-company">Nome da Empresa</label>
+                            <input type="text" name="register-company" id="register-company">
+                        </div>
+                    </form>
+                </article>
+
+                <article class="arm-checkout__customer-delivery">
+                    <header class="arm-checkout__title">
+                        <h2>Método de Entrega</h2>
+                    </header>
+
+                    <p>Digite seu endereço para ver as opções de entrega.</p>
+                </article>
+
+                <article class="arm-checkout__customer-notes">
+                    <header class="arm-checkout__title">
+                        <h2>Notas Adicionais</h2>
+                    </header>
+
+                    <textarea rows="2"></textarea>
+                </article>
+
+                <article class="arm-checkout__customer-payment">
+                    <header class="arm-checkout__title">
+                        <h2>Forma de pagamento</h2>
+                    </header>
+
+                    <div class="payments-list">
+                        <div class="payments-item">
+                            <p class="title">
+                                <span class="check"></span>
+                                Boleto Bancário
+                            </p>
+
+                            <div class="content ticket">
+                                <p>
+                                    Pague sua compra com boleto bancário.
+                                    <a href="#">Gerar boleto</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="payments-item">
+                            <p class="title">
+                                <span class="check"></span>
+                                Cartão de Crédito
+                            </p>
+
+                            <div class="content card">
+                                <p>Pague sua compra com cartão de crédito.</p>
+
+                                <form>
+                                    <div class="form-control name">
+                                        <label for="card-name">Nome no cartão <span style="color: red;">*</span></label>
+                                        <input type="text" name="card-name" id="card-name">
+                                    </div>
+
+                                    <div class="form-control number">
+                                        <label for="card-number">Número do cartão <span style="color: red;">*</span></label>
+                                        <input type="text" name="card-number" id="card-number">
+                                    </div>
+
+                                    <div class="form-control exp-date">
+                                        <p>Data de expiração</p>
+
+                                        <div>
+                                            <label for="card-exp-month">Mês <span style="color: red;">*</span></label>
+                                            <input type="text" name="card-exp-month" id="card-exp-month">
+                                        </div>
+
+                                        <div>
+                                            <label for="card-exp-year">Ano <span style="color: red;">*</span></label>
+                                            <input type="text" name="card-exp-year" id="card-exp-year">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-control cvc">
+                                        <label for="card-cvc">Código de Segurança <span style="color: red;">*</span></label>
+                                        <input type="text" name="card-cvc" id="card-cvc">
+                                    </div>
+
+                                    <div class="form-control installments">
+                                        <label for="card-installments">Parcelas</label>
+                                        <select name="card-installments" id="card-installments">
+                                            <option>1x R$ 273,36</option>
+                                            <option>2x R$ 136,68</option>
+                                            <option>3x R$ 91,12</option>
+                                            <option>4x R$ 68,34</option>
+                                            <option>5x R$ 54,67</option>
+                                            <option>6x R$ 45,56</option>
+                                            <option>7x R$ 39,05</option>
+                                            <option>8x R$ 34,17</option>
+                                            <option>9x R$ 30,37</option>
+                                            <option>10x R$ 27,34</option>
+                                            <option>11x R$ 24,85</option>
+                                            <option>12x R$ 22,78</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="payments-item">
+                            <p class="title">
+                                <span class="check"></span>
+                                Pix
+                            </p>
+
+                            <div class="content pix">
+                                <p>Pague sua compra com Pix.</p>
+
+                                <p class="code">
+                                    <span class="qr">
+                                        <img src="../assets/images/frame.png" alt="QR Code">
+                                    </span>
+
+                                    <span>ABCDefGhIJKlmnopQRstuvWXYZ1234567890</span>
+
+                                    <button class="arm-button"><i class="fa-regular fa-copy"></i> Copiar código</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arm-checkout__customer-proceed">
+                        <button class="arm-button">Finalizar Pedido</button>
+                    </div>
+                </article>
+            </section>
+
+            <aside class="arm-checkout__product">
+                <header class="arm-checkout__title arm-checkout__product-title">
+                    <h1>Resumo do pedido</h1>
+                    <p>
+                        <a href="../carrinho/">Editar carrinho</a>
+                    </p>
+                </header>
+
+                <div class="arm-checkout__product-list">
+                    <div class="arm-checkout__product-item">
+                        <div class="image">
+                            <img src="../assets/images/relogio-thumb.jpg" alt="Relógio Prata De Quartzo Com Ponteiro Quadrado">
+                            <span>x1</span>
+                        </div>
+    
+                        <div class="description">
+                            <p class="name">Relógio Prata De Quartzo Com Ponteiro Quadrado</p>
+                            <p class="unit-price">R$ 220,00</p>
+                        </div>
+    
+                        <div class="price">
+                            <p><strong>R$ 220,00</strong></p>
+                        </div>
+                    </div>
+    
+                    <div class="arm-checkout__product-item">
+                        <div class="image">
+                            <img src="../assets/images/anel-prata-thumb.webp" alt="Relógio Prata De Quartzo Com Ponteiro Quadrado">
+                            <span>x2</span>
+                        </div>
+    
+                        <div class="description">
+                            <p class="name">2 Peças Anel Prata Ou Dourado Com Decoração De Zircão - Ouro</p>
+                            <p class="unit-price">R$ 220,00</p>
+                        </div>
+    
+                        <div class="price">
+                            <p><strong>R$ 440,00</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="arm-checkout__product-price-resume subtotal">
+                    <p>Subtotal</p>
+                    <p>R$ 660,00</p>
+                </div>
+
+                <div class="arm-checkout__product-price-resume freight">
+                    <p>Entrega</p>
+                    <p>--</p>
+                </div>
+
+                <div class="arm-checkout__product-price-resume total">
+                    <p>Total</p>
+                    <p>R$ 660,00</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="arm-footer">
+        <div class="arm-footer__container arm-footer__benefits">
+            <article class="arm-footer__benefit">
+                <div class="arm-footer__benefit-image">
+                    <img src="../assets/images/caminhao-de-entrega-4.png.webp" alt="Ilustração caminhão de entrega">
+                </div>
+
+                <header class="arm-footer__benefit-title">
+                    <h1>Receba em casa</h1>
+                </header>
+
+                <p class="arm-footer__benefit-text">Enviamos para todo o Brasil</p>
+            </article>
+
+            <article class="arm-footer__benefit">
+                <div class="arm-footer__benefit-image">
+                    <img src="../assets/images/devolucoes-1.png.webp" alt="Ilustração devoluções">
+                </div>
+
+                <header class="arm-footer__benefit-title">
+                    <h1>Troca e Devolução</h1>
+                </header>
+
+                <p class="arm-footer__benefit-text">7 dias após o recebimento</p>
+            </article>
+
+            <article class="arm-footer__benefit">
+                <div class="arm-footer__benefit-image">
+                    <img src="../assets/images/cartoes-de-credito-1.png.webp" alt="Ilustração cartões de crédito">
+                </div>
+
+                <header class="arm-footer__benefit-title">
+                    <h1>Parcele em até</h1>
+                </header>
+
+                <p class="arm-footer__benefit-text">12x com caartões de crédito</p>
+            </article>
+
+            <article class="arm-footer__benefit">
+                <div class="arm-footer__benefit-image">
+                    <img src="../assets/images/cadeado-1.png.webp" alt="Ilustração cadeado">
+                </div>
+
+                <header class="arm-footer__benefit-title">
+                    <h1>Site 100% seguro</h1>
+                </header>
+
+                <p class="arm-footer__benefit-text">Seus dados estão protegidos</p>
+            </article>
+        </div>
+
+        <div class="arm-footer__content">
+            <div class="arm-footer__container">
+                <article class="arm-footer__institutional arm-footer__items">
+                    <header class="arm-footer__items-title">
+                        <h1>Institucional</h1>
+                    </header>
+
+                    <ul class="arm-footer__items-list">
+                        <li class="arm-footer__items-link">
+                            <a href="../">Home</a>
+                        </li>
+
+                        <li class="arm-footer__items-link">
+                            <a href="#">Sobre Nós</a>
+                        </li>
+
+                        <li class="arm-footer__items-link">
+                            <a href="../loja/">Todos os Produtos</a>
+                        </li>
+
+                        <li class="arm-footer__items-link">
+                            <a href="#">Contato</a>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="arm-footer__help arm-footer__items">
+                    <header class="arm-footer__items-title">
+                        <h1>Ajuda</h1>
+                    </header>
+
+                    <ul class="arm-footer__items-list">
+                        <li class="arm-footer__items-link">
+                            <a href="#">Política de Privacidade</a>
+                        </li>
+
+                        <li class="arm-footer__items-link">
+                            <a href="#">Política de Devolução e Trocas</a>
+                        </li>
+
+                        <li class="arm-footer__items-link">
+                            <a href="#">Rastreamento de Pedidos</a>
+                        </li>
+                    </ul>
+
+                    <ul class="arm-footer__items-list">
+                        <li class="arm-footer__items-link">
+                            <a href="#">
+                                <i class="fa-regular fa-envelope"></i>
+                                contato@armoreljoias.com.br
+                            </a>
+                        </li>
+
+                        <li class="arm-footer__items-link">
+                            <a href="#">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                (61) 9 0000 0000
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="arm-footer__payment arm-footer__items">
+                    <header class="arm-footer__items-title">
+                        <h1>Formas de Pagamento</h1>
+                    </header>
+
+                    <div class="arm-footer__payment-images">
+                        <img src="../assets/images/formas.webp" alt="Bandeiras de Cartões" class="cards">
+                        <img src="../assets/images/selossl.webp" alt="Selo SSL" class="ssl">
+                    </div>
+                </article>
+
+                <article class="arm-footer__social arm-footer__items">
+                    <header class="arm-footer__items-title">
+                        <h1>Nossas Redes</h1>
+                    </header>
+
+                    <ul class="arm-footer__social-list">
+                        <li class="arm-footer__social-link">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </li>
+
+                        <li class="arm-footer__social-link">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </li>
+
+                        <li class="arm-footer__social-link">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+
+                        <li class="arm-footer__social-link">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-pinterest"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+
+        <div class="arm-footer__copyright">
+            <p>Amorel Joias © 2023 Todos os direitos reservados.</p>
+            <p>CNPJ: 00000000000/00</p>
+        </div>
+    </footer>
+
+    <script type="module" src="../assets/scripts/minified/script.min.js"></script>
+    <script type="module" src="../assets/scripts/minified/product-quantity.min.js"></script>
+    <script type="module" src="../assets/scripts/minified/cart.min.js"></script>
+</body>
+</html>

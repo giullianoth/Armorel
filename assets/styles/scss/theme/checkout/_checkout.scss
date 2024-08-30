@@ -1,0 +1,53 @@
+@include theme() {
+    &checkout {
+        @include containerFluid;
+        margin-block: 50px;
+
+        &__container {
+            @include flex(flex-start, flex-start, nowrap);
+            column-gap: 40px;
+            @include relative;
+
+            @include setResponsiveDesign($breakpoint-small) {                
+                @include container;
+            }
+        }
+
+        &__title {
+            margin-bottom: 20px;
+
+            h1, h2 {
+                color: $color-primary;
+                font-size: $font-size-default;
+                text-transform: uppercase;
+            }
+        }
+
+        &__progress {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: $font-jost;
+            font-weight: 700;
+            color: $color-primary;
+            margin-bottom: 20px;
+            padding-inline: 20px;
+
+            @include setResponsiveDesign($breakpoint-small) {
+                padding: 0;
+            }
+
+            .bar {
+                @include containerFluid;
+                height: 5px;
+                @include relative;
+                background-color: $color-light-gray;
+                margin-top: 5px;
+            }
+
+            .progress {
+                @include absoluteFull(0, 0, true);
+                background-color: $color-accent;
+            }
+        }
+    }
+}

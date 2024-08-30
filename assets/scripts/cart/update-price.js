@@ -17,8 +17,6 @@ export function UpdatePrice(quantityField) {
     let subtotal = quantity * price
     let pixSubtotal = quantity * pixPrice
 
-    console.log(pixSubtotal);    
-
     productPriceTotal(quantityField).innerText = subtotal.toFixed(2).replace(".", ",")
     productPixPriceTotal(quantityField).innerText = pixSubtotal.toFixed(2).replace(".", ",")
 
