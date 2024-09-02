@@ -25,7 +25,7 @@
 
             &-login {
                 padding: 20px;
-                margin-bottom: 20px;
+                margin-block: 20px;
                 text-align: center;
                 background-color: $color-lighter-gray;
                 @include borderRadius(5px);
@@ -97,6 +97,7 @@
             &-form {
                 @include flex(flex-start, flex-start);
                 gap: 20px;
+                margin-top: 20px;
 
                 label {
                     font-size: 0.9em;
@@ -123,6 +124,10 @@
                 padding: 20px;
                 border: 1px solid $color-light-gray;
                 border-top: none;
+
+                & > p, & > div {
+                    margin-top: 20px;
+                }
             }
 
             &-notes {

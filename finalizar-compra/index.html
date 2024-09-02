@@ -64,13 +64,13 @@
                                 <li class="arm-header__menu-item">
                                     <a href="../loja/">Loja</a>
                                 </li>
-                                <li class="arm-header__menu-item">
-                                    <a href="../categoria/" class="j_dropdown">
+                                <li class="arm-header__menu-item j_dropdown j_collapse">
+                                    <a href="../categoria/" class="j_collapse_clickable">
                                         Brincos
                                         <i class="fa-solid fa-angle-down"></i>
                                     </a>
                                     
-                                    <ul class="arm-header__submenu j_submenu">
+                                    <ul class="arm-header__submenu j_submenu j_collapse_content">
                                         <li class="arm-header__submenu-item">
                                             <a href="../categoria/">Argolas</a>
                                         </li>
@@ -79,13 +79,13 @@
                                 <li class="arm-header__menu-item">
                                     <a href="../categoria/">Colares</a>
                                 </li>
-                                <li class="arm-header__menu-item">
-                                    <a href="../categoria/" class="j_dropdown">
+                                <li class="arm-header__menu-item j_dropdown j_collapse">
+                                    <a href="../categoria/" class="j_collapse_clickable">
                                         Pulseiras
                                         <i class="fa-solid fa-angle-down"></i>
                                     </a>
                                     
-                                    <ul class="arm-header__submenu j_submenu">
+                                    <ul class="arm-header__submenu j_submenu j_collapse_content">
                                         <li class="arm-header__submenu-item">
                                             <a href="../categoria/">Braceletes</a>
                                         </li>
@@ -132,216 +132,224 @@
                     </div>
                 </div> -->
 
-                <article class="arm-checkout__customer-contact">
-                    <header class="arm-checkout__title">
+                <article class="arm-checkout__customer-contact j_collapse">
+                    <header class="arm-checkout__title j_collapse_clickable arm-collapse">
                         <h2>Meu contato</h2>
                     </header>
 
-                    <div class="arm-checkout__customer-login">
-                        <p>Já tem uma conta? <a href="#">Faça login</a></p>
-                    </div>
-
-                    <div class="arm-checkout__customer-register">
-                        <p class="arm-checkout__customer-continue">
-                            <span>Ou continue abaixo</span>
-                        </p>
-
-                        <label for="register-email" class="arm-checkout__customer-email">Endereço de e-mail <span style="color: red;">*</span></label>
-                        <input type="email" name="register-email" id="register-email" class="arm-checkout__customer-input">
-
-                        <p class="arm-checkout__customer-note">O número do pedido e o recibo serão enviados para este endereço de e-mail.</p>
-
-                        <button class="arm-button arm-checkout__customer-button">Salvar alterações</button>
+                    <div class="j_collapse_content">
+                        <div class="arm-checkout__customer-login">
+                            <p>Já tem uma conta? <a href="#">Faça login</a></p>
+                        </div>
+    
+                        <div class="arm-checkout__customer-register">
+                            <p class="arm-checkout__customer-continue">
+                                <span>Ou continue abaixo</span>
+                            </p>
+    
+                            <label for="register-email" class="arm-checkout__customer-email">Endereço de e-mail <span style="color: red;">*</span></label>
+                            <input type="email" name="register-email" id="register-email" class="arm-checkout__customer-input">
+    
+                            <p class="arm-checkout__customer-note">O número do pedido e o recibo serão enviados para este endereço de e-mail.</p>
+    
+                            <button class="arm-button arm-checkout__customer-button">Salvar alterações</button>
+                        </div>
                     </div>
                 </article>
 
-                <article class="arm-checkout__customer-data">
-                    <header class="arm-checkout__title">
+                <article class="arm-checkout__customer-data j_collapse">
+                    <header class="arm-checkout__title j_collapse_clickable arm-collapse">
                         <h2>Enviando para</h2>
                     </header>
 
-                    <form class="arm-checkout__customer-form">
-                        <div class="form-control">
-                            <label for="register-name">Nome <span style="color: red;">*</span></label>
-                            <input type="text" name="register-name" id="register-name">
-                        </div>
-
-                        <div class="form-control">
-                            <label for="register-surname">Sobrenome <span style="color: red;">*</span></label>
-                            <input type="text" name="register-surname" id="register-surname">
-                        </div>
-
-                        <div class="form-control">
-                            <label for="register-document">CPF <span style="color: red;">*</span></label>
-                            <input type="text" name="register-document" id="register-document">
-                        </div>
-
-                        <div class="form-control">
-                            <label for="register-zip">CEP <span style="color: red;">*</span></label>
-                            <input type="text" name="register-zip" id="register-zip">
-                        </div>
-
-                        <div class="form-control country">
-                            <label for="register-country">País <span style="color: red;">*</span></label>
-                            <input type="text" name="register-country" id="register-country">
-                        </div>
-
-                        <div class="form-control">
-                            <label for="register-address">Endereço <span style="color: red;">*</span></label>
-                            <input type="text" name="register-address" id="register-address">
-                        </div>
-
-                        <div class="form-control">
-                            <label for="register-address-number">Número <span style="color: red;">*</span></label>
-                            <input type="text" name="register-address-number" id="register-address-number">
-                        </div>
-
-                        <div class="form-control">
-                            <label for="register-complement">Complemento</label>
-                            <input type="text" name="register-complement" id="register-complement">
-                        </div>
-
-                        <div class="form-control">
-                            <label for="register-borough">Bairro</label>
-                            <input type="text" name="register-borough" id="register-borough">
-                        </div>
-
-                        <div class="form-control">
-                            <label for="register-city">Cidade <span style="color: red;">*</span></label>
-                            <input type="text" name="register-city" id="register-city">
-                        </div>
-
-                        <div class="form-control">
-                            <label for="register-state">Estado <span style="color: red;">*</span></label>
-                            <input type="text" name="register-state" id="register-state">
-                        </div>
-
-                        <div class="form-control company">
-                            <label for="register-company">Nome da Empresa</label>
-                            <input type="text" name="register-company" id="register-company">
-                        </div>
-                    </form>
+                    <div class="j_collapse_content">
+                        <form class="arm-checkout__customer-form">
+                            <div class="form-control">
+                                <label for="register-name">Nome <span style="color: red;">*</span></label>
+                                <input type="text" name="register-name" id="register-name">
+                            </div>
+    
+                            <div class="form-control">
+                                <label for="register-surname">Sobrenome <span style="color: red;">*</span></label>
+                                <input type="text" name="register-surname" id="register-surname">
+                            </div>
+    
+                            <div class="form-control">
+                                <label for="register-document">CPF <span style="color: red;">*</span></label>
+                                <input type="text" name="register-document" id="register-document">
+                            </div>
+    
+                            <div class="form-control">
+                                <label for="register-zip">CEP <span style="color: red;">*</span></label>
+                                <input type="text" name="register-zip" id="register-zip">
+                            </div>
+    
+                            <div class="form-control country">
+                                <label for="register-country">País <span style="color: red;">*</span></label>
+                                <input type="text" name="register-country" id="register-country">
+                            </div>
+    
+                            <div class="form-control">
+                                <label for="register-address">Endereço <span style="color: red;">*</span></label>
+                                <input type="text" name="register-address" id="register-address">
+                            </div>
+    
+                            <div class="form-control">
+                                <label for="register-address-number">Número <span style="color: red;">*</span></label>
+                                <input type="text" name="register-address-number" id="register-address-number">
+                            </div>
+    
+                            <div class="form-control">
+                                <label for="register-complement">Complemento</label>
+                                <input type="text" name="register-complement" id="register-complement">
+                            </div>
+    
+                            <div class="form-control">
+                                <label for="register-borough">Bairro</label>
+                                <input type="text" name="register-borough" id="register-borough">
+                            </div>
+    
+                            <div class="form-control">
+                                <label for="register-city">Cidade <span style="color: red;">*</span></label>
+                                <input type="text" name="register-city" id="register-city">
+                            </div>
+    
+                            <div class="form-control">
+                                <label for="register-state">Estado <span style="color: red;">*</span></label>
+                                <input type="text" name="register-state" id="register-state">
+                            </div>
+    
+                            <div class="form-control company">
+                                <label for="register-company">Nome da Empresa</label>
+                                <input type="text" name="register-company" id="register-company">
+                            </div>
+                        </form>
+                    </div>
                 </article>
 
-                <article class="arm-checkout__customer-delivery">
-                    <header class="arm-checkout__title">
+                <article class="arm-checkout__customer-delivery j_collapse">
+                    <header class="arm-checkout__title j_collapse_clickable arm-collapse">
                         <h2>Método de Entrega</h2>
                     </header>
 
-                    <p>Digite seu endereço para ver as opções de entrega.</p>
+                    <p class="j_collapse_content">Digite seu endereço para ver as opções de entrega.</p>
                 </article>
 
-                <article class="arm-checkout__customer-notes">
-                    <header class="arm-checkout__title">
+                <article class="arm-checkout__customer-notes j_collapse">
+                    <header class="arm-checkout__title j_collapse_clickable arm-collapse">
                         <h2>Notas Adicionais</h2>
                     </header>
 
-                    <textarea rows="2"></textarea>
+                    <div class="j_collapse_content">
+                        <textarea rows="2"></textarea>
+                    </div>
                 </article>
 
-                <article class="arm-checkout__customer-payment">
-                    <header class="arm-checkout__title">
+                <article class="arm-checkout__customer-payment j_collapse">
+                    <header class="arm-checkout__title j_collapse_clickable arm-collapse">
                         <h2>Forma de pagamento</h2>
                     </header>
 
-                    <div class="payments-list">
-                        <div class="payments-item">
-                            <p class="title">
-                                <span class="check">
-                                    <i class="fa-solid fa-check"></i>
-                                </span>
-                                Boleto Bancário
-                            </p>
-
-                            <div class="content ticket">
-                                <p>
-                                    Pague sua compra com boleto bancário.
-                                    <a href="#">Gerar boleto</a>
+                    <div class="j_collapse_content">
+                        <div class="payments-list">
+                            <div class="payments-item j_collapse j_payment_collapse">
+                                <p class="title j_collapse_clickable arm-collapse">
+                                    <span class="check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </span>
+                                    Boleto Bancário
                                 </p>
+    
+                                <div class="content ticket j_collapse_content">
+                                    <p>
+                                        Pague sua compra com boleto bancário.
+                                        <a href="#">Gerar boleto</a>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="payments-item">
-                            <p class="title">
-                                <span class="check">
-                                    <i class="fa-solid fa-check"></i>
-                                </span>
-                                Cartão de Crédito
-                            </p>
-
-                            <div class="content card">
-                                <p>Pague sua compra com cartão de crédito.</p>
-
-                                <form>
-                                    <div class="form-control name">
-                                        <label for="card-name">Nome no cartão <span style="color: red;">*</span></label>
-                                        <input type="text" name="card-name" id="card-name">
-                                    </div>
-
-                                    <div class="form-control number">
-                                        <label for="card-number">Número do cartão <span style="color: red;">*</span></label>
-                                        <input type="text" name="card-number" id="card-number">
-                                    </div>
-
-                                    <div class="form-control exp-date">
-                                        <p>Data de expiração</p>
-
-                                        <div>
-                                            <label for="card-exp-month">Mês <span style="color: red;">*</span></label>
-                                            <input type="text" name="card-exp-month" id="card-exp-month">
+    
+                            <div class="payments-item j_collapse j_payment_collapse">
+                                <p class="title j_collapse_clickable arm-collapse">
+                                    <span class="check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </span>
+                                    Cartão de Crédito
+                                </p>
+    
+                                <div class="content card j_collapse_content">
+                                    <p>Pague sua compra com cartão de crédito.</p>
+    
+                                    <form>
+                                        <div class="form-control name">
+                                            <label for="card-name">Nome no cartão <span style="color: red;">*</span></label>
+                                            <input type="text" name="card-name" id="card-name">
                                         </div>
-
-                                        <div>
-                                            <label for="card-exp-year">Ano <span style="color: red;">*</span></label>
-                                            <input type="text" name="card-exp-year" id="card-exp-year">
+    
+                                        <div class="form-control number">
+                                            <label for="card-number">Número do cartão <span style="color: red;">*</span></label>
+                                            <input type="text" name="card-number" id="card-number">
                                         </div>
-                                    </div>
-
-                                    <div class="form-control cvc">
-                                        <label for="card-cvc">Código de Segurança <span style="color: red;">*</span></label>
-                                        <input type="text" name="card-cvc" id="card-cvc">
-                                    </div>
-
-                                    <div class="form-control installments">
-                                        <label for="card-installments">Parcelas</label>
-                                        <select name="card-installments" id="card-installments">
-                                            <option>1x R$ 273,36</option>
-                                            <option>2x R$ 136,68</option>
-                                            <option>3x R$ 91,12</option>
-                                            <option>4x R$ 68,34</option>
-                                            <option>5x R$ 54,67</option>
-                                            <option>6x R$ 45,56</option>
-                                            <option>7x R$ 39,05</option>
-                                            <option>8x R$ 34,17</option>
-                                            <option>9x R$ 30,37</option>
-                                            <option>10x R$ 27,34</option>
-                                            <option>11x R$ 24,85</option>
-                                            <option>12x R$ 22,78</option>
-                                        </select>
-                                    </div>
-                                </form>
+    
+                                        <div class="form-control exp-date">
+                                            <p>Data de expiração</p>
+    
+                                            <div>
+                                                <label for="card-exp-month">Mês <span style="color: red;">*</span></label>
+                                                <input type="text" name="card-exp-month" id="card-exp-month">
+                                            </div>
+    
+                                            <div>
+                                                <label for="card-exp-year">Ano <span style="color: red;">*</span></label>
+                                                <input type="text" name="card-exp-year" id="card-exp-year">
+                                            </div>
+                                        </div>
+    
+                                        <div class="form-control cvc">
+                                            <label for="card-cvc">Código de Segurança <span style="color: red;">*</span></label>
+                                            <input type="text" name="card-cvc" id="card-cvc">
+                                        </div>
+    
+                                        <div class="form-control installments">
+                                            <label for="card-installments">Parcelas</label>
+                                            <select name="card-installments" id="card-installments">
+                                                <option>1x R$ 273,36</option>
+                                                <option>2x R$ 136,68</option>
+                                                <option>3x R$ 91,12</option>
+                                                <option>4x R$ 68,34</option>
+                                                <option>5x R$ 54,67</option>
+                                                <option>6x R$ 45,56</option>
+                                                <option>7x R$ 39,05</option>
+                                                <option>8x R$ 34,17</option>
+                                                <option>9x R$ 30,37</option>
+                                                <option>10x R$ 27,34</option>
+                                                <option>11x R$ 24,85</option>
+                                                <option>12x R$ 22,78</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="payments-item">
-                            <p class="title">
-                                <span class="check">
-                                    <i class="fa-solid fa-check"></i>
-                                </span>
-                                Pix
-                            </p>
-
-                            <div class="content pix">
-                                <p>Pague sua compra com Pix.</p>
-
-                                <div class="get-code">
-                                    <div class="qr">
-                                        <img src="../assets/images/frame.png" alt="QR Code">
+    
+                            <div class="payments-item j_collapse j_payment_collapse">
+                                <p class="title j_collapse_clickable arm-collapse">
+                                    <span class="check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </span>
+                                    Pix
+                                </p>
+    
+                                <div class="content pix j_collapse_content">
+                                    <p>Pague sua compra com Pix.</p>
+    
+                                    <div class="get-code">
+                                        <div class="qr">
+                                            <img src="../assets/images/frame.png" alt="QR Code">
+                                        </div>
+    
+                                        <p class="code">ABCDefGhIJKlmnopQRstuvWXYZ1234567890</p>
+    
+                                        <button class="arm-button"><i class="fa-regular fa-copy"></i> Copiar código</button>
                                     </div>
-
-                                    <p class="code">ABCDefGhIJKlmnopQRstuvWXYZ1234567890</p>
-
-                                    <button class="arm-button"><i class="fa-regular fa-copy"></i> Copiar código</button>
                                 </div>
                             </div>
                         </div>
@@ -577,8 +585,7 @@
         </div>
     </footer>
 
-    <script type="module" src="../assets/scripts/minified/script.min.js"></script>
-    <script type="module" src="../assets/scripts/minified/product-quantity.min.js"></script>
-    <script type="module" src="../assets/scripts/minified/cart.min.js"></script>
+    <!-- <script type="module" src="../assets/scripts/minified/script.min.js"></script> -->
+    <script type="module" src="../assets/scripts/script.js"></script>
 </body>
 </html>

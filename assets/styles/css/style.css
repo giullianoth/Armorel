@@ -239,6 +239,9 @@ input[type=range], input[type=checkbox], input[type=radio], select {
   color: #282A2C;
   font-weight: 500;
 }
+.arm-collapse {
+  cursor: pointer;
+}
 
 /* HEADER CONFIG */
 .arm-header {
@@ -2370,9 +2373,6 @@ input[type=range], input[type=checkbox], input[type=radio], select {
     margin-inline: auto;
   }
 }
-.arm-checkout__title {
-  margin-bottom: 20px;
-}
 .arm-checkout__title h1, .arm-checkout__title h2 {
   color: #282A2C;
   font-size: 1rem;
@@ -2438,7 +2438,7 @@ input[type=range], input[type=checkbox], input[type=radio], select {
 }
 .arm-checkout__customer-login {
   padding: 20px;
-  margin-bottom: 20px;
+  margin-block: 20px;
   text-align: center;
   background-color: #F6F6F6;
   border-radius: 5px;
@@ -2507,6 +2507,7 @@ input[type=range], input[type=checkbox], input[type=radio], select {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 20px;
+  margin-top: 20px;
 }
 .arm-checkout__customer-form label {
   font-size: 0.9em;
@@ -2529,6 +2530,9 @@ input[type=range], input[type=checkbox], input[type=radio], select {
   padding: 20px;
   border: 1px solid #DDD;
   border-top: none;
+}
+.arm-checkout__customer-delivery > p, .arm-checkout__customer-delivery > div, .arm-checkout__customer-notes > p, .arm-checkout__customer-notes > div, .arm-checkout__customer-payment > p, .arm-checkout__customer-payment > div {
+  margin-top: 20px;
 }
 .arm-checkout__customer-notes textarea {
   width: 100%;

@@ -64,13 +64,13 @@
                                 <li class="arm-header__menu-item">
                                     <a href="./">Loja</a>
                                 </li>
-                                <li class="arm-header__menu-item">
-                                    <a href="../categoria/" class="j_dropdown">
+                                <li class="arm-header__menu-item j_dropdown j_collapse">
+                                    <a href="../categoria/" class="j_collapse_clickable">
                                         Brincos
                                         <i class="fa-solid fa-angle-down"></i>
                                     </a>
                                     
-                                    <ul class="arm-header__submenu j_submenu">
+                                    <ul class="arm-header__submenu j_submenu j_collapse_content">
                                         <li class="arm-header__submenu-item">
                                             <a href="../categoria/">Argolas</a>
                                         </li>
@@ -79,13 +79,13 @@
                                 <li class="arm-header__menu-item">
                                     <a href="../categoria/">Colares</a>
                                 </li>
-                                <li class="arm-header__menu-item">
-                                    <a href="../categoria/" class="j_dropdown">
+                                <li class="arm-header__menu-item j_dropdown j_collapse">
+                                    <a href="../categoria/" class="j_collapse_clickable">
                                         Pulseiras
                                         <i class="fa-solid fa-angle-down"></i>
                                     </a>
                                     
-                                    <ul class="arm-header__submenu j_submenu">
+                                    <ul class="arm-header__submenu j_submenu j_collapse_content">
                                         <li class="arm-header__submenu-item">
                                             <a href="../categoria/">Braceletes</a>
                                         </li>
@@ -124,8 +124,8 @@
     <main class="arm-store">
         <div class="arm-store__container">
             <aside class="arm-store__filter">
-                <article class="arm-store__filter-by arm-store__filter-by-price">
-                    <header class="arm-store__filter-title j_filter_collapse">
+                <article class="arm-store__filter-by arm-store__filter-by-price j_collapse j_collapse_filter_by">
+                    <header class="arm-store__filter-title j_filter_collapse j_collapse_clickable">
                         <h2>Preço</h2>
 
                         <div class="arm-store__filter-collapse">
@@ -133,7 +133,7 @@
                         </div>
                     </header>
 
-                    <div class="arm-store__filter-content j_filter_content">
+                    <div class="arm-store__filter-content j_filter_content j_collapse_content">
                         <div class="range j_price_range">
                             <div class="bar">
                                 <div class="progress"></div>
@@ -152,8 +152,8 @@
                     </div>
                 </article>
 
-                <article class="arm-store__filter-by arm-store__filter-by-category">
-                    <header class="arm-store__filter-title j_filter_collapse">
+                <article class="arm-store__filter-by arm-store__filter-by-category j_collapse j_collapse_filter_by">
+                    <header class="arm-store__filter-title j_filter_collapse j_collapse_clickable">
                         <h2>Categorias</h2>
 
                         <div class="arm-store__filter-collapse">
@@ -161,7 +161,7 @@
                         </div>
                     </header>
 
-                    <div class="arm-store__filter-content j_filter_content">
+                    <div class="arm-store__filter-content j_filter_content j_collapse_content">
                         <ul class="arm-store__filter-list">
                             <li class="arm-store__filter-item">
                                 <input type="radio" name="category" id="aneis">
@@ -206,8 +206,8 @@
                     </div>
                 </article>
 
-                <article class="arm-store__filter-by arm-store__filter-by-stone">
-                    <header class="arm-store__filter-title j_filter_collapse">
+                <article class="arm-store__filter-by arm-store__filter-by-stone j_collapse j_collapse_filter_by">
+                    <header class="arm-store__filter-title j_filter_collapse j_collapse_clickable">
                         <h2>Cor da Pedra</h2>
 
                         <div class="arm-store__filter-collapse">
@@ -215,7 +215,7 @@
                         </div>
                     </header>
 
-                    <div class="arm-store__filter-content j_filter_content">
+                    <div class="arm-store__filter-content j_filter_content j_collapse_content">
                         <ul class="arm-store__filter-list">
                             <li class="arm-store__filter-item">
                                 <input type="checkbox" name="transparente" id="transparente">
@@ -230,8 +230,8 @@
                     </div>
                 </article>
 
-                <article class="arm-store__filter-by arm-store__filter-by-material">
-                    <header class="arm-store__filter-title j_filter_collapse">
+                <article class="arm-store__filter-by arm-store__filter-by-material j_collapse j_collapse_filter_by">
+                    <header class="arm-store__filter-title j_filter_collapse j_collapse_clickable">
                         <h2>Material</h2>
 
                         <div class="arm-store__filter-collapse">
@@ -239,7 +239,7 @@
                         </div>
                     </header>
 
-                    <div class="arm-store__filter-content j_filter_content">
+                    <div class="arm-store__filter-content j_filter_content j_collapse_content">
                         <ul class="arm-store__filter-list">
                             <li class="arm-store__filter-item">
                                 <input type="checkbox" name="ouro" id="ouro">
@@ -254,8 +254,8 @@
                     </div>
                 </article>
 
-                <article class="arm-store__filter-by arm-store__filter-by-size">
-                    <header class="arm-store__filter-title j_filter_collapse">
+                <article class="arm-store__filter-by arm-store__filter-by-size j_collapse j_collapse_filter_by">
+                    <header class="arm-store__filter-title j_filter_collapse j_collapse_clickable">
                         <h2>Tamanho do Aro</h2>
 
                         <div class="arm-store__filter-collapse">
@@ -263,7 +263,7 @@
                         </div>
                     </header>
 
-                    <div class="arm-store__filter-content j_filter_content">
+                    <div class="arm-store__filter-content j_filter_content j_collapse_content">
                         <ul class="arm-store__filter-list">
                             <li class="arm-store__filter-item">
                                 <input type="checkbox" name="tamanho9" id="tamanho9">
@@ -1219,7 +1219,10 @@
         </div>
     </footer>
 
-    <script type="module" src="../assets/scripts/minified/script.min.js"></script>
-    <script type="module" src="../assets/scripts/minified/store.min.js"></script>
+    <!-- <script type="module" src="../assets/scripts/minified/script.min.js"></script>
+    <script type="module" src="../assets/scripts/minified/store.min.js"></script> -->
+    <script type="module" src="../assets/scripts/script.js"></script>
+    <script type="module" src="../assets/scripts/store/filter-collapse.js"></script>
+    <script type="module" src="../assets/scripts/store/price-range.js"></script>
 </body>
 </html>
