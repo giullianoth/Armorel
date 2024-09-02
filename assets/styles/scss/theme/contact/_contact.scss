@@ -1,0 +1,106 @@
+@include theme() {
+    &contact {
+        @include containerFluid;
+        margin-block: 50px;
+
+        &__container {
+            @include container;
+            @include flex(flex-start, stretch);
+            gap: 40px;
+        }
+
+        &__info {
+            @include flex1;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex2(40px);
+            }
+        }
+
+        &__title {
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+
+        &__text {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        &__list {
+            margin-bottom: 30px;
+            line-height: 1.8;
+            color: $color-accent;
+            font-family: $font-jost;
+
+            i {
+                margin-right: 16px;
+            }
+        }
+        
+        &__about {
+            padding-bottom: 10px;
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            a {
+                @include transition;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &__social {
+            &-list {
+                @include flex(flex-start);
+                gap: 16px;
+            }
+
+            &-link {
+                a {
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    background-color: $color-primary;
+                    color: $color-white;
+                    line-height: 32px;
+                    text-align: center;
+                    @include rounded;
+                }
+            }
+        }
+
+        &__form {
+            @include flex1;
+            background-color: $color-lighter-gray;
+            @include borderRadius(10px);
+            @include container(600px, 0);
+            padding: 20px;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                padding: 30px;
+            }
+
+            @include setResponsiveDesign($breakpoint-large) {
+                @include flex2(40px);
+                max-width: none;
+            }
+
+            form {
+                @include flex(flex-start, stretch, nowrap);
+                flex-direction: column;
+                row-gap: 20px;
+            }
+
+            .form-control {
+                input, select, textarea {
+                    @include containerFluid;
+                }
+            }
+        }
+    }
+}

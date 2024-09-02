@@ -59,6 +59,7 @@ input:not([type="range"]), textarea, select {
     padding: 10px;
     outline: none;
     display: block;
+    color: $color-text;
     @include borderRadius(5px);
 
     &::placeholder {
