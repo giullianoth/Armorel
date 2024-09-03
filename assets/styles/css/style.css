@@ -126,6 +126,12 @@ input[type=range], input[type=checkbox], input[type=radio], select {
   height: 1px;
   background-color: #DDD;
 }
+.arm-text-box {
+  line-height: 1.4;
+}
+.arm-text-box > *:not(:last-child) {
+  margin-bottom: 12px;
+}
 .arm-product-item {
   transition: all 0.3s ease 0s;
   padding: 10px;
@@ -2846,4 +2852,95 @@ input[type=range], input[type=checkbox], input[type=radio], select {
 }
 .arm-contact__form .form-control input, .arm-contact__form .form-control select, .arm-contact__form .form-control textarea {
   width: 100%;
+}
+
+/* ABOUT PAGE */
+/* About Section */
+.arm-about {
+  width: 100%;
+  margin-block: 50px;
+}
+.arm-about__container {
+  max-width: 1140px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+.arm-about__content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 40px 20px;
+}
+@media screen and (min-width: 992px) {
+  .arm-about__content {
+    flex-direction: row-reverse;
+  }
+}
+.arm-about__content-text {
+  flex-basis: 100%;
+}
+@media screen and (min-width: 992px) {
+  .arm-about__content-text {
+    flex-basis: calc(70% - 20px);
+  }
+}
+.arm-about__content-text a {
+  color: #38C43B;
+  font-weight: 500;
+  transition: all 0.3s ease 0s;
+}
+.arm-about__content-text a:hover {
+  color: #9D6335;
+}
+.arm-about__content-image {
+  flex-basis: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .arm-about__content-image {
+    flex-basis: 30%;
+  }
+}
+
+/* FAQ Section */
+.arm-faq {
+  width: 100%;
+  margin-block: 50px;
+}
+.arm-faq__container {
+  max-width: 1140px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+.arm-faq__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.arm-faq__question {
+  padding: 12px;
+  background-color: #F6F6F6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 12px;
+  color: #282A2C;
+  cursor: pointer;
+}
+.arm-faq__question h2 {
+  font-size: 1em;
+  font-weight: 500;
+}
+.arm-faq__answer {
+  padding-block: 20px;
+  display: none;
+}
+.arm-faq__answer a {
+  color: #38C43B;
+}
+.arm-faq__answer a:hover {
+  text-decoration: underline;
+}
+.arm-faq__answer li {
+  list-style-type: disc;
 }

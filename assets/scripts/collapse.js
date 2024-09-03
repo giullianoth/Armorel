@@ -1,3 +1,4 @@
+import { faqCollapse } from "./about/faq.js"
 import { paymentCollapse } from "./checkout/payment-collapse.js"
 import { slideDown, slideUp } from "./effects.js"
 import { menuDropdown } from "./menu.js"
@@ -31,6 +32,10 @@ export default function Collapse() {
 
             if (collapse.classList.contains("j_collapse_filter_by")) {
                 filterCollapse(collapseButton(collapse))                
+            }
+
+            if (collapse.classList.contains("j_faq")) {
+                faqCollapse(collapseButton(collapse))                
             }
         })        
     })

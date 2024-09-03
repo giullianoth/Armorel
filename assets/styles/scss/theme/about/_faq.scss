@@ -1,0 +1,47 @@
+@include theme() {
+    &faq {
+        @include containerFluid;
+        margin-block: 50px;
+
+        &__container {
+            @include container;
+        }
+
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__question {
+            padding: 12px;
+            background-color: $color-lighter-gray;
+            @include flex(space-between, center, nowrap);
+            gap: 12px;
+            color: $color-primary;
+            cursor: pointer;
+
+            h2 {
+                font-size: 1em;
+                font-weight: 500;
+            }
+        }
+
+        &__answer {
+            padding-block: 20px;
+            display: none;
+
+            a {
+                color: $color-accent;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            li {
+                list-style-type: disc;
+            }
+        }
+    }
+}

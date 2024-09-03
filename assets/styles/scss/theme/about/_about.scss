@@ -1,0 +1,48 @@
+@include theme() {
+    &about {
+        @include containerFluid;
+        margin-block: 50px;
+
+        &__container {
+            @include container;
+        }
+
+        &__content {
+            @include flex(flex-start, stretch);
+            gap: 40px 20px;
+
+            @include setResponsiveDesign($breakpoint-large) {
+                flex-direction: row-reverse;
+            }
+
+            &-text {
+                @include flex1;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    @include flexBasis(70%, 20px);
+                }
+    
+                a {
+                    color: $color-accent;
+                    font-weight: 500;
+                    @include transition;
+
+                    &:hover {
+                        color: $color-brown;
+                    }
+                }
+            }
+    
+            &-image {
+                @include flex1;
+                text-align: center;
+
+                @include setResponsiveDesign($breakpoint-large) {
+                    @include flexBasis(30%);
+                }
+            }
+        }
+
+        
+    }
+}

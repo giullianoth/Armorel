@@ -121,6 +121,16 @@ input[type="range"], input[type="checkbox"], input[type="radio"], select {
         }
     }
 
+    &text-box {
+        line-height: 1.4;
+
+        & > * {
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+        }
+    }
+
     &product {
         &-item {
             @include transition;
