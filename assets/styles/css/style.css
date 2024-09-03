@@ -2755,17 +2755,27 @@ input[type=range], input[type=checkbox], input[type=radio], select {
   margin-block: 50px;
 }
 .arm-contact__container {
-  max-width: 1140px;
-  padding-inline: 20px;
-  margin-inline: auto;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
   flex-wrap: wrap;
   gap: 40px;
 }
+@media screen and (min-width: 576px) {
+  .arm-contact__container {
+    max-width: 1140px;
+    padding-inline: 20px;
+    margin-inline: auto;
+  }
+}
 .arm-contact__info {
   flex-basis: 100%;
+  padding-inline: 20px;
+}
+@media screen and (min-width: 576px) {
+  .arm-contact__info {
+    padding: 0;
+  }
 }
 @media screen and (min-width: 992px) {
   .arm-contact__info {
@@ -2823,13 +2833,17 @@ input[type=range], input[type=checkbox], input[type=radio], select {
 .arm-contact__form {
   flex-basis: 100%;
   background-color: #F6F6F6;
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
   max-width: 600px;
   padding-inline: 0;
   margin-inline: auto;
   padding: 20px;
+}
+@media screen and (min-width: 576px) {
+  .arm-contact__form {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+  }
 }
 @media screen and (min-width: 768px) {
   .arm-contact__form {
