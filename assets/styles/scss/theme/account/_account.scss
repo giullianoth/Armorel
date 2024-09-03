@@ -1,0 +1,64 @@
+@include theme() {
+    &account {
+        @include containerFluid;
+        margin-block: 50px;
+
+        &__container {
+            @include container;
+        }
+
+        &__tabs {
+            @include containerFluid;
+            @include flex(center, stretch, nowrap);
+            flex-direction: column;
+            padding: 0 10px;
+            background-color: $color-brown-overlay;
+            @include borderRadius(5px);
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                flex-direction: row;
+                padding: 10px;
+            }
+        }
+
+        &__tab {
+            @include grow;
+            text-align: center;
+            padding: 16px 4px;
+            @include flex;
+
+            @include setResponsiveDesign($breakpoint-medium) {
+                padding: 4px;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $color-brown;
+
+                @include setResponsiveDesign($breakpoint-medium) {
+                    border-right: 2px solid $color-brown;
+                    border-bottom: none;
+                }
+            }
+
+            a {
+                color: $color-brown;
+                font-weight: 500;
+                @include transition;
+                line-height: 1;
+
+                &:hover {
+                    color: $color-primary;
+                }
+            }
+        }
+
+        &__item {
+            margin-top: 50px;
+            display: none;
+
+            a {
+                color: $color-accent;
+            }
+        }
+    }
+}

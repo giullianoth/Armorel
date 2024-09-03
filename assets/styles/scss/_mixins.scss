@@ -80,6 +80,10 @@
     @include flexBasis(calc(100% / 4), calc($gap - ($gap / 4)));
 }
 
+@mixin grow() {
+    flex-grow: 1;
+}
+
 // POSITION
 // Relative
 @mixin relative() {

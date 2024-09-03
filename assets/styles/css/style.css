@@ -3002,3 +3002,158 @@ input[type=range], input[type=checkbox], input[type=radio], select {
   list-style-type: disc;
   margin-left: 1.8em;
 }
+
+/* ACCOUNT PAGE */
+/* Account Section */
+.arm-account {
+  width: 100%;
+  margin-block: 50px;
+}
+.arm-account__container {
+  max-width: 1140px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+.arm-account__tabs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  padding: 0 10px;
+  background-color: rgba(184, 137, 108, 0.3019607843);
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+@media screen and (min-width: 768px) {
+  .arm-account__tabs {
+    flex-direction: row;
+    padding: 10px;
+  }
+}
+.arm-account__tab {
+  flex-grow: 1;
+  text-align: center;
+  padding: 16px 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .arm-account__tab {
+    padding: 4px;
+  }
+}
+.arm-account__tab:not(:last-child) {
+  border-bottom: 1px solid #9D6335;
+}
+@media screen and (min-width: 768px) {
+  .arm-account__tab:not(:last-child) {
+    border-right: 2px solid #9D6335;
+    border-bottom: none;
+  }
+}
+.arm-account__tab a {
+  color: #9D6335;
+  font-weight: 500;
+  transition: all 0.3s ease 0s;
+  line-height: 1;
+}
+.arm-account__tab a:hover {
+  color: #282A2C;
+}
+.arm-account__item {
+  margin-top: 50px;
+  display: none;
+}
+.arm-account__item a {
+  color: #38C43B;
+}
+
+/* Account Details Section */
+.arm-account__account-details {
+  max-width: 768px;
+  padding-inline: 0;
+  margin-inline: auto;
+}
+@media screen and (min-width: 1024px) {
+  .arm-account__account-details {
+    max-width: none;
+  }
+}
+.arm-account__account-details form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.arm-account__account-details form .form-column {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 20px;
+}
+.arm-account__account-details form .form-column.submit {
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .arm-account__account-details form .form-column:not(.submit) {
+    flex-basis: calc(50% - 20px);
+  }
+}
+.arm-account__account-details form .form-column.password {
+  padding: 30px 10px 10px 10px;
+  border: 1px solid #DDD;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .arm-account__account-details form .form-column.password {
+    padding: 30px 20px 20px 20px;
+  }
+}
+.arm-account__account-details form .form-column.password .column-title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFF;
+  padding-inline: 3px;
+  display: inline-block;
+}
+.arm-account__account-details form .form-column.password .password-label {
+  position: relative;
+}
+.arm-account__account-details form .form-column.password .password-label i {
+  position: absolute;
+  top: 50%;
+  left: unset;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  color: #DDD;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.arm-account__account-details form .form-column.password .password-label i:hover {
+  color: #7A7A7A;
+}
+.arm-account__account-details form .form-control {
+  flex-basis: 100%;
+}
+.arm-account__account-details form input {
+  width: 100%;
+}
+.arm-account__account-details form .note {
+  display: block;
+  line-height: 1;
+  font-size: 0.8em;
+  font-style: italic;
+  margin-top: 5px;
+}

@@ -1,0 +1,87 @@
+@include theme() {
+    &account {
+        &__account-details {
+            @include container($breakpoint-medium, 0);
+
+            @include setResponsiveDesign($breakpoint-extra-large) {
+                max-width: none;
+            }
+
+            form {
+                @include flex(flex-start, stretch);
+                gap: 40px;
+
+                .form {
+                    &-column {
+                        @include flex1;
+                        @include flex(flex-start, stretch, nowrap);
+                        flex-direction: column;
+                        gap: 20px;
+
+                        &.submit {
+                            align-items: center;
+                        }
+
+                        &:not(.submit) {
+                            @include setResponsiveDesign($breakpoint-extra-large) {
+                                @include flex2(40px);
+                            }
+                        }
+
+                        &.password {
+                            padding: 30px 10px 10px 10px;
+                            border: 1px solid $color-light-gray;
+                            @include relative;
+
+                            @include setResponsiveDesign($breakpoint-extra-large) {
+                                padding: 30px 20px 20px 20px;
+                            }
+
+                            .column-title {
+                                @include absolute(0, 50%);
+                                transform: translate(-50%, -50%);
+                                background-color: $color-white;
+                                padding-inline: 3px;
+                                display: inline-block;
+                            }
+
+                            .password-label {
+                                @include relative;
+
+                                i {
+                                    @include absolute(50%, unset);
+                                    right: 10px;
+                                    transform: translateY(-50%);
+                                    font-size: 0.8em;
+                                    color: $color-light-gray;
+                                    cursor: pointer;
+                                    @include transition;
+
+                                    &:hover {
+                                        color: $color-text;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &-control {
+                        @include flex1;
+                    }
+                }
+
+                input {
+                    @include containerFluid;
+                }
+
+                .note {
+                    display: block;
+                    line-height: 1;
+                    font-size: 0.8em;
+                    font-style: italic;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
