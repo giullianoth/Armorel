@@ -46,7 +46,7 @@ img {
   -o-object-position: center;
 }
 
-li {
+ul li {
   list-style: none;
 }
 
@@ -128,6 +128,9 @@ input[type=range], input[type=checkbox], input[type=radio], select {
 }
 .arm-text-box {
   line-height: 1.4;
+}
+.arm-text-box h1, .arm-text-box h2, .arm-text-box h3, .arm-text-box h4, .arm-text-box h5, .arm-text-box h6 {
+  padding-top: 12px;
 }
 .arm-text-box > *:not(:last-child) {
   margin-bottom: 12px;
@@ -2957,4 +2960,45 @@ input[type=range], input[type=checkbox], input[type=radio], select {
 }
 .arm-faq__answer li {
   list-style-type: disc;
+}
+
+/* PRIVACY POLICY PAGE */
+.arm-privacy {
+  width: 100%;
+  margin-block: 50px;
+}
+.arm-privacy__container {
+  max-width: 1140px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+.arm-privacy__content a {
+  color: #38C43B;
+}
+
+/* RETURNS AND EXCHANGES PAGE */
+.arm-exchanges {
+  width: 100%;
+  margin-block: 50px;
+}
+.arm-exchanges__container {
+  max-width: 1140px;
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+.arm-exchanges__content a {
+  color: #38C43B;
+}
+.arm-exchanges__content ol > li {
+  margin-left: 1.8em;
+}
+.arm-exchanges__content ol > li::marker {
+  font-size: 1.4em;
+}
+.arm-exchanges__content ol > li h2 {
+  margin-left: 12px;
+}
+.arm-exchanges__content ul li {
+  list-style-type: disc;
+  margin-left: 1.8em;
 }

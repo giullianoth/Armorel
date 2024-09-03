@@ -1,0 +1,16 @@
+@include theme() {
+    &privacy {
+        @include containerFluid;
+        margin-block: 50px;
+
+        &__container {
+            @include container;
+        }
+
+        &__content {
+            a {
+                color: $color-accent;
+            }
+        }
+    }
+}

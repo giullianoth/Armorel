@@ -43,8 +43,10 @@ img {
     @include setBrowserPrefix(object-position, center, "o");
 }
 
-li {
-    list-style: none;
+ul {
+    li {
+        list-style: none;
+    }
 }
 
 label {
@@ -123,6 +125,10 @@ input[type="range"], input[type="checkbox"], input[type="radio"], select {
 
     &text-box {
         line-height: 1.4;
+
+        h1, h2, h3, h4, h5, h6 {
+            padding-top: 12px;
+        }
 
         & > * {
             &:not(:last-child) {

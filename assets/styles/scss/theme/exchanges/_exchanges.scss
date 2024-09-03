@@ -1,0 +1,37 @@
+@include theme() {
+    &exchanges {
+        @include containerFluid;
+        margin-block: 50px;
+
+        &__container {
+            @include container;
+        }
+
+        &__content {
+            a {
+                color: $color-accent;
+            }
+
+            ol {
+                & > li {
+                    margin-left: 1.8em;
+    
+                    &::marker {
+                        font-size: 1.4em;
+                    }
+    
+                    h2 {
+                        margin-left: 12px;
+                    }
+                }
+            }
+
+            ul {
+                li {
+                    list-style-type: disc;
+                    margin-left: 1.8em;
+                }
+            }
+        }
+    }
+}
