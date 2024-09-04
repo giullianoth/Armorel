@@ -44,24 +44,6 @@
                                 padding-inline: 3px;
                                 display: inline-block;
                             }
-
-                            .password-label {
-                                @include relative;
-
-                                i {
-                                    @include absolute(50%, unset);
-                                    right: 10px;
-                                    transform: translateY(-50%);
-                                    font-size: 0.8em;
-                                    color: $color-light-gray;
-                                    cursor: pointer;
-                                    @include transition;
-
-                                    &:hover {
-                                        color: $color-text;
-                                    }
-                                }
-                            }
                         }
                     }
 

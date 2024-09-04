@@ -1,0 +1,61 @@
+@include theme() {
+    &login {
+        @include containerFluid;
+        margin-block: 50px;
+
+        &__container {
+            @include container;
+            @include flex(flex-start, stretch);
+            gap: 50px;
+        }
+
+        &__content {
+            @include flex1;
+            border: 1px solid $color-light-gray;
+            @include container($breakpoint-small, 0);
+            padding: 20px;
+
+            @include setResponsiveDesign($breakpoint-extra-large) {
+                max-width: none;
+                @include flex2(50px);
+            }
+
+            a {
+                &:not(.arm-button) {
+                    color: $color-accent;
+                }
+            }
+        }
+
+        &__title {
+            margin-bottom: 20px;
+        }
+
+        form {
+            @include flex(flex-start, stretch, nowrap);
+            flex-direction: column;
+            gap: 20px;
+
+            input {
+                &:not([type="checkbox"]) {
+                    @include containerFluid;
+                }
+            }
+
+            .remember {
+                @include flex(flex-start, center, nowrap);
+                gap: 20px;
+
+                label, input {
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .note {
+            font-size: 0.8em;
+            line-height: 1.2em;
+        }
+    }
+}

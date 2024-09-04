@@ -252,6 +252,23 @@ input[type=range], input[type=checkbox], input[type=radio], select {
 .arm-collapse {
   cursor: pointer;
 }
+.arm-password-label {
+  position: relative;
+}
+.arm-password-label i {
+  position: absolute;
+  top: 50%;
+  left: unset;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  color: #DDD;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.arm-password-label i:hover {
+  color: #7A7A7A;
+}
 
 /* HEADER CONFIG */
 .arm-header {
@@ -3127,23 +3144,6 @@ input[type=range], input[type=checkbox], input[type=radio], select {
   padding-inline: 3px;
   display: inline-block;
 }
-.arm-account__account-details form .form-column.password .password-label {
-  position: relative;
-}
-.arm-account__account-details form .form-column.password .password-label i {
-  position: absolute;
-  top: 50%;
-  left: unset;
-  right: 10px;
-  transform: translateY(-50%);
-  font-size: 0.8em;
-  color: #DDD;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-.arm-account__account-details form .form-column.password .password-label i:hover {
-  color: #7A7A7A;
-}
 .arm-account__account-details form .form-control {
   flex-basis: 100%;
 }
@@ -3156,4 +3156,66 @@ input[type=range], input[type=checkbox], input[type=radio], select {
   font-size: 0.8em;
   font-style: italic;
   margin-top: 5px;
+}
+
+/* LOGIN PAGE */
+.arm-login {
+  width: 100%;
+  margin-block: 50px;
+}
+.arm-login__container {
+  max-width: 1140px;
+  padding-inline: 20px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.arm-login__content {
+  flex-basis: 100%;
+  border: 1px solid #DDD;
+  max-width: 576px;
+  padding-inline: 0;
+  margin-inline: auto;
+  padding: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .arm-login__content {
+    max-width: none;
+    flex-basis: calc(50% - 25px);
+  }
+}
+.arm-login__content a:not(.arm-button) {
+  color: #38C43B;
+}
+.arm-login__title {
+  margin-bottom: 20px;
+}
+.arm-login form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 20px;
+}
+.arm-login form input:not([type=checkbox]) {
+  width: 100%;
+}
+.arm-login form .remember {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+.arm-login form .remember label, .arm-login form .remember input {
+  display: inline-block;
+  margin-right: 5px;
+}
+.arm-login .note {
+  font-size: 0.8em;
+  line-height: 1.2em;
 }
